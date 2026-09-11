@@ -6,10 +6,10 @@
 :root{
   --display:"Tektur","Golos Text",system-ui,sans-serif;
   --serif:"PT Serif",Georgia,"Times New Roman",serif;
-  --bg:#E9E6E9; --surface:#FFFFFF; --surface-2:#F4F1F3; --sunk:#DDD8DE; --check:rgba(126,110,140,.10);
-  --ink:#15141A; --ink-2:#5B5765; --ink-3:#8C8796;
-  --line:#D8D2DA; --line-2:#C5BEC9;
-  --g8:#E8291C; --lime:#CFE838; --lime-ink:#15141A; --pink:#E23C97; --plate:#15141A;
+  --bg:#FCFAF8; --surface:#FFFFFF; --surface-2:#F4F1F4; --sunk:#E3E3E3; --lilac:#C9BEC6;
+  --ink:#201F1E; --ink-2:#655E63; --ink-3:#98909A;
+  --line:#E2DCE2; --line-2:#C9BEC6;
+  --g8:#FE2627; --lime:#D8F23F; --lime-ink:#201F1E; --pink:#FE6EC5; --plate:#201F1E; --paper:#FCFAF8;
   --tint:13%; --tint-2:26%; --shadow:0 1px 2px rgba(20,18,25,.06),0 8px 24px rgba(20,18,25,.05);
   --v-boiler:#7E6E8C; --v-kotel:#9DAE1C; --v-simple:#E23C97;
   --v-vnutri:#2E7FD1; --v-gostin:#A08A16; --v-lector:#6C7480; --v-konstr:#D8331F;
@@ -18,10 +18,10 @@
 :root:not([data-theme="light"]) { }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#121214; --surface:#1B1B1F; --surface-2:#232329; --sunk:#0D0D0F; --check:rgba(216,242,63,.05);
-    --ink:#F1EFEC; --ink-2:#A5A1AE; --ink-3:#7C7888;
-    --line:#2E2E36; --line-2:#3C3C46;
-    --g8:#FF4436; --lime:#D8F23F; --pink:#FF63B4; --plate:#000000;
+    --bg:#171516; --surface:#201F1E; --surface-2:#2A2829; --sunk:#0E0D0E; --lilac:#6E6470;
+    --ink:#FCFAF8; --ink-2:#A9A2A6; --ink-3:#807880;
+    --line:#332F32; --line-2:#433E42;
+    --g8:#FF4B3C; --lime:#D8F23F; --pink:#FE6EC5; --plate:#0E0D0E;
     --tint:22%; --tint-2:38%; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);
     --v-boiler:#B5A0C6; --v-kotel:#CBDF3E; --v-simple:#FF63B4;
     --v-vnutri:#5FA9F0; --v-gostin:#D2B62C; --v-lector:#A0A8B4; --v-konstr:#FF5A45;
@@ -29,10 +29,10 @@
   }
 }
 :root[data-theme="dark"]{
-  --bg:#121214; --surface:#1B1B1F; --surface-2:#232329; --sunk:#0D0D0F; --check:rgba(216,242,63,.05);
-  --ink:#F1EFEC; --ink-2:#A5A1AE; --ink-3:#7C7888;
-  --line:#2E2E36; --line-2:#3C3C46;
-  --g8:#FF4436; --lime:#D8F23F; --pink:#FF63B4; --plate:#000000;
+  --bg:#171516; --surface:#201F1E; --surface-2:#2A2829; --sunk:#0E0D0E; --lilac:#6E6470;
+  --ink:#FCFAF8; --ink-2:#A9A2A6; --ink-3:#807880;
+  --line:#332F32; --line-2:#433E42;
+  --g8:#FF4B3C; --lime:#D8F23F; --pink:#FE6EC5; --plate:#0E0D0E;
   --tint:22%; --tint-2:38%; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);
   --v-boiler:#B5A0C6; --v-kotel:#CBDF3E; --v-simple:#FF63B4;
   --v-vnutri:#5FA9F0; --v-gostin:#D2B62C; --v-lector:#A0A8B4; --v-konstr:#FF5A45;
@@ -52,24 +52,34 @@ button{font:inherit; color:inherit; background:none; border:none; cursor:pointer
 .mono{font-family:"JetBrains Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
 
 /* ---------- header ---------- */
-header.top{padding-block:22px 14px; border-bottom:1px solid var(--line); position:relative; overflow:hidden}
-header.top::before{content:""; position:absolute; inset:-40%; z-index:0; pointer-events:none;
-  background-image:repeating-conic-gradient(var(--check) 0 25%, transparent 0 50%);
-  background-size:64px 64px; transform:rotate(45deg)}
-header.top .wrap{position:relative; z-index:1}
+header.top{padding-block:20px 14px; border-bottom:1px solid var(--line)}
+.ticker{background:var(--plate); color:var(--paper); overflow:hidden; padding-block:7px}
+.ticker__track{display:flex; width:max-content; animation:tick 80s linear infinite}
+.ticker:hover .ticker__track{animation-play-state:paused}
+.ticker span{font-family:var(--display); font-weight:500; font-size:11px; text-transform:uppercase;
+  letter-spacing:.09em; padding-right:22px; white-space:nowrap}
+@keyframes tick{from{transform:translateX(0)} to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker__track{animation:none}}
+.checker{height:32px; background-repeat:repeat-x,repeat-x; background-size:64px 16px,64px 16px;
+  background-position:0 0,0 16px;
+  background-image:
+    repeating-linear-gradient(90deg, var(--g8) 0 16px, var(--sunk) 16px 32px, var(--pink) 32px 48px, var(--lilac) 48px 64px),
+    repeating-linear-gradient(90deg, var(--lilac) 0 16px, var(--pink) 16px 32px, var(--sunk) 32px 48px, var(--g8) 48px 64px)}
+@media (max-width:700px){.checker{height:22px; background-size:44px 11px,44px 11px; background-position:0 0,0 11px;
+  background-image:
+    repeating-linear-gradient(90deg, var(--g8) 0 11px, var(--sunk) 11px 22px, var(--pink) 22px 33px, var(--lilac) 33px 44px),
+    repeating-linear-gradient(90deg, var(--lilac) 0 11px, var(--pink) 11px 22px, var(--sunk) 22px 33px, var(--g8) 33px 44px)}}
 .brandrow{display:flex; align-items:flex-start; gap:16px; flex-wrap:wrap; justify-content:space-between}
-.g8mark{
-  font-family:var(--display); font-weight:700; font-size:13px; letter-spacing:.08em;
-  background:var(--g8); color:#fff; padding:5px 10px; display:inline-block;
-  clip-path:polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px);
-}
-.g8ring{position:absolute; right:0; top:6px; width:74px; height:74px; opacity:.9; z-index:1}
-@media (max-width:700px){.g8ring{width:52px; height:52px; top:2px}}
+.g8mark{display:inline-flex; align-items:center; gap:4px; font-family:var(--display); font-weight:700}
+.g8mark i{width:27px; height:27px; display:grid; place-items:center; font-style:normal; font-size:15px;
+  background:var(--plate); color:var(--paper);
+  clip-path:polygon(7px 0,calc(100% - 7px) 0,100% 7px,100% calc(100% - 7px),calc(100% - 7px) 100%,7px 100%,0 calc(100% - 7px),0 7px)}
+.g8mark u{text-decoration:none; font-size:12px; letter-spacing:.08em; color:var(--ink-3); margin-left:6px}
 h1{font-family:var(--display); font-weight:800; font-size:clamp(27px,5.6vw,46px); line-height:1.0; letter-spacing:-.01em; margin-top:12px; text-transform:uppercase}
 h1 em{font-style:normal; color:var(--g8)}
 .subline{color:var(--ink-2); font-size:14px; margin-top:8px; max-width:62ch}
 .subline b{color:var(--ink); font-weight:600}
-.counts{display:flex; gap:18px; flex-wrap:wrap; margin-top:14px; padding-right:92px}
+.counts{display:flex; gap:18px; flex-wrap:wrap; margin-top:14px}
 .count{display:flex; flex-direction:column; gap:1px}
 .count .n{font-family:var(--display); font-weight:700; font-size:19px; line-height:1}
 .count .l{font-family:var(--display); font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-3)}
@@ -392,21 +402,13 @@ main{padding-bottom:30px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important; scroll-behavior:auto!important}}
 </style>
 
+<div class="ticker" aria-hidden="true"><div class="ticker__track" id="tickerTrack"></div></div>
+<div class="checker"></div>
 <header class="top">
   <div class="wrap">
     <div class="brandrow">
       <div>
-        <svg class="g8ring" viewBox="0 0 100 100" aria-hidden="true">
-          <g fill="var(--g8)">
-            <rect x="42" y="0" width="16" height="16"/><rect x="42" y="84" width="16" height="16"/>
-            <rect x="0" y="42" width="16" height="16"/><rect x="84" y="42" width="16" height="16"/>
-            <rect x="12" y="12" width="16" height="16" transform="rotate(45 20 20)"/>
-            <rect x="72" y="12" width="16" height="16" transform="rotate(45 80 20)"/>
-            <rect x="12" y="72" width="16" height="16" transform="rotate(45 20 80)"/>
-            <rect x="72" y="72" width="16" height="16" transform="rotate(45 80 80)"/>
-          </g>
-        </svg>
-        <span class="g8mark">G8 · 2026</span>
+        <span class="g8mark"><i>G</i><i>8</i><u>Креофудкорт · 2026</u></span>
         <h1>Куда пойти<br><em>на фестивале</em></h1>
         <p class="subline" id="subline"></p>
       </div>
@@ -524,16 +526,23 @@ const T0=480, T1=1290, PAD=14;
 const narrow = () => window.innerWidth < 700;
 function header(){
   const f=DATA.festival;
+  const speakers = new Set(EV.flatMap(e=>e.speakers.map(s=>s.name))).size;
+  const line = ['11 сентября','Креофудкорт G8','Хлебозавод и Дизайн-завод',
+    plural(CONTENT.length,'событие','события','событий')+' в 7 залах',
+    plural(speakers,'спикер','спикера','спикеров'),
+    'Церемония награждения 19:00','Вечеринка от Resonance Moscow 23:00'];
+  const once = line.map(t=>`<span>${esc(t)}&nbsp;&nbsp;⟶</span>`).join('');
+  document.getElementById('tickerTrack').innerHTML = once + once;
   document.getElementById('subline').innerHTML = narrow()
     ? `<b>${esc(f.dateLabel)}</b> · ${plural(CONTENT.length,'событие','события','событий')} в 7 залах. Отмечайте ★ — план соберётся во вкладке «Мой план».`
     : `<b>${esc(f.dateLabel)}</b> · ${f.places.map(p=>esc(p.name)).join(' + ')} · ${plural(CONTENT.length,'событие','события','событий')} в 7 залах параллельно. `+
       `Отмечайте звёздочкой то, что хотите — план соберётся во вкладке «Мой план» и предупредит о накладках.`;
   document.getElementById('counts').innerHTML =
     [[CONTENT.length,'событий'],[7,'залов'],[DATA.sections.length,'секций'],
-     [new Set(EV.flatMap(e=>e.speakers.map(s=>s.name))).size,'спикеров']]
+     [speakers,'спикеров']]
     .map(([n,l])=>`<div class="count"><span class="n mono">${n}</span><span class="l">${l}</span></div>`).join('');
   document.getElementById('footnote').innerHTML =
-    `Расписание собрано из официальной PDF-программы фестиваля <a href="${esc(f.site)}" target="_blank" rel="noopener">G8</a> — «${esc(f.edition)}», ${esc(f.dateLabel)}. `+
+    `Расписание собрано из официальной PDF-программы фестиваля <a href="${esc(f.site)}" target="_blank" rel="noopener">G8</a> — «${esc(f.edition)}», ${esc(f.dateLabel)}. ${esc(f.places[0].note)}. `+
     `Церемония награждения ${esc(f.ceremony.time)}, ${esc(f.ceremony.place)} (${esc(f.ceremony.note)}). Афтепати ${esc(f.afterparty.time)}, ${esc(f.afterparty.place)} — ${esc(f.afterparty.note)}. `+
     `Организаторы могут менять программу: сверяйтесь на месте.`;
 }
