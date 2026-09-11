@@ -478,22 +478,34 @@ function savePlan(){
   try{ localStorage.setItem(LS, JSON.stringify(ids)); }catch(e){}
   if(dbDoc){ writing=true; dbDoc.set({ids, updated:Date.now()}).catch(()=>{}).finally(()=>{writing=false;}); }
 }
+// тело документа лежит за snap.data(), а не в самом снимке
+function docIds(snap){
+  const body = snap && snap.exists ? snap.data() : null;
+  return body && Array.isArray(body.ids) ? body.ids.filter(id=>byId[id] && byId[id].kind!=='break') : null;
+}
 (async()=>{
   const db = await (window.claude?.use?.('db') ?? Promise.resolve(null));
   if(!db) return;
   try{
     dbDoc = db.doc('plan/main');
-    const snap = await dbDoc.get();
-    if(snap && Array.isArray(snap.ids)){
-      const merged=new Set([...state.plan, ...snap.ids.filter(id=>byId[id])]);
-      state.plan=merged; savePlan(); render();
-    } else if(state.plan.size){ savePlan(); }
-    dbDoc.onSnapshot(d=>{
-      if(writing || !d || !Array.isArray(d.ids)) return;
-      state.plan=new Set(d.ids.filter(id=>byId[id]));
-      try{ localStorage.setItem(LS, JSON.stringify([...state.plan])); }catch(e){}
+    const ids = docIds(await dbDoc.get());
+    if(ids){
+      const merged = new Set([...state.plan, ...ids]);
+      // пишем обратно, только если локально есть отметки, которых нет в базе
+      const needsWrite = merged.size !== ids.length;
+      state.plan = merged;
+      if(needsWrite) savePlan();
+      else { try{ localStorage.setItem(LS, JSON.stringify([...merged])); }catch(e){} }
       render();
-    });
+    } else if(state.plan.size){ savePlan(); }
+    dbDoc.onSnapshot(snap=>{
+      if(writing) return;
+      const live = docIds(snap);
+      if(!live) return;
+      state.plan = new Set(live);
+      try{ localStorage.setItem(LS, JSON.stringify(live)); }catch(e){}
+      render();
+    }, ()=>{});
   }catch(e){ dbDoc=null; }
 })();
 
