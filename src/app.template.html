@@ -379,6 +379,12 @@ async function showExport(dataUrl, blob, filename){
 .splist{margin-top:16px; display:flex; flex-direction:column; gap:10px; border-top:1px solid var(--line); padding-top:14px}
 .sp-item b{display:block; font-family:var(--serif); font-weight:700; font-size:14.5px}
 .sp-item span{font-family:var(--serif); font-size:13px; color:var(--ink-2)}
+.sp-link{color:inherit; text-decoration:none; border-bottom:1.5px solid var(--lime)}
+.sp-link:hover{border-bottom-color:var(--g8)}
+.sp-arrow{font-family:var(--display); font-size:11px; color:var(--ink-3); margin-left:5px; border:none}
+.sp-badge{display:block; width:fit-content; font-family:var(--display); font-size:9.5px; text-transform:uppercase;
+  letter-spacing:.06em; color:var(--ink-3); border:1px solid var(--line-2); border-radius:3px;
+  padding:2px 6px; margin-top:6px}
 .sheet .act{margin-top:18px; display:flex; gap:8px}
 .parallel{margin-top:18px; border-top:1px solid var(--line); padding-top:14px}
 .parallel h4{font-family:var(--display); font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-3); margin:0 0 8px}
@@ -470,6 +476,15 @@ main{padding-bottom:30px}
 
 <script>
 const DATA = /*__DATA__*/;
+const AFISHA = /*__LINKS__*/;
+const AFISHA_SITE = 'https://www.design-events.fun';
+// на самой афише ведём в той же вкладке, снаружи — в новой
+const SAME_SITE = /(^|\.)design-events\.fun$/.test(location.hostname);
+function afishaLink(name){
+  const rec = AFISHA[name];
+  if(!rec) return null;
+  return { url: `${AFISHA_SITE}/speaker/${rec.slug}`, profile: rec.profile };
+}
 const V = {}; DATA.venues.forEach(v=>V[v.id]=v);
 const VCOLOR = id => `var(--v-${id})`;
 const EV = DATA.events;
@@ -908,8 +923,14 @@ function openSheet(id){
     <h2>${esc(e.title)}</h2>
     <div class="when mono">${e.start}${e.end?' – '+e.end:''}</div>
     <div class="where">${esc(v.place)}${e.section?` · секция «${esc(e.section)}»`:''}${e.curator?` · куратор: ${esc(e.curator)}`:''}</div>
-    ${e.speakers.length?`<div class="splist">${e.speakers.map(s=>
-       `<div class="sp-item"><b>${esc(s.name)}</b>${s.role?`<span>${esc(s.role)}</span>`:''}</div>`).join('')}</div>`:''}
+    ${e.speakers.length?`<div class="splist">${e.speakers.map(s=>{
+       const l = afishaLink(s.name);
+       const nameHtml = l
+         ? `<a class="sp-link" href="${l.url}"${SAME_SITE?'':' target="_blank" rel="noopener"'}>${esc(s.name)}<span class="sp-arrow" aria-hidden="true">→</span></a>`
+         : esc(s.name);
+       return `<div class="sp-item"><b>${nameHtml}</b>${s.role?`<span>${esc(s.role)}</span>`:''}${
+         l && l.profile ? '<span class="sp-badge">профиль в афише</span>' : ''}</div>`;
+     }).join('')}</div>`:''}
     <div class="act">
       <button class="btn primary" id="togglePick">${state.plan.has(e.id)?'★ Убрать из плана':'☆ В мой план'}</button>
     </div>

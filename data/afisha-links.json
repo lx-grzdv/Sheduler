@@ -1,0 +1,114 @@
+{
+ "Андрей Тубольцев": {
+  "slug": "andrei-tuboltsev",
+  "profile": true
+ },
+ "Антон Бондарь": {
+  "slug": "anton-bondar",
+  "profile": false
+ },
+ "Арсений Попов": {
+  "slug": "arsenii-popov",
+  "profile": false
+ },
+ "Денис Ломов": {
+  "slug": "denis-lomov",
+  "profile": false
+ },
+ "Евгений Филатов": {
+  "slug": "evgenii-filatov",
+  "profile": false
+ },
+ "Иван Стельмах": {
+  "slug": "ivan-stelmah",
+  "profile": true
+ },
+ "Пётр Сафронов": {
+  "slug": "petr-safronov",
+  "profile": false
+ },
+ "Сергей Трегубов": {
+  "slug": "sergei-tregubov",
+  "profile": false
+ },
+ "Александра Дубинина": {
+  "slug": "aleksandra-dubinina",
+  "profile": false
+ },
+ "Алексей Журавлёв": {
+  "slug": "aleksei-zhuravlev",
+  "profile": false
+ },
+ "Алексей Мочалов": {
+  "slug": "aleksei-mochalov",
+  "profile": false
+ },
+ "Анна Зайцева": {
+  "slug": "anna-zaitseva",
+  "profile": false
+ },
+ "Антон Черногоров": {
+  "slug": "anton-chernogorov",
+  "profile": false
+ },
+ "Борис Шилин": {
+  "slug": "boris-shilin",
+  "profile": true
+ },
+ "Виталий Быков": {
+  "slug": "vitalii-bykov",
+  "profile": true
+ },
+ "Григорий Туманов": {
+  "slug": "grigorii-tumanov",
+  "profile": true
+ },
+ "Дмитрий Мордвинцев": {
+  "slug": "dmitrii-mordvintsev",
+  "profile": false
+ },
+ "Ева Шумляева": {
+  "slug": "eva-shumlyaeva",
+  "profile": false
+ },
+ "Екатерина Беляева": {
+  "slug": "ekaterina-belyaeva",
+  "profile": true
+ },
+ "Зелим Габисов": {
+  "slug": "zelim-gabisov",
+  "profile": true
+ },
+ "Игорь Демидов": {
+  "slug": "igor-demidov",
+  "profile": false
+ },
+ "Ирина Волкова": {
+  "slug": "irina-volkova",
+  "profile": false
+ },
+ "Карина Шабанова": {
+  "slug": "karina-shabanova",
+  "profile": false
+ },
+ "Кир Павлюкевич": {
+  "slug": "kir-pavlyukevich",
+  "profile": true
+ },
+ "Митя Осадчук": {
+  "slug": "mitya-osadchuk",
+  "profile": true
+ },
+ "Ольга Зуева": {
+  "slug": "olga-zueva",
+  "profile": true
+ },
+ "Покрас Лампас": {
+  "slug": "pokras-lampas",
+  "profile": true
+ },
+ "Пётр Губанов": {
+  "slug": "petr-gubanov",
+  "profile": false
+ }
+}
