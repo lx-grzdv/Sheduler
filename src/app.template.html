@@ -163,6 +163,165 @@ select.sel{background:var(--surface); border:1px solid var(--line-2); border-rad
 .btn:hover{border-color:var(--ink)}
 .btn.primary{background:var(--ink); color:var(--bg); border-color:var(--ink)}
 
+
+/* ---------- экспорт плана в картинку и PDF ---------- */
+const EX = {W:1080, PAD:64, TCOL:150, A4:1527};
+const VEXPORT = {boiler:'#7E6E8C', kotel:'#8A9A18', simple:'#E23C97', vnutri:'#2E7FD1',
+                 gostin:'#A08A16', lector:'#6C7480', konstr:'#D8331F'};
+function wrapText(ctx, text, maxW, font){
+  ctx.font = font;
+  const out=[]; let line='';
+  for(const word of String(text).split(/\s+/)){
+    const test = line ? line+' '+word : word;
+    if(ctx.measureText(test).width <= maxW || !line) line = test;
+    else { out.push(line); line = word; }
+  }
+  if(line) out.push(line);
+  return out;
+}
+function planWarning(prev, e){
+  if(!prev) return null;
+  const v=V[e.venue], pv=V[prev.venue];
+  if(e.startMin < prev.endMin) return {t:`Накладка с «${prev.title}» (до ${prev.end}, ${pv.name})`, c:'red'};
+  if(pv.place!==v.place && e.startMin-prev.endMin < 10) return {t:`Переход ${pv.place} → ${v.place} за ${e.startMin-prev.endMin} мин`, c:'lime'};
+  if(e.startMin-prev.endMin >= 45) return {t:`Окно ${e.startMin-prev.endMin} мин`, c:'grey'};
+  return null;
+}
+function buildBlocks(picks, scale){
+  const ctx = document.createElement('canvas').getContext('2d');
+  const cw = (EX.W - EX.PAD*2 - EX.TCOL) / scale;
+  const blocks=[];
+  picks.forEach((e,i)=>{
+    const w = planWarning(picks[i-1], e);
+    if(w){
+      const wl = wrapText(ctx, (w.c==='red'?'⚠ ':w.c==='lime'?'→ ':'· ')+w.t, cw, `600 22px "Golos Text",system-ui,sans-serif`);
+      blocks.push({type:'warn', ...w, lines:wl, h: wl.length*28 + 22});
+    }
+    const titleLines = wrapText(ctx, e.title, cw, `600 ${30}px "Golos Text",system-ui,sans-serif`);
+    const spText = e.speakers.map(s=>s.name).join(', ');
+    const spLines = spText ? wrapText(ctx, spText, cw, `400 24px "Golos Text",system-ui,sans-serif`).slice(0,2) : [];
+    blocks.push({type:'ev', e, titleLines, spLines,
+      h: 34 + titleLines.length*38 + (spLines.length ? spLines.length*30 + 8 : 0) + 26});
+  });
+  return blocks;
+}
+function drawPages(picks, pageH, scale){
+  const blocks = buildBlocks(picks, scale);
+  const headH = 250, contH = 96, footH = 70;
+  const pages=[]; let cur=[], y=headH;
+  blocks.forEach(b=>{
+    if(pageH && y + b.h > pageH - footH && cur.length){ pages.push(cur); cur=[]; y=contH; }
+    cur.push(b); y += b.h;
+  });
+  if(cur.length) pages.push(cur);
+  const total = pages.length;
+  return pages.map((items,pi)=>{
+    const top = pi===0 ? headH : contH;
+    const H = pageH || (top + items.reduce((a,b)=>a+b.h,0) + footH);
+    const cv = document.createElement('canvas');
+    cv.width = EX.W; cv.height = Math.round(H*scale);
+    const c = cv.getContext('2d');
+    c.scale(scale, scale);
+    const W = EX.W/scale, P = EX.PAD/scale, TC = EX.TCOL/scale, HH = H;
+    c.fillStyle='#FFFFFF'; c.fillRect(0,0,W,HH);
+    c.textBaseline='alphabetic';
+    if(pi===0){
+      c.fillStyle='#E22318'; roundRect(c,P,58,168,46,7); c.fill();
+      c.fillStyle='#fff'; c.font=`700 22px "JetBrains Mono",monospace`; c.fillText('G8 · 2026', P+18, 88);
+      c.fillStyle='#15141A'; c.font=`800 52px "Golos Text",system-ui,sans-serif`;
+      c.fillText('Мой план на фестивале', P, 168);
+      const last = picks[picks.length-1];
+      c.fillStyle='#5B5765'; c.font=`400 25px "Golos Text",system-ui,sans-serif`;
+      c.fillText(`${DATA.festival.dateLabel} · ${plural(picks.length,'событие','события','событий')} · с ${picks[0].start} до ${last.end||last.start}`, P, 212);
+      c.fillStyle='#DAD5CE'; c.fillRect(P, 238, W-P*2, 1);
+    } else {
+      c.fillStyle='#8C8796'; c.font=`600 21px "Golos Text",system-ui,sans-serif`;
+      c.fillText('Мой план на фестивале G8 — продолжение', P, 56);
+      c.fillStyle='#DAD5CE'; c.fillRect(P, 74, W-P*2, 1);
+    }
+    let y = top;
+    items.forEach(b=>{
+      if(b.type==='warn'){
+        const col = b.c==='red' ? '#E22318' : b.c==='lime' ? '#7A8A12' : '#8C8796';
+        c.fillStyle=col; c.font=`600 22px "Golos Text",system-ui,sans-serif`;
+        b.lines.forEach((l,i)=>c.fillText(l, P+TC, y+26+i*28));
+        y += b.h; return;
+      }
+      const e=b.e, v=V[e.venue];
+      const col = VEXPORT[e.venue] || '#5B5765';
+      c.fillStyle=col; c.fillRect(P+TC-26, y+8, 5, b.h-24);
+      c.fillStyle='#15141A'; c.font=`700 28px "JetBrains Mono",monospace`; c.fillText(e.start, P, y+34);
+      c.fillStyle='#8C8796'; c.font=`500 21px "JetBrains Mono",monospace`; c.fillText(e.end||'', P, y+62);
+      c.fillStyle=col; c.font=`700 19px "Golos Text",system-ui,sans-serif`;
+      c.fillText((v.name+(e.section?' · '+e.section:'')).toUpperCase(), P+TC, y+26);
+      c.fillStyle='#15141A'; c.font=`600 30px "Golos Text",system-ui,sans-serif`;
+      b.titleLines.forEach((l,i)=>c.fillText(l, P+TC, y+64+i*38));
+      if(b.spLines.length){
+        c.fillStyle='#5B5765'; c.font=`400 24px "Golos Text",system-ui,sans-serif`;
+        b.spLines.forEach((l,i)=>c.fillText(l, P+TC, y+64+b.titleLines.length*38+16+i*30));
+      }
+      y += b.h;
+      c.fillStyle='#EBE7E1'; c.fillRect(P+TC, y-13, W-P-TC, 1);
+    });
+    c.fillStyle='#8C8796'; c.font=`400 20px "Golos Text",system-ui,sans-serif`;
+    c.fillText('G8 «Креативный фудкорт» · Хлебозавод + Дизайн-завод · g8.art', P, HH-30);
+    if(total>1){ c.textAlign='right'; c.fillText(`${pi+1} / ${total}`, W-P, HH-30); c.textAlign='left'; }
+    return cv;
+  });
+}
+function roundRect(c,x,y,w,h,r){ c.beginPath(); c.moveTo(x+r,y); c.arcTo(x+w,y,x+w,y+h,r); c.arcTo(x+w,y+h,x,y+h,r); c.arcTo(x,y+h,x,y,r); c.arcTo(x,y,x+w,y,r); c.closePath(); }
+function loadScript(src){
+  return new Promise((res,rej)=>{ const t=document.createElement('script'); t.src=src; t.onload=res; t.onerror=rej; document.head.appendChild(t); });
+}
+async function exportPlan(kind, btn){
+  const picks=[...state.plan].map(id=>byId[id]).filter(Boolean).sort((a,b)=>a.startMin-b.startMin);
+  if(!picks.length) return;
+  const label = btn.textContent; btn.textContent = 'Готовлю…'; btn.disabled = true;
+  try{
+    if(document.fonts && document.fonts.ready) await document.fonts.ready;
+    let blob, filename;
+    if(kind==='png'){
+      const rough = buildBlocks(picks,1).reduce((a,b)=>a+b.h,0) + 320;
+      const scale = rough > 13000 ? 0.72 : 1;
+      const cv = drawPages(picks, null, scale)[0];
+      blob = await new Promise(r=>cv.toBlob(r,'image/png'));
+      filename = 'G8-2026-plan.png';
+      showExport(cv.toDataURL('image/png'), blob, filename, 'png');
+    } else {
+      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js');
+      const pages = drawPages(picks, EX.A4, 1);
+      const doc = new window.jspdf.jsPDF({unit:'pt', format:'a4'});
+      pages.forEach((cv,i)=>{ if(i) doc.addPage();
+        doc.addImage(cv.toDataURL('image/jpeg',0.92),'JPEG',0,0,595.28,841.89); });
+      blob = doc.output('blob');
+      filename = 'G8-2026-plan.pdf';
+      const dl = await (window.claude?.use?.('downloads') ?? Promise.resolve(null));
+      if(dl){ try{ await dl.save({filename, data:blob}); } catch(err){ if(err?.code!=='declined') openBlob(blob); } }
+      else openBlob(blob);
+    }
+  }catch(err){ alert('Не получилось собрать файл: '+(err&&err.message||err)); }
+  finally{ btn.textContent = label; btn.disabled = false; }
+}
+function openBlob(blob){ const u=URL.createObjectURL(blob); window.open(u,'_blank'); setTimeout(()=>URL.revokeObjectURL(u),60000); }
+async function showExport(dataUrl, blob, filename){
+  const sheet=document.getElementById('sheet');
+  sheet.innerHTML = `<button class="close" id="closeSheet" aria-label="Закрыть">✕</button>
+    <h2 style="font-size:19px">Расписание картинкой</h2>
+    <p class="hint" style="margin:8px 0 12px">Нажмите «Сохранить» — файл уйдёт в системное меню сохранения. На айфоне можно и проще: долгое нажатие на картинку → «Добавить в Фото».</p>
+    <img src="${dataUrl}" alt="Моё расписание G8" style="width:100%; border:1px solid var(--line); border-radius:8px">
+    <div class="act"><button class="btn primary" id="dlNow">Сохранить</button></div>`;
+  sheet.classList.add('open'); document.getElementById('scrim').classList.add('open');
+  sheet.scrollTop=0;
+  document.getElementById('closeSheet').onclick=closeSheet;
+  document.getElementById('dlNow').onclick=async (ev)=>{
+    const b=ev.currentTarget;
+    const dl = await (window.claude?.use?.('downloads') ?? Promise.resolve(null));
+    if(!dl){ openBlob(blob); return; }
+    try{ await dl.save({filename, data:blob}); b.textContent='Сохранено'; }
+    catch(err){ if(err?.code==='declined'){ b.textContent='Сохранить'; } else { openBlob(blob); } }
+  };
+}
+
 /* ---------- sheet ---------- */
 .scrim{position:fixed; inset:0; background:rgba(10,9,14,.45); z-index:50; display:none}
 .scrim.open{display:block}
@@ -481,17 +640,180 @@ function renderPlan(){
   html += '</div>';
   const last=picks[picks.length-1];
   html += `<div class="planbar">
+      <button class="btn primary" id="savePng">Сохранить картинкой</button>
+      <button class="btn" id="savePdf">PDF</button>
       <button class="btn" id="copyPlan">Скопировать текстом</button>
       <button class="btn" id="clearPlan">Очистить план</button>
       <span class="hint">${plural(picks.length,'событие','события','событий')} · с ${picks[0].start} до ${last.end||last.start}</span>
     </div>`;
   el.innerHTML=html;
+  document.getElementById('savePng').onclick = e => exportPlan('png', e.currentTarget);
+  document.getElementById('savePdf').onclick = e => exportPlan('pdf', e.currentTarget);
   document.getElementById('clearPlan').onclick=()=>{ if(confirm('Убрать все отмеченные события?')){ state.plan.clear(); savePlan(); render(); } };
   document.getElementById('copyPlan').onclick=async()=>{
     const txt = 'Мой G8, '+DATA.festival.dateLabel+'\n\n' + picks.map(e=>
       `${e.start}–${e.end||''} · ${V[e.venue].name} (${V[e.venue].place})\n${e.title}` +
       (e.speakers.length?`\n${e.speakers.map(s=>s.name).join(', ')}`:'')).join('\n\n');
     try{ await navigator.clipboard.writeText(txt); const b=document.getElementById('copyPlan'); b.textContent='Скопировано'; setTimeout(()=>b.textContent='Скопировать текстом',1600);}catch(err){ alert(txt); }
+  };
+}
+
+
+/* ---------- экспорт плана в картинку и PDF ---------- */
+const EX = {W:1080, PAD:64, TCOL:150, A4:1527};
+const VEXPORT = {boiler:'#7E6E8C', kotel:'#8A9A18', simple:'#E23C97', vnutri:'#2E7FD1',
+                 gostin:'#A08A16', lector:'#6C7480', konstr:'#D8331F'};
+function wrapText(ctx, text, maxW, font){
+  ctx.font = font;
+  const out=[]; let line='';
+  for(const word of String(text).split(/\s+/)){
+    const test = line ? line+' '+word : word;
+    if(ctx.measureText(test).width <= maxW || !line) line = test;
+    else { out.push(line); line = word; }
+  }
+  if(line) out.push(line);
+  return out;
+}
+function planWarning(prev, e){
+  if(!prev) return null;
+  const v=V[e.venue], pv=V[prev.venue];
+  if(e.startMin < prev.endMin) return {t:`Накладка с «${prev.title}» (до ${prev.end}, ${pv.name})`, c:'red'};
+  if(pv.place!==v.place && e.startMin-prev.endMin < 10) return {t:`Переход ${pv.place} → ${v.place} за ${e.startMin-prev.endMin} мин`, c:'lime'};
+  if(e.startMin-prev.endMin >= 45) return {t:`Окно ${e.startMin-prev.endMin} мин`, c:'grey'};
+  return null;
+}
+function buildBlocks(picks, scale){
+  const ctx = document.createElement('canvas').getContext('2d');
+  const cw = (EX.W - EX.PAD*2 - EX.TCOL) / scale;
+  const blocks=[];
+  picks.forEach((e,i)=>{
+    const w = planWarning(picks[i-1], e);
+    if(w){
+      const wl = wrapText(ctx, (w.c==='red'?'⚠ ':w.c==='lime'?'→ ':'· ')+w.t, cw, `600 22px "Golos Text",system-ui,sans-serif`);
+      blocks.push({type:'warn', ...w, lines:wl, h: wl.length*28 + 22});
+    }
+    const titleLines = wrapText(ctx, e.title, cw, `600 ${30}px "Golos Text",system-ui,sans-serif`);
+    const spText = e.speakers.map(s=>s.name).join(', ');
+    const spLines = spText ? wrapText(ctx, spText, cw, `400 24px "Golos Text",system-ui,sans-serif`).slice(0,2) : [];
+    blocks.push({type:'ev', e, titleLines, spLines,
+      h: 34 + titleLines.length*38 + (spLines.length ? spLines.length*30 + 8 : 0) + 26});
+  });
+  return blocks;
+}
+function drawPages(picks, pageH, scale){
+  const blocks = buildBlocks(picks, scale);
+  const headH = 250, contH = 96, footH = 70;
+  const pages=[]; let cur=[], y=headH;
+  blocks.forEach(b=>{
+    if(pageH && y + b.h > pageH - footH && cur.length){ pages.push(cur); cur=[]; y=contH; }
+    cur.push(b); y += b.h;
+  });
+  if(cur.length) pages.push(cur);
+  const total = pages.length;
+  return pages.map((items,pi)=>{
+    const top = pi===0 ? headH : contH;
+    const H = pageH || (top + items.reduce((a,b)=>a+b.h,0) + footH);
+    const cv = document.createElement('canvas');
+    cv.width = EX.W; cv.height = Math.round(H*scale);
+    const c = cv.getContext('2d');
+    c.scale(scale, scale);
+    const W = EX.W/scale, P = EX.PAD/scale, TC = EX.TCOL/scale, HH = H;
+    c.fillStyle='#FFFFFF'; c.fillRect(0,0,W,HH);
+    c.textBaseline='alphabetic';
+    if(pi===0){
+      c.fillStyle='#E22318'; roundRect(c,P,58,168,46,7); c.fill();
+      c.fillStyle='#fff'; c.font=`700 22px "JetBrains Mono",monospace`; c.fillText('G8 · 2026', P+18, 88);
+      c.fillStyle='#15141A'; c.font=`800 52px "Golos Text",system-ui,sans-serif`;
+      c.fillText('Мой план на фестивале', P, 168);
+      const last = picks[picks.length-1];
+      c.fillStyle='#5B5765'; c.font=`400 25px "Golos Text",system-ui,sans-serif`;
+      c.fillText(`${DATA.festival.dateLabel} · ${plural(picks.length,'событие','события','событий')} · с ${picks[0].start} до ${last.end||last.start}`, P, 212);
+      c.fillStyle='#DAD5CE'; c.fillRect(P, 238, W-P*2, 1);
+    } else {
+      c.fillStyle='#8C8796'; c.font=`600 21px "Golos Text",system-ui,sans-serif`;
+      c.fillText('Мой план на фестивале G8 — продолжение', P, 56);
+      c.fillStyle='#DAD5CE'; c.fillRect(P, 74, W-P*2, 1);
+    }
+    let y = top;
+    items.forEach(b=>{
+      if(b.type==='warn'){
+        const col = b.c==='red' ? '#E22318' : b.c==='lime' ? '#7A8A12' : '#8C8796';
+        c.fillStyle=col; c.font=`600 22px "Golos Text",system-ui,sans-serif`;
+        b.lines.forEach((l,i)=>c.fillText(l, P+TC, y+26+i*28));
+        y += b.h; return;
+      }
+      const e=b.e, v=V[e.venue];
+      const col = VEXPORT[e.venue] || '#5B5765';
+      c.fillStyle=col; c.fillRect(P+TC-26, y+8, 5, b.h-24);
+      c.fillStyle='#15141A'; c.font=`700 28px "JetBrains Mono",monospace`; c.fillText(e.start, P, y+34);
+      c.fillStyle='#8C8796'; c.font=`500 21px "JetBrains Mono",monospace`; c.fillText(e.end||'', P, y+62);
+      c.fillStyle=col; c.font=`700 19px "Golos Text",system-ui,sans-serif`;
+      c.fillText((v.name+(e.section?' · '+e.section:'')).toUpperCase(), P+TC, y+26);
+      c.fillStyle='#15141A'; c.font=`600 30px "Golos Text",system-ui,sans-serif`;
+      b.titleLines.forEach((l,i)=>c.fillText(l, P+TC, y+64+i*38));
+      if(b.spLines.length){
+        c.fillStyle='#5B5765'; c.font=`400 24px "Golos Text",system-ui,sans-serif`;
+        b.spLines.forEach((l,i)=>c.fillText(l, P+TC, y+64+b.titleLines.length*38+16+i*30));
+      }
+      y += b.h;
+      c.fillStyle='#EBE7E1'; c.fillRect(P+TC, y-13, W-P-TC, 1);
+    });
+    c.fillStyle='#8C8796'; c.font=`400 20px "Golos Text",system-ui,sans-serif`;
+    c.fillText('G8 «Креативный фудкорт» · Хлебозавод + Дизайн-завод · g8.art', P, HH-30);
+    if(total>1){ c.textAlign='right'; c.fillText(`${pi+1} / ${total}`, W-P, HH-30); c.textAlign='left'; }
+    return cv;
+  });
+}
+function roundRect(c,x,y,w,h,r){ c.beginPath(); c.moveTo(x+r,y); c.arcTo(x+w,y,x+w,y+h,r); c.arcTo(x+w,y+h,x,y+h,r); c.arcTo(x,y+h,x,y,r); c.arcTo(x,y,x+w,y,r); c.closePath(); }
+function loadScript(src){
+  return new Promise((res,rej)=>{ const t=document.createElement('script'); t.src=src; t.onload=res; t.onerror=rej; document.head.appendChild(t); });
+}
+async function exportPlan(kind, btn){
+  const picks=[...state.plan].map(id=>byId[id]).filter(Boolean).sort((a,b)=>a.startMin-b.startMin);
+  if(!picks.length) return;
+  const label = btn.textContent; btn.textContent = 'Готовлю…'; btn.disabled = true;
+  try{
+    if(document.fonts && document.fonts.ready) await document.fonts.ready;
+    let blob, filename;
+    if(kind==='png'){
+      const rough = buildBlocks(picks,1).reduce((a,b)=>a+b.h,0) + 320;
+      const scale = rough > 13000 ? 0.72 : 1;
+      const cv = drawPages(picks, null, scale)[0];
+      blob = await new Promise(r=>cv.toBlob(r,'image/png'));
+      filename = 'G8-2026-plan.png';
+      showExport(cv.toDataURL('image/png'), blob, filename, 'png');
+    } else {
+      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js');
+      const pages = drawPages(picks, EX.A4, 1);
+      const doc = new window.jspdf.jsPDF({unit:'pt', format:'a4'});
+      pages.forEach((cv,i)=>{ if(i) doc.addPage();
+        doc.addImage(cv.toDataURL('image/jpeg',0.92),'JPEG',0,0,595.28,841.89); });
+      blob = doc.output('blob');
+      filename = 'G8-2026-plan.pdf';
+      const dl = await (window.claude?.use?.('downloads') ?? Promise.resolve(null));
+      if(dl){ try{ await dl.save({filename, data:blob}); } catch(err){ if(err?.code!=='declined') openBlob(blob); } }
+      else openBlob(blob);
+    }
+  }catch(err){ alert('Не получилось собрать файл: '+(err&&err.message||err)); }
+  finally{ btn.textContent = label; btn.disabled = false; }
+}
+function openBlob(blob){ const u=URL.createObjectURL(blob); window.open(u,'_blank'); setTimeout(()=>URL.revokeObjectURL(u),60000); }
+async function showExport(dataUrl, blob, filename){
+  const sheet=document.getElementById('sheet');
+  sheet.innerHTML = `<button class="close" id="closeSheet" aria-label="Закрыть">✕</button>
+    <h2 style="font-size:19px">Расписание картинкой</h2>
+    <p class="hint" style="margin:8px 0 12px">Нажмите «Сохранить» — файл уйдёт в системное меню сохранения. На айфоне можно и проще: долгое нажатие на картинку → «Добавить в Фото».</p>
+    <img src="${dataUrl}" alt="Моё расписание G8" style="width:100%; border:1px solid var(--line); border-radius:8px">
+    <div class="act"><button class="btn primary" id="dlNow">Сохранить</button></div>`;
+  sheet.classList.add('open'); document.getElementById('scrim').classList.add('open');
+  sheet.scrollTop=0;
+  document.getElementById('closeSheet').onclick=closeSheet;
+  document.getElementById('dlNow').onclick=async (ev)=>{
+    const b=ev.currentTarget;
+    const dl = await (window.claude?.use?.('downloads') ?? Promise.resolve(null));
+    if(!dl){ openBlob(blob); return; }
+    try{ await dl.save({filename, data:blob}); b.textContent='Сохранено'; }
+    catch(err){ if(err?.code==='declined'){ b.textContent='Сохранить'; } else { openBlob(blob); } }
   };
 }
 
