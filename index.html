@@ -137,7 +137,7 @@ select.sel{background:var(--surface); border:1px solid var(--line-2); border-rad
   display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; overflow-wrap:break-word; hyphens:auto}
 .ev.break{background:repeating-linear-gradient(135deg,transparent,transparent 5px,color-mix(in srgb,var(--ink) 6%,transparent) 5px,color-mix(in srgb,var(--ink) 6%,transparent) 10px); border-left-color:var(--line-2)}
 .ev.break .ti{font-weight:500; color:var(--ink-3)}
-.ev.picked{border-color:var(--ink); box-shadow:inset 0 0 0 2px var(--lime)}
+.ev.picked{background:color-mix(in srgb,var(--lime) 42%,var(--surface)); border-left-color:var(--lime-ink)}
 .ev.picked .ti::after{content:"★"; color:var(--g8); margin-left:4px}
 .ev.dim{opacity:.28}
 .nowline{position:absolute; left:0; right:0; height:2px; background:var(--g8); z-index:10; pointer-events:none}
@@ -153,17 +153,20 @@ select.sel{background:var(--surface); border:1px solid var(--line-2); border-rad
   border-radius:9px; padding:11px 12px; display:flex; gap:10px; align-items:flex-start;
 }
 .card:hover{border-color:var(--line-2); background:color-mix(in srgb,var(--v) 6%,var(--surface))}
-.card.picked{box-shadow:inset 0 0 0 2px var(--lime); border-color:var(--ink)}
+.card.picked{background:color-mix(in srgb,var(--lime) 12%,var(--surface)); border-color:color-mix(in srgb,var(--lime) 45%,var(--line))}
 .card .body{flex:1; min-width:0}
 .meta{display:flex; gap:7px; align-items:center; flex-wrap:wrap; font-size:11px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.05em}
 .meta .vn{font-family:var(--display); color:var(--v); font-weight:700; letter-spacing:.03em}
-.seclabel{font-family:var(--display); font-weight:500; font-size:10px; letter-spacing:.06em;
-  background:var(--plate); color:var(--v); padding:2px 6px 3px;
+.seclabel{font-family:var(--display); font-weight:500; font-size:10px; letter-spacing:.06em; color:var(--ink-3)}
+.seclabel::before{content:"·"; margin-right:6px; color:var(--line-2)}
+.sheet .seclabel{background:var(--plate); color:var(--v); padding:3px 7px 4px; margin-left:8px;
   clip-path:polygon(4px 0,100% 0,100% calc(100% - 4px),calc(100% - 4px) 100%,0 100%,0 4px)}
+.sheet .seclabel::before{content:none}
 .card h3{font-family:var(--serif); font-size:15.5px; font-weight:700; line-height:1.24; margin-top:4px}
 .card .sp{font-family:var(--serif); font-size:13.5px; color:var(--ink-2); margin-top:5px}
 .card .sp b{font-weight:600; color:var(--ink)}
-.star{flex:none; width:30px; height:30px; border-radius:8px; border:1px solid var(--line-2); display:grid; place-items:center; font-size:14px; color:var(--ink-3); background:var(--surface)}
+.star{flex:none; width:28px; height:28px; border-radius:7px; border:1px solid transparent; display:grid; place-items:center; font-size:15px; color:var(--ink-3); background:none}
+.card:hover .star{border-color:var(--line-2)}
 .card.picked .star, .row.picked .star{background:var(--lime); color:var(--lime-ink); border-color:var(--lime)}
 .kind{font-family:var(--display); font-size:9.5px; font-weight:500; padding:2px 6px; border-radius:3px; letter-spacing:.05em; text-transform:uppercase}
 .kind.disc{background:color-mix(in srgb,var(--v) 20%,var(--surface)); color:var(--ink-2)}
@@ -173,11 +176,19 @@ select.sel{background:var(--surface); border:1px solid var(--line-2); border-rad
 .plan{display:flex; flex-direction:column; gap:0; margin-top:12px}
 .prow{display:grid; grid-template-columns:64px 1fr; gap:12px; padding-block:12px; border-top:1px solid var(--line)}
 .prow:first-child{border-top:none}
-.prow .pt{font-family:"JetBrains Mono",monospace; font-weight:700; font-size:14px; padding-top:2px}
+  .prow .pt{font-family:"JetBrains Mono",monospace; font-weight:700; font-size:14px; padding-top:2px}
+.prow .card{width:100%; border:none; border-left:3px solid var(--v); border-radius:0; padding:2px 0 2px 13px; background:none}
+.prow .card:hover{background:none}
+.prow .card:hover h3{text-decoration:underline; text-underline-offset:3px}
+.prow .card.picked{background:none; border-left-color:var(--v)}
 .prow .pt small{display:block; font-weight:500; color:var(--ink-3); font-size:11px}
-.warn{display:flex; gap:8px; align-items:flex-start; padding:9px 12px; border-radius:9px; font-size:13px; margin-top:6px;
-  background:color-mix(in srgb,var(--g8) 12%,var(--surface)); border:1px solid color-mix(in srgb,var(--g8) 35%,var(--surface)); color:var(--ink)}
-.warn.walk{background:color-mix(in srgb,var(--lime) 22%,var(--surface)); border-color:color-mix(in srgb,var(--lime) 55%,var(--surface))}
+.warn{font-size:12.5px; color:var(--ink-2); padding:7px 0 7px 13px; margin-left:76px;
+  border-left:2px solid var(--g8); line-height:1.4}
+.warn b{font-family:var(--display); font-weight:500; font-size:10px; letter-spacing:.07em;
+  text-transform:uppercase; color:var(--g8); margin-right:8px}
+.warn.walk{border-left-color:#7A8A12} .warn.walk b{color:#7A8A12}
+.warn.gap{border-left-color:var(--line-2)} .warn.gap b{color:var(--ink-3)}
+@media (max-width:700px){.warn{margin-left:58px}}
 .empty{text-align:center; padding:56px 20px; color:var(--ink-2); max-width:46ch; margin:0 auto}
 .empty h2{font-family:var(--display); font-size:18px; text-transform:uppercase; margin-bottom:8px}
 .planbar{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:14px}
@@ -668,11 +679,11 @@ function renderPlan(){
     const v=V[e.venue], prev=picks[i-1];
     if(prev){
       if(e.startMin < prev.endMin){
-        html += `<div class="warn">⚠ Накладка: «${esc(prev.title)}» идёт до ${prev.end} в зале ${esc(V[prev.venue].name)}. Придётся выбрать.</div>`;
+        html += `<div class="warn"><b>Накладка</b>«${esc(prev.title)}» идёт до ${prev.end} в зале ${esc(V[prev.venue].name)} — придётся выбрать.</div>`;
       } else if(V[prev.venue].place!==v.place && e.startMin-prev.endMin < 10){
-        html += `<div class="warn walk">🚶 Переход ${esc(V[prev.venue].place)} → ${esc(v.place)} за ${e.startMin-prev.endMin} мин. Соседние площадки, но заложите 5–7 минут.</div>`;
+        html += `<div class="warn walk"><b>Переход</b>${esc(V[prev.venue].place)} → ${esc(v.place)} за ${e.startMin-prev.endMin} мин. Площадки соседние, но заложите 5–7 минут.</div>`;
       } else if(e.startMin-prev.endMin >= 45){
-        html += `<div class="warn walk">☕ Окно ${e.startMin-prev.endMin} мин — время на фудкорт, ярмарку или нетворкинг.</div>`;
+        html += `<div class="warn gap"><b>Окно ${e.startMin-prev.endMin} мин</b>фудкорт, ярмарка или нетворкинг.</div>`;
       }
     }
     html += `<div class="prow">
