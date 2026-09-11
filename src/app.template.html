@@ -1,13 +1,15 @@
 <title>Куда пойти на G8</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tektur:wght@500;700;800&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
 <style>
 :root{
-  --bg:#EDEBE7; --surface:#FFFFFF; --surface-2:#F5F2EE; --sunk:#E3DFDA;
+  --display:"Tektur","Golos Text",system-ui,sans-serif;
+  --serif:"PT Serif",Georgia,"Times New Roman",serif;
+  --bg:#E9E6E9; --surface:#FFFFFF; --surface-2:#F4F1F3; --sunk:#DDD8DE; --check:rgba(126,110,140,.10);
   --ink:#15141A; --ink-2:#5B5765; --ink-3:#8C8796;
-  --line:#DAD5CE; --line-2:#C7C1B8;
-  --g8:#E22318; --lime:#CFE838; --lime-ink:#15141A;
+  --line:#D8D2DA; --line-2:#C5BEC9;
+  --g8:#E8291C; --lime:#CFE838; --lime-ink:#15141A; --pink:#E23C97; --plate:#15141A;
   --tint:13%; --tint-2:26%; --shadow:0 1px 2px rgba(20,18,25,.06),0 8px 24px rgba(20,18,25,.05);
   --v-boiler:#7E6E8C; --v-kotel:#9DAE1C; --v-simple:#E23C97;
   --v-vnutri:#2E7FD1; --v-gostin:#A08A16; --v-lector:#6C7480; --v-konstr:#D8331F;
@@ -16,10 +18,10 @@
 :root:not([data-theme="light"]) { }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#121214; --surface:#1B1B1F; --surface-2:#232329; --sunk:#0D0D0F;
+    --bg:#121214; --surface:#1B1B1F; --surface-2:#232329; --sunk:#0D0D0F; --check:rgba(216,242,63,.05);
     --ink:#F1EFEC; --ink-2:#A5A1AE; --ink-3:#7C7888;
     --line:#2E2E36; --line-2:#3C3C46;
-    --g8:#FF4436; --lime:#D8F23F;
+    --g8:#FF4436; --lime:#D8F23F; --pink:#FF63B4; --plate:#000000;
     --tint:22%; --tint-2:38%; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);
     --v-boiler:#B5A0C6; --v-kotel:#CBDF3E; --v-simple:#FF63B4;
     --v-vnutri:#5FA9F0; --v-gostin:#D2B62C; --v-lector:#A0A8B4; --v-konstr:#FF5A45;
@@ -27,10 +29,10 @@
   }
 }
 :root[data-theme="dark"]{
-  --bg:#121214; --surface:#1B1B1F; --surface-2:#232329; --sunk:#0D0D0F;
+  --bg:#121214; --surface:#1B1B1F; --surface-2:#232329; --sunk:#0D0D0F; --check:rgba(216,242,63,.05);
   --ink:#F1EFEC; --ink-2:#A5A1AE; --ink-3:#7C7888;
   --line:#2E2E36; --line-2:#3C3C46;
-  --g8:#FF4436; --lime:#D8F23F;
+  --g8:#FF4436; --lime:#D8F23F; --pink:#FF63B4; --plate:#000000;
   --tint:22%; --tint-2:38%; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);
   --v-boiler:#B5A0C6; --v-kotel:#CBDF3E; --v-simple:#FF63B4;
   --v-vnutri:#5FA9F0; --v-gostin:#D2B62C; --v-lector:#A0A8B4; --v-konstr:#FF5A45;
@@ -50,24 +52,31 @@ button{font:inherit; color:inherit; background:none; border:none; cursor:pointer
 .mono{font-family:"JetBrains Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
 
 /* ---------- header ---------- */
-header.top{padding-block:22px 14px; border-bottom:1px solid var(--line)}
+header.top{padding-block:22px 14px; border-bottom:1px solid var(--line); position:relative; overflow:hidden}
+header.top::before{content:""; position:absolute; inset:-40%; z-index:0; pointer-events:none;
+  background-image:repeating-conic-gradient(var(--check) 0 25%, transparent 0 50%);
+  background-size:64px 64px; transform:rotate(45deg)}
+header.top .wrap{position:relative; z-index:1}
 .brandrow{display:flex; align-items:flex-start; gap:16px; flex-wrap:wrap; justify-content:space-between}
 .g8mark{
-  font-family:"Unbounded",sans-serif; font-weight:800; font-size:13px; letter-spacing:.06em;
-  background:var(--g8); color:#fff; padding:4px 9px; border-radius:3px; display:inline-block;
+  font-family:var(--display); font-weight:700; font-size:13px; letter-spacing:.08em;
+  background:var(--g8); color:#fff; padding:5px 10px; display:inline-block;
+  clip-path:polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px);
 }
-h1{font-family:"Unbounded",sans-serif; font-weight:800; font-size:clamp(26px,5.4vw,44px); line-height:1.02; letter-spacing:-.015em; margin-top:10px}
+.g8ring{position:absolute; right:0; top:6px; width:74px; height:74px; opacity:.9; z-index:1}
+@media (max-width:700px){.g8ring{width:52px; height:52px; top:2px}}
+h1{font-family:var(--display); font-weight:800; font-size:clamp(27px,5.6vw,46px); line-height:1.0; letter-spacing:-.01em; margin-top:12px; text-transform:uppercase}
 h1 em{font-style:normal; color:var(--g8)}
 .subline{color:var(--ink-2); font-size:14px; margin-top:8px; max-width:62ch}
 .subline b{color:var(--ink); font-weight:600}
-.counts{display:flex; gap:18px; flex-wrap:wrap; margin-top:14px}
+.counts{display:flex; gap:18px; flex-wrap:wrap; margin-top:14px; padding-right:92px}
 .count{display:flex; flex-direction:column; gap:1px}
-.count .n{font-family:"Unbounded",sans-serif; font-weight:600; font-size:19px; line-height:1}
-.count .l{font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-3)}
+.count .n{font-family:var(--display); font-weight:700; font-size:19px; line-height:1}
+.count .l{font-family:var(--display); font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-3)}
 
 /* ---------- tabs ---------- */
 .tabs{display:flex; gap:4px; margin-top:18px; background:var(--sunk); padding:4px; border-radius:10px; width:fit-content; max-width:100%; flex-wrap:wrap}
-.tab{padding:7px 14px; border-radius:7px; font-weight:600; font-size:14px; color:var(--ink-2); white-space:nowrap}
+.tab{padding:8px 14px; border-radius:6px; font-family:var(--display); font-weight:500; font-size:12.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-2); white-space:nowrap}
 .tab[aria-selected="true"]{background:var(--surface); color:var(--ink); box-shadow:var(--shadow)}
 .tab .badge{display:inline-block; min-width:18px; padding:0 5px; margin-left:6px; border-radius:9px; background:var(--lime); color:var(--lime-ink); font-size:11px; font-weight:700; text-align:center}
 
@@ -97,9 +106,9 @@ select.sel{background:var(--surface); border:1px solid var(--line-2); border-rad
 .gridhead{display:grid; position:sticky; top:0; z-index:12; background:var(--surface-2); border-bottom:1px solid var(--line-2)}
 .gridhead .hcell{padding:9px 10px; border-left:1px solid var(--line); min-width:0}
 .gridhead .hcell:first-child{border-left:none; position:sticky; left:0; background:var(--surface-2); z-index:13}
-.hname{font-family:"Unbounded",sans-serif; font-weight:600; font-size:12.5px; letter-spacing:-.01em; line-height:1.2; display:flex; gap:7px; align-items:center}
+.hname{font-family:var(--display); font-weight:700; text-transform:uppercase; font-size:12.5px; letter-spacing:-.01em; line-height:1.2; display:flex; gap:7px; align-items:center}
 .hname .dot{width:10px; height:10px; border-radius:3px; background:var(--v); flex:none}
-.hplace{font-size:10.5px; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-3); margin-top:3px; padding-left:17px}
+.hplace{font-family:var(--display); font-size:9.5px; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-3); margin-top:3px; padding-left:17px}
 .gridbody{display:grid; position:relative}
 .gcol{position:relative; border-left:1px solid var(--line); min-width:0}
 .gcol.ruler{border-left:none; position:sticky; left:0; z-index:11; background:var(--surface)}
@@ -114,7 +123,7 @@ select.sel{background:var(--surface); border:1px solid var(--line-2); border-rad
 }
 .ev:hover{background:color-mix(in srgb,var(--v) var(--tint-2),var(--surface))}
 .ev .t{font-size:11px; font-weight:700; color:var(--ink-2); margin-right:5px}
-.ev .ti{font-size:12.5px; font-weight:600; line-height:1.2;
+.ev .ti{font-family:var(--serif); font-size:12.5px; font-weight:700; line-height:1.2;
   display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; overflow-wrap:break-word; hyphens:auto}
 .ev.break{background:repeating-linear-gradient(135deg,transparent,transparent 5px,color-mix(in srgb,var(--ink) 6%,transparent) 5px,color-mix(in srgb,var(--ink) 6%,transparent) 10px); border-left-color:var(--line-2)}
 .ev.break .ti{font-weight:500; color:var(--ink-3)}
@@ -136,14 +145,17 @@ select.sel{background:var(--surface); border:1px solid var(--line-2); border-rad
 .card:hover{border-color:var(--line-2); background:color-mix(in srgb,var(--v) 6%,var(--surface))}
 .card.picked{box-shadow:inset 0 0 0 2px var(--lime); border-color:var(--ink)}
 .card .body{flex:1; min-width:0}
-.meta{display:flex; gap:8px; align-items:center; flex-wrap:wrap; font-size:11px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.05em}
-.meta .vn{color:var(--v); font-weight:700}
-.card h3{font-size:15px; font-weight:600; line-height:1.25; margin-top:3px}
-.card .sp{font-size:13px; color:var(--ink-2); margin-top:4px}
+.meta{display:flex; gap:7px; align-items:center; flex-wrap:wrap; font-size:11px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.05em}
+.meta .vn{font-family:var(--display); color:var(--v); font-weight:700; letter-spacing:.03em}
+.seclabel{font-family:var(--display); font-weight:500; font-size:10px; letter-spacing:.06em;
+  background:var(--plate); color:var(--v); padding:2px 6px 3px;
+  clip-path:polygon(4px 0,100% 0,100% calc(100% - 4px),calc(100% - 4px) 100%,0 100%,0 4px)}
+.card h3{font-family:var(--serif); font-size:15.5px; font-weight:700; line-height:1.24; margin-top:4px}
+.card .sp{font-family:var(--serif); font-size:13.5px; color:var(--ink-2); margin-top:5px}
 .card .sp b{font-weight:600; color:var(--ink)}
 .star{flex:none; width:30px; height:30px; border-radius:8px; border:1px solid var(--line-2); display:grid; place-items:center; font-size:14px; color:var(--ink-3); background:var(--surface)}
 .card.picked .star, .row.picked .star{background:var(--lime); color:var(--lime-ink); border-color:var(--lime)}
-.kind{font-size:10px; font-weight:700; padding:1px 6px; border-radius:4px; letter-spacing:.05em; text-transform:uppercase}
+.kind{font-family:var(--display); font-size:9.5px; font-weight:500; padding:2px 6px; border-radius:3px; letter-spacing:.05em; text-transform:uppercase}
 .kind.disc{background:color-mix(in srgb,var(--v) 20%,var(--surface)); color:var(--ink-2)}
 .kind.special{background:var(--g8); color:#fff}
 
@@ -157,9 +169,9 @@ select.sel{background:var(--surface); border:1px solid var(--line-2); border-rad
   background:color-mix(in srgb,var(--g8) 12%,var(--surface)); border:1px solid color-mix(in srgb,var(--g8) 35%,var(--surface)); color:var(--ink)}
 .warn.walk{background:color-mix(in srgb,var(--lime) 22%,var(--surface)); border-color:color-mix(in srgb,var(--lime) 55%,var(--surface))}
 .empty{text-align:center; padding:56px 20px; color:var(--ink-2); max-width:46ch; margin:0 auto}
-.empty h2{font-family:"Unbounded",sans-serif; font-size:19px; margin-bottom:8px}
+.empty h2{font-family:var(--display); font-size:18px; text-transform:uppercase; margin-bottom:8px}
 .planbar{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:14px}
-.btn{border:1px solid var(--line-2); background:var(--surface); padding:7px 13px; border-radius:9px; font-size:13px; font-weight:600}
+.btn{border:1px solid var(--line-2); background:var(--surface); padding:8px 14px; border-radius:7px; font-family:var(--display); font-size:12px; font-weight:500; text-transform:uppercase; letter-spacing:.04em}
 .btn:hover{border-color:var(--ink)}
 .btn.primary{background:var(--ink); color:var(--bg); border-color:var(--ink)}
 
@@ -197,9 +209,9 @@ function buildBlocks(picks, scale){
       const wl = wrapText(ctx, (w.c==='red'?'⚠ ':w.c==='lime'?'→ ':'· ')+w.t, cw, `600 22px "Golos Text",system-ui,sans-serif`);
       blocks.push({type:'warn', ...w, lines:wl, h: wl.length*28 + 22});
     }
-    const titleLines = wrapText(ctx, e.title, cw, `600 ${30}px "Golos Text",system-ui,sans-serif`);
+    const titleLines = wrapText(ctx, e.title, cw, `700 30px "PT Serif",Georgia,serif`);
     const spText = e.speakers.map(s=>s.name).join(', ');
-    const spLines = spText ? wrapText(ctx, spText, cw, `400 24px "Golos Text",system-ui,sans-serif`).slice(0,2) : [];
+    const spLines = spText ? wrapText(ctx, spText, cw, `400 24px "PT Serif",Georgia,serif`).slice(0,2) : [];
     blocks.push({type:'ev', e, titleLines, spLines,
       h: 34 + titleLines.length*38 + (spLines.length ? spLines.length*30 + 8 : 0) + 26});
   });
@@ -227,16 +239,16 @@ function drawPages(picks, pageH, scale){
     c.textBaseline='alphabetic';
     if(pi===0){
       c.fillStyle='#E22318'; roundRect(c,P,58,168,46,7); c.fill();
-      c.fillStyle='#fff'; c.font=`700 22px "JetBrains Mono",monospace`; c.fillText('G8 · 2026', P+18, 88);
-      c.fillStyle='#15141A'; c.font=`800 52px "Golos Text",system-ui,sans-serif`;
-      c.fillText('Мой план на фестивале', P, 168);
+      c.fillStyle='#fff'; c.font=`700 21px "Tektur","Golos Text",sans-serif`; c.fillText('G8 · 2026', P+18, 88);
+      c.fillStyle='#15141A'; c.font=`800 50px "Tektur","Golos Text",sans-serif`;
+      c.fillText('МОЙ ПЛАН НА ФЕСТИВАЛЕ', P, 168);
       const last = picks[picks.length-1];
       c.fillStyle='#5B5765'; c.font=`400 25px "Golos Text",system-ui,sans-serif`;
       c.fillText(`${DATA.festival.dateLabel} · ${plural(picks.length,'событие','события','событий')} · с ${picks[0].start} до ${last.end||last.start}`, P, 212);
       c.fillStyle='#DAD5CE'; c.fillRect(P, 238, W-P*2, 1);
     } else {
-      c.fillStyle='#8C8796'; c.font=`600 21px "Golos Text",system-ui,sans-serif`;
-      c.fillText('Мой план на фестивале G8 — продолжение', P, 56);
+      c.fillStyle='#8C8796'; c.font=`500 20px "Tektur","Golos Text",sans-serif`;
+      c.fillText('МОЙ ПЛАН НА ФЕСТИВАЛЕ G8 — ПРОДОЛЖЕНИЕ', P, 56);
       c.fillStyle='#DAD5CE'; c.fillRect(P, 74, W-P*2, 1);
     }
     let y = top;
@@ -252,12 +264,12 @@ function drawPages(picks, pageH, scale){
       c.fillStyle=col; c.fillRect(P+TC-26, y+8, 5, b.h-24);
       c.fillStyle='#15141A'; c.font=`700 28px "JetBrains Mono",monospace`; c.fillText(e.start, P, y+34);
       c.fillStyle='#8C8796'; c.font=`500 21px "JetBrains Mono",monospace`; c.fillText(e.end||'', P, y+62);
-      c.fillStyle=col; c.font=`700 19px "Golos Text",system-ui,sans-serif`;
+      c.fillStyle=col; c.font=`700 18px "Tektur","Golos Text",sans-serif`;
       c.fillText((v.name+(e.section?' · '+e.section:'')).toUpperCase(), P+TC, y+26);
-      c.fillStyle='#15141A'; c.font=`600 30px "Golos Text",system-ui,sans-serif`;
+      c.fillStyle='#15141A'; c.font=`700 30px "PT Serif",Georgia,serif`;
       b.titleLines.forEach((l,i)=>c.fillText(l, P+TC, y+64+i*38));
       if(b.spLines.length){
-        c.fillStyle='#5B5765'; c.font=`400 24px "Golos Text",system-ui,sans-serif`;
+        c.fillStyle='#5B5765'; c.font=`400 24px "PT Serif",Georgia,serif`;
         b.spLines.forEach((l,i)=>c.fillText(l, P+TC, y+64+b.titleLines.length*38+16+i*30));
       }
       y += b.h;
@@ -331,21 +343,21 @@ async function showExport(dataUrl, blob, filename){
 }
 .sheet.open{display:block}
 .sheet .close{position:absolute; right:14px; top:14px; width:32px; height:32px; border-radius:8px; border:1px solid var(--line); display:grid; place-items:center}
-.sheet .vtag{display:inline-flex; align-items:center; gap:7px; font-size:12px; font-weight:700; color:var(--v); text-transform:uppercase; letter-spacing:.06em}
+.sheet .vtag{display:inline-flex; align-items:center; gap:7px; font-family:var(--display); font-size:11.5px; font-weight:700; color:var(--v); text-transform:uppercase; letter-spacing:.06em}
 .sheet .vtag .dot{width:10px; height:10px; border-radius:3px; background:var(--v)}
-.sheet h2{font-family:"Unbounded",sans-serif; font-weight:600; font-size:21px; line-height:1.18; margin-top:10px; letter-spacing:-.01em}
+.sheet h2{font-family:var(--serif); font-weight:700; font-size:23px; line-height:1.2; margin-top:10px}
 .sheet .when{font-family:"JetBrains Mono",monospace; font-size:14px; font-weight:700; margin-top:10px}
 .sheet .where{font-size:13px; color:var(--ink-2); margin-top:2px}
 .splist{margin-top:16px; display:flex; flex-direction:column; gap:10px; border-top:1px solid var(--line); padding-top:14px}
-.sp-item b{display:block; font-weight:600; font-size:14px}
-.sp-item span{font-size:12.5px; color:var(--ink-2)}
+.sp-item b{display:block; font-family:var(--serif); font-weight:700; font-size:14.5px}
+.sp-item span{font-family:var(--serif); font-size:13px; color:var(--ink-2)}
 .sheet .act{margin-top:18px; display:flex; gap:8px}
 .parallel{margin-top:18px; border-top:1px solid var(--line); padding-top:14px}
-.parallel h4{font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-3); margin:0 0 8px}
+.parallel h4{font-family:var(--display); font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-3); margin:0 0 8px}
 .pl{display:block; text-align:left; width:100%; padding:7px 0; border-top:1px solid var(--line); font-size:13px; color:var(--ink-2)}
 .pl:first-of-type{border-top:none}
-.pl b{color:var(--ink); font-weight:600}
-.pl .vn{color:var(--v); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.05em}
+.pl b{font-family:var(--serif); color:var(--ink); font-weight:700}
+.pl .vn{font-family:var(--display); color:var(--v); font-weight:700; font-size:10.5px; text-transform:uppercase; letter-spacing:.05em}
 
 footer{border-top:1px solid var(--line); margin-top:40px; padding-block:22px 40px; color:var(--ink-3); font-size:12.5px}
 footer a{color:var(--ink-2)}
@@ -384,6 +396,16 @@ main{padding-bottom:30px}
   <div class="wrap">
     <div class="brandrow">
       <div>
+        <svg class="g8ring" viewBox="0 0 100 100" aria-hidden="true">
+          <g fill="var(--g8)">
+            <rect x="42" y="0" width="16" height="16"/><rect x="42" y="84" width="16" height="16"/>
+            <rect x="0" y="42" width="16" height="16"/><rect x="84" y="42" width="16" height="16"/>
+            <rect x="12" y="12" width="16" height="16" transform="rotate(45 20 20)"/>
+            <rect x="72" y="12" width="16" height="16" transform="rotate(45 80 20)"/>
+            <rect x="12" y="72" width="16" height="16" transform="rotate(45 20 80)"/>
+            <rect x="72" y="72" width="16" height="16" transform="rotate(45 80 80)"/>
+          </g>
+        </svg>
         <span class="g8mark">G8 · 2026</span>
         <h1>Куда пойти<br><em>на фестивале</em></h1>
         <p class="subline" id="subline"></p>
@@ -604,7 +626,7 @@ function cardHTML(e){
     <h3 style="font-weight:500;color:var(--ink-3)">${esc(e.title)}</h3></div></div>`;
   return `<button class="card${state.plan.has(e.id)?' picked':''}" data-ev="${e.id}" style="--v:${VCOLOR(e.venue)}">
     <div class="body">
-      <div class="meta"><span class="vn">${esc(v.name)}</span>${e.section?`<span>${esc(e.section)}</span>`:''}${kind}<span class="mono">${e.start}–${e.end||''}</span></div>
+      <div class="meta"><span class="vn">${esc(v.name)}</span>${e.section?`<span class="seclabel">${esc(e.section)}</span>`:''}${kind}<span class="mono">${e.start}–${e.end||''}</span></div>
       <h3>${esc(e.title)}</h3>${sp}
     </div>
     <span class="star" aria-hidden="true">${state.plan.has(e.id)?'★':'☆'}</span>
@@ -692,9 +714,9 @@ function buildBlocks(picks, scale){
       const wl = wrapText(ctx, (w.c==='red'?'⚠ ':w.c==='lime'?'→ ':'· ')+w.t, cw, `600 22px "Golos Text",system-ui,sans-serif`);
       blocks.push({type:'warn', ...w, lines:wl, h: wl.length*28 + 22});
     }
-    const titleLines = wrapText(ctx, e.title, cw, `600 ${30}px "Golos Text",system-ui,sans-serif`);
+    const titleLines = wrapText(ctx, e.title, cw, `700 30px "PT Serif",Georgia,serif`);
     const spText = e.speakers.map(s=>s.name).join(', ');
-    const spLines = spText ? wrapText(ctx, spText, cw, `400 24px "Golos Text",system-ui,sans-serif`).slice(0,2) : [];
+    const spLines = spText ? wrapText(ctx, spText, cw, `400 24px "PT Serif",Georgia,serif`).slice(0,2) : [];
     blocks.push({type:'ev', e, titleLines, spLines,
       h: 34 + titleLines.length*38 + (spLines.length ? spLines.length*30 + 8 : 0) + 26});
   });
@@ -722,16 +744,16 @@ function drawPages(picks, pageH, scale){
     c.textBaseline='alphabetic';
     if(pi===0){
       c.fillStyle='#E22318'; roundRect(c,P,58,168,46,7); c.fill();
-      c.fillStyle='#fff'; c.font=`700 22px "JetBrains Mono",monospace`; c.fillText('G8 · 2026', P+18, 88);
-      c.fillStyle='#15141A'; c.font=`800 52px "Golos Text",system-ui,sans-serif`;
-      c.fillText('Мой план на фестивале', P, 168);
+      c.fillStyle='#fff'; c.font=`700 21px "Tektur","Golos Text",sans-serif`; c.fillText('G8 · 2026', P+18, 88);
+      c.fillStyle='#15141A'; c.font=`800 50px "Tektur","Golos Text",sans-serif`;
+      c.fillText('МОЙ ПЛАН НА ФЕСТИВАЛЕ', P, 168);
       const last = picks[picks.length-1];
       c.fillStyle='#5B5765'; c.font=`400 25px "Golos Text",system-ui,sans-serif`;
       c.fillText(`${DATA.festival.dateLabel} · ${plural(picks.length,'событие','события','событий')} · с ${picks[0].start} до ${last.end||last.start}`, P, 212);
       c.fillStyle='#DAD5CE'; c.fillRect(P, 238, W-P*2, 1);
     } else {
-      c.fillStyle='#8C8796'; c.font=`600 21px "Golos Text",system-ui,sans-serif`;
-      c.fillText('Мой план на фестивале G8 — продолжение', P, 56);
+      c.fillStyle='#8C8796'; c.font=`500 20px "Tektur","Golos Text",sans-serif`;
+      c.fillText('МОЙ ПЛАН НА ФЕСТИВАЛЕ G8 — ПРОДОЛЖЕНИЕ', P, 56);
       c.fillStyle='#DAD5CE'; c.fillRect(P, 74, W-P*2, 1);
     }
     let y = top;
@@ -747,12 +769,12 @@ function drawPages(picks, pageH, scale){
       c.fillStyle=col; c.fillRect(P+TC-26, y+8, 5, b.h-24);
       c.fillStyle='#15141A'; c.font=`700 28px "JetBrains Mono",monospace`; c.fillText(e.start, P, y+34);
       c.fillStyle='#8C8796'; c.font=`500 21px "JetBrains Mono",monospace`; c.fillText(e.end||'', P, y+62);
-      c.fillStyle=col; c.font=`700 19px "Golos Text",system-ui,sans-serif`;
+      c.fillStyle=col; c.font=`700 18px "Tektur","Golos Text",sans-serif`;
       c.fillText((v.name+(e.section?' · '+e.section:'')).toUpperCase(), P+TC, y+26);
-      c.fillStyle='#15141A'; c.font=`600 30px "Golos Text",system-ui,sans-serif`;
+      c.fillStyle='#15141A'; c.font=`700 30px "PT Serif",Georgia,serif`;
       b.titleLines.forEach((l,i)=>c.fillText(l, P+TC, y+64+i*38));
       if(b.spLines.length){
-        c.fillStyle='#5B5765'; c.font=`400 24px "Golos Text",system-ui,sans-serif`;
+        c.fillStyle='#5B5765'; c.font=`400 24px "PT Serif",Georgia,serif`;
         b.spLines.forEach((l,i)=>c.fillText(l, P+TC, y+64+b.titleLines.length*38+16+i*30));
       }
       y += b.h;
