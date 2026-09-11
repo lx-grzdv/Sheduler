@@ -1,0 +1,6462 @@
+{
+ "source": {
+  "festival": "G8 — фестиваль креативных индустрий",
+  "edition": "Креофудкорт",
+  "date": "2026-09-11",
+  "site": "https://g8.art/ru/",
+  "organizer": "REDKEDS",
+  "extractedFrom": "G8_2026_PROGRAM.pdf — официальная программа, 16 полос без текстового слоя",
+  "navigator": "https://claude.ai/code/artifact/47e406bb-ca64-457e-8d17-7e3b6ffff889",
+  "slugAlgorithm": "apps/calendar-web/src/app/utils/slugify.ts · slugifyEntityKey"
+ },
+ "halls": [
+  {
+   "name": "Бойлерная",
+   "place": "Хлебозавод",
+   "venueKey": "хлебозавод №9"
+  },
+  {
+   "name": "Котельная",
+   "place": "Хлебозавод",
+   "venueKey": "хлебозавод №9"
+  },
+  {
+   "name": "Simple Music",
+   "place": "Хлебозавод",
+   "venueKey": "хлебозавод №9"
+  },
+  {
+   "name": "Центр Внутри",
+   "place": "Хлебозавод",
+   "venueKey": "хлебозавод №9"
+  },
+  {
+   "name": "Гостиная",
+   "place": "Хлебозавод",
+   "venueKey": "хлебозавод №9"
+  },
+  {
+   "name": "Лекторий",
+   "place": "Дизайн-завод",
+   "venueKey": "дизайн-завод"
+  },
+  {
+   "name": "Konstruct Space",
+   "place": "Дизайн-завод",
+   "venueKey": "дизайн-завод"
+  }
+ ],
+ "tracks": [
+  {
+   "name": "Маркетинг",
+   "curator": null,
+   "hall": "Бойлерная"
+  },
+  {
+   "name": "Дизайн",
+   "curator": "Митя Осадчук",
+   "hall": "Бойлерная"
+  },
+  {
+   "name": "Реклама",
+   "curator": "Денис Лапшинов",
+   "hall": "Бойлерная"
+  },
+  {
+   "name": "ИИ",
+   "curator": "Сергей Заволоко",
+   "hall": "Бойлерная"
+  },
+  {
+   "name": "Архитектура",
+   "curator": "Артем Укропов",
+   "hall": "Центр Внутри"
+  },
+  {
+   "name": "Медиаарт",
+   "curator": "Анна Смирнова",
+   "hall": "Центр Внутри"
+  },
+  {
+   "name": "Компьютерная графика",
+   "curator": "Влад Ткачук",
+   "hall": "Центр Внутри"
+  },
+  {
+   "name": "Дизайн интерьера",
+   "curator": "Степан Бугаев",
+   "hall": "Центр Внутри"
+  },
+  {
+   "name": "Предметный дизайн",
+   "curator": "Кира Полянина",
+   "hall": "Центр Внутри"
+  },
+  {
+   "name": "Медиа",
+   "curator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная"
+  },
+  {
+   "name": "Кино",
+   "curator": "Катя Норштейн",
+   "hall": "Котельная"
+  },
+  {
+   "name": "Издательское дело",
+   "curator": "Кирилл Шелест",
+   "hall": "Котельная"
+  },
+  {
+   "name": "Стендап",
+   "curator": "Арсений Ашомко",
+   "hall": "Котельная"
+  },
+  {
+   "name": "Веб",
+   "curator": "Денис Ломов",
+   "hall": "Simple Music"
+  },
+  {
+   "name": "Образование",
+   "curator": "Наташа Климчук",
+   "hall": "Simple Music"
+  },
+  {
+   "name": "Музыка",
+   "curator": "S&P Records",
+   "hall": "Simple Music"
+  },
+  {
+   "name": "Бюро Глагол",
+   "curator": null,
+   "hall": "Simple Music"
+  },
+  {
+   "name": "Блогеры",
+   "curator": "Юлия Белая",
+   "hall": "Simple Music"
+  },
+  {
+   "name": "REDDAY",
+   "curator": null,
+   "hall": "Гостиная"
+  },
+  {
+   "name": "Big Picture",
+   "curator": null,
+   "hall": "Лекторий"
+  },
+  {
+   "name": "Клуб",
+   "curator": null,
+   "hall": "Лекторий"
+  },
+  {
+   "name": "Konstruct и Слой",
+   "curator": null,
+   "hall": "Konstruct Space"
+  }
+ ],
+ "sessions": [
+  {
+   "sessionId": "g8-2026-e001",
+   "date": "2026-09-11",
+   "start": "08:30",
+   "end": "09:15",
+   "title": "Сбор и регистрация гостей",
+   "kind": "service",
+   "track": "",
+   "trackCurator": "",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [],
+   "speakerSlugs": [],
+   "speakerNames": []
+  },
+  {
+   "sessionId": "g8-2026-e002",
+   "date": "2026-09-11",
+   "start": "09:15",
+   "end": "09:30",
+   "title": "Открытие фестиваля. Японские барабанщицы TAIKO IN-SPIRATION",
+   "kind": "special",
+   "track": "",
+   "trackCurator": "",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [],
+   "speakerSlugs": [],
+   "speakerNames": []
+  },
+  {
+   "sessionId": "g8-2026-e003",
+   "date": "2026-09-11",
+   "start": "09:30",
+   "end": "09:45",
+   "title": "Приветственное слово",
+   "kind": "talk",
+   "track": "",
+   "trackCurator": "",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "виталий быков",
+    "гюльнара акамова"
+   ],
+   "speakerSlugs": [
+    "vitalii-bykov",
+    "gyulnara-akamova"
+   ],
+   "speakerNames": [
+    "Виталий Быков",
+    "Гюльнара Акамова"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e004",
+   "date": "2026-09-11",
+   "start": "09:45",
+   "end": "10:00",
+   "title": "Итоги фестивального сезона 2026",
+   "kind": "talk",
+   "track": "Маркетинг",
+   "trackCurator": "",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "юрий субботин"
+   ],
+   "speakerSlugs": [
+    "yurii-subbotin"
+   ],
+   "speakerNames": [
+    "Юрий Субботин"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e005",
+   "date": "2026-09-11",
+   "start": "10:00",
+   "end": "10:20",
+   "title": "7 смертных грехов рекламщика",
+   "kind": "talk",
+   "track": "Маркетинг",
+   "trackCurator": "",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "диана халилова"
+   ],
+   "speakerSlugs": [
+    "diana-halilova"
+   ],
+   "speakerNames": [
+    "Диана Халилова"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e006",
+   "date": "2026-09-11",
+   "start": "10:20",
+   "end": "10:40",
+   "title": "Кейс: «AI x Creative x VP production: как использовать triple power»",
+   "kind": "talk",
+   "track": "Маркетинг",
+   "trackCurator": "",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "лиза тринич-афанасьева"
+   ],
+   "speakerSlugs": [
+    "liza-trinich-afanaseva"
+   ],
+   "speakerNames": [
+    "Лиза Тринич-Афанасьева"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e007",
+   "date": "2026-09-11",
+   "start": "10:40",
+   "end": "11:00",
+   "title": "Маркетинга больше нет?",
+   "kind": "talk",
+   "track": "Маркетинг",
+   "trackCurator": "",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "иван смелянский"
+   ],
+   "speakerSlugs": [
+    "ivan-smelyanskii"
+   ],
+   "speakerNames": [
+    "Иван Смелянский"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e009",
+   "date": "2026-09-11",
+   "start": "11:20",
+   "end": "11:40",
+   "title": "Фестивальный дизайн или дизайн фестиваля",
+   "kind": "talk",
+   "track": "Дизайн",
+   "trackCurator": "Митя Осадчук",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "алексей пушкарёв",
+    "борис шилин"
+   ],
+   "speakerSlugs": [
+    "aleksei-pushkarev",
+    "boris-shilin"
+   ],
+   "speakerNames": [
+    "Алексей Пушкарёв",
+    "Борис Шилин"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e010",
+   "date": "2026-09-11",
+   "start": "11:40",
+   "end": "12:00",
+   "title": "Концептуальный мерч. Или нет",
+   "kind": "talk",
+   "track": "Дизайн",
+   "trackCurator": "Митя Осадчук",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "гульнара туктарова",
+    "виктория василевская"
+   ],
+   "speakerSlugs": [
+    "gulnara-tuktarova",
+    "viktoriya-vasilevskaya"
+   ],
+   "speakerNames": [
+    "Гульнара Туктарова",
+    "Виктория Василевская"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e011",
+   "date": "2026-09-11",
+   "start": "12:00",
+   "end": "12:20",
+   "title": "ИИ в крафте или против крафта",
+   "kind": "talk",
+   "track": "Дизайн",
+   "trackCurator": "Митя Осадчук",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "олег баринбойм",
+    "дмитрий костюченко"
+   ],
+   "speakerSlugs": [
+    "oleg-barinboim",
+    "dmitrii-kostyuchenko"
+   ],
+   "speakerNames": [
+    "Олег Баринбойм",
+    "Дмитрий Костюченко"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e012",
+   "date": "2026-09-11",
+   "start": "12:20",
+   "end": "12:40",
+   "title": "В крупных агентствах всё хорошо, но будет еще хуже",
+   "kind": "talk",
+   "track": "Дизайн",
+   "trackCurator": "Митя Осадчук",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "саша ковальский",
+    "женя ефанов"
+   ],
+   "speakerSlugs": [
+    "sasha-kovalskii",
+    "zhenya-efanov"
+   ],
+   "speakerNames": [
+    "Саша Ковальский",
+    "Женя Ефанов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e013",
+   "date": "2026-09-11",
+   "start": "12:40",
+   "end": "13:00",
+   "title": "Как молодые агентства откусывают рынок",
+   "kind": "talk",
+   "track": "Дизайн",
+   "trackCurator": "Митя Осадчук",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "мария ищенко",
+    "антон черногоров"
+   ],
+   "speakerSlugs": [
+    "mariya-ischenko",
+    "anton-chernogorov"
+   ],
+   "speakerNames": [
+    "Мария Ищенко",
+    "Антон Черногоров"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e014",
+   "date": "2026-09-11",
+   "start": "13:00",
+   "end": "13:30",
+   "title": "Дискуссия: каким дизайн-командам вообще есть место в 2027 году, если в будущее возьмут не всех?",
+   "kind": "disc",
+   "track": "Дизайн",
+   "trackCurator": "Митя Осадчук",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "анастасия ступина",
+    "андрей ильин",
+    "евгения новокрещенова",
+    "игорь фроловский",
+    "митя осадчук"
+   ],
+   "speakerSlugs": [
+    "anastasiya-stupina",
+    "andrei-ilin",
+    "evgeniya-novokreschenova",
+    "igor-frolovskii",
+    "mitya-osadchuk"
+   ],
+   "speakerNames": [
+    "Анастасия Ступина",
+    "Андрей Ильин",
+    "Евгения Новокрещенова",
+    "Игорь Фроловский",
+    "Митя Осадчук"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e016",
+   "date": "2026-09-11",
+   "start": "13:50",
+   "end": "14:10",
+   "title": "Как найти и обезвредить Нарцисса",
+   "kind": "talk",
+   "track": "Реклама",
+   "trackCurator": "Денис Лапшинов",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "денис лапшинов"
+   ],
+   "speakerSlugs": [
+    "denis-lapshinov"
+   ],
+   "speakerNames": [
+    "Денис Лапшинов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e017",
+   "date": "2026-09-11",
+   "start": "14:10",
+   "end": "14:30",
+   "title": "In-house of the dragon: темная сторона семейных отношений",
+   "kind": "talk",
+   "track": "Реклама",
+   "trackCurator": "Денис Лапшинов",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "андрей дансков"
+   ],
+   "speakerSlugs": [
+    "andrei-danskov"
+   ],
+   "speakerNames": [
+    "Андрей Дансков"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e018",
+   "date": "2026-09-11",
+   "start": "14:30",
+   "end": "14:50",
+   "title": "Можно ли позволить себе скучную рекламу в кризис?",
+   "kind": "talk",
+   "track": "Реклама",
+   "trackCurator": "Денис Лапшинов",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "артём царегородцев"
+   ],
+   "speakerSlugs": [
+    "artem-tsaregorodtsev"
+   ],
+   "speakerNames": [
+    "Артём Царегородцев"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e020",
+   "date": "2026-09-11",
+   "start": "15:10",
+   "end": "15:30",
+   "title": "Каллиграфия — искусство прошлого и будущего",
+   "kind": "special",
+   "track": "Реклама",
+   "trackCurator": "Денис Лапшинов",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "покрас лампас"
+   ],
+   "speakerSlugs": [
+    "pokras-lampas"
+   ],
+   "speakerNames": [
+    "Покрас Лампас"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e022",
+   "date": "2026-09-11",
+   "start": "15:50",
+   "end": "16:10",
+   "title": "Выживут только Осьминоги с усиленным интеллектом",
+   "kind": "talk",
+   "track": "ИИ",
+   "trackCurator": "Сергей Заволоко",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "ольга зуева"
+   ],
+   "speakerSlugs": [
+    "olga-zueva"
+   ],
+   "speakerNames": [
+    "Ольга Зуева"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e023",
+   "date": "2026-09-11",
+   "start": "16:10",
+   "end": "16:30",
+   "title": "Как (не) продать душу нейросети",
+   "kind": "talk",
+   "track": "ИИ",
+   "trackCurator": "Сергей Заволоко",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "кир павлюкевич"
+   ],
+   "speakerSlugs": [
+    "kir-pavlyukevich"
+   ],
+   "speakerNames": [
+    "Кир Павлюкевич"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e024",
+   "date": "2026-09-11",
+   "start": "16:30",
+   "end": "16:50",
+   "title": "Мог ли мир, в котором мы живём, выглядеть иначе?",
+   "kind": "talk",
+   "track": "ИИ",
+   "trackCurator": "Сергей Заволоко",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "рома цикада"
+   ],
+   "speakerSlugs": [
+    "roma-tsikada"
+   ],
+   "speakerNames": [
+    "Рома Цикада"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e025",
+   "date": "2026-09-11",
+   "start": "16:50",
+   "end": "17:10",
+   "title": "Художник воюет с микроволновкой, пока рынок ест деда",
+   "kind": "talk",
+   "track": "ИИ",
+   "trackCurator": "Сергей Заволоко",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "арсений попов"
+   ],
+   "speakerSlugs": [
+    "arsenii-popov"
+   ],
+   "speakerNames": [
+    "Арсений Попов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e026",
+   "date": "2026-09-11",
+   "start": "17:10",
+   "end": "17:30",
+   "title": "Операционка или творчество: кто заберёт работу креатора",
+   "kind": "talk",
+   "track": "ИИ",
+   "trackCurator": "Сергей Заволоко",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "артем полянский"
+   ],
+   "speakerSlugs": [
+    "artem-polyanskii"
+   ],
+   "speakerNames": [
+    "Артем Полянский"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e027",
+   "date": "2026-09-11",
+   "start": "17:30",
+   "end": "19:00",
+   "title": "Дискуссия: мы автоматизировали скучную работу, так почему теперь автоматизируем интересную",
+   "kind": "disc",
+   "track": "ИИ",
+   "trackCurator": "Сергей Заволоко",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "арсений попов",
+    "александр кадыкеев",
+    "александр доброкотов",
+    "миша петрик",
+    "олег юсупов"
+   ],
+   "speakerSlugs": [
+    "arsenii-popov",
+    "aleksandr-kadykeev",
+    "aleksandr-dobrokotov",
+    "misha-petrik",
+    "oleg-yusupov"
+   ],
+   "speakerNames": [
+    "Арсений Попов",
+    "Александр Кадыкеев",
+    "Александр Доброкотов",
+    "Миша Петрик",
+    "Олег Юсупов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e028",
+   "date": "2026-09-11",
+   "start": "19:00",
+   "end": null,
+   "title": "ЦЕРЕМОНИЯ НАГРАЖДЕНИЯ (вход строго до 19:10)",
+   "kind": "special",
+   "track": "ИИ",
+   "trackCurator": "Сергей Заволоко",
+   "hall": "Бойлерная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [],
+   "speakerSlugs": [],
+   "speakerNames": []
+  },
+  {
+   "sessionId": "g8-2026-e029",
+   "date": "2026-09-11",
+   "start": "11:00",
+   "end": "12:30",
+   "title": "Околоархитектурный квиз",
+   "kind": "special",
+   "track": "Архитектура",
+   "trackCurator": "Артем Укропов",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [],
+   "speakerSlugs": [],
+   "speakerNames": []
+  },
+  {
+   "sessionId": "g8-2026-e031",
+   "date": "2026-09-11",
+   "start": "13:00",
+   "end": "13:20",
+   "title": "Заброшенная симуляция: оптимизация искусства",
+   "kind": "talk",
+   "track": "Медиаарт",
+   "trackCurator": "Анна Смирнова",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "solar w (алексей ефремов)"
+   ],
+   "speakerSlugs": [
+    "solar-w-aleksei-efremov"
+   ],
+   "speakerNames": [
+    "SOLAR W (Алексей Ефремов)"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e032",
+   "date": "2026-09-11",
+   "start": "13:20",
+   "end": "13:40",
+   "title": "Как стать медиаартистом: образовательные маршруты в России",
+   "kind": "talk",
+   "track": "Медиаарт",
+   "trackCurator": "Анна Смирнова",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "екатерина беляева"
+   ],
+   "speakerSlugs": [
+    "ekaterina-belyaeva"
+   ],
+   "speakerNames": [
+    "Екатерина Беляева"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e033",
+   "date": "2026-09-11",
+   "start": "13:40",
+   "end": "14:20",
+   "title": "Дискуссия: Multimedia perestroyka. Рынок мультимедиа в эпоху AGI: что происходит и что нас ждёт?",
+   "kind": "disc",
+   "track": "Медиаарт",
+   "trackCurator": "Анна Смирнова",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "анна смирнова",
+    "максим козлов",
+    "александр ус",
+    "андрей тубольцев",
+    "иван нефёдкин"
+   ],
+   "speakerSlugs": [
+    "anna-smirnova",
+    "maksim-kozlov",
+    "aleksandr-us",
+    "andrei-tuboltsev",
+    "ivan-nefedkin"
+   ],
+   "speakerNames": [
+    "Анна Смирнова",
+    "Максим Козлов",
+    "Александр Ус",
+    "Андрей Тубольцев",
+    "Иван Нефёдкин"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e035",
+   "date": "2026-09-11",
+   "start": "14:40",
+   "end": "15:00",
+   "title": "Что делать, если денег стало меньше?",
+   "kind": "talk",
+   "track": "Компьютерная графика",
+   "trackCurator": "Влад Ткачук",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "вадим белов"
+   ],
+   "speakerSlugs": [
+    "vadim-belov"
+   ],
+   "speakerNames": [
+    "Вадим Белов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e036",
+   "date": "2026-09-11",
+   "start": "15:00",
+   "end": "15:20",
+   "title": "Как мы в Жи-Ши делаем проекты для души",
+   "kind": "talk",
+   "track": "Компьютерная графика",
+   "trackCurator": "Влад Ткачук",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "артём щербаков"
+   ],
+   "speakerSlugs": [
+    "artem-scherbakov"
+   ],
+   "speakerNames": [
+    "Артём Щербаков"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e037",
+   "date": "2026-09-11",
+   "start": "15:20",
+   "end": "15:40",
+   "title": "Снять нельзя сгенерировать: где поставить запятую в современном продакшне",
+   "kind": "talk",
+   "track": "Компьютерная графика",
+   "trackCurator": "Влад Ткачук",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "эрадж нидоев",
+    "анастасия тулумджан"
+   ],
+   "speakerSlugs": [
+    "eradzh-nidoev",
+    "anastasiya-tulumdzhan"
+   ],
+   "speakerNames": [
+    "Эрадж Нидоев",
+    "Анастасия Тулумджан"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e038",
+   "date": "2026-09-11",
+   "start": "15:40",
+   "end": "16:00",
+   "title": "Режиссерский код. Вайбкод в продакшне: автоматизация на реальных задачах",
+   "kind": "talk",
+   "track": "Компьютерная графика",
+   "trackCurator": "Влад Ткачук",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "женя редкэпп"
+   ],
+   "speakerSlugs": [
+    "zhenya-redkepp"
+   ],
+   "speakerNames": [
+    "Женя Редкэпп"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e039",
+   "date": "2026-09-11",
+   "start": "16:00",
+   "end": "16:20",
+   "title": "Красивую картинку теперь делает каждый. Что дальше?",
+   "kind": "talk",
+   "track": "Компьютерная графика",
+   "trackCurator": "Влад Ткачук",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "святослав деньгин",
+    "александра дубинина"
+   ],
+   "speakerSlugs": [
+    "svyatoslav-dengin",
+    "aleksandra-dubinina"
+   ],
+   "speakerNames": [
+    "Святослав Деньгин",
+    "Александра Дубинина"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e041",
+   "date": "2026-09-11",
+   "start": "16:40",
+   "end": "17:10",
+   "title": "Дискуссия: Дизайнер уходит — что остается?",
+   "kind": "disc",
+   "track": "Дизайн интерьера",
+   "trackCurator": "Степан Бугаев",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "степан бугаев",
+    "сергей трегубов",
+    "лиза жолтая"
+   ],
+   "speakerSlugs": [
+    "stepan-bugaev",
+    "sergei-tregubov",
+    "liza-zholtaya"
+   ],
+   "speakerNames": [
+    "Степан Бугаев",
+    "Сергей Трегубов",
+    "Лиза Жолтая"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e042",
+   "date": "2026-09-11",
+   "start": "17:10",
+   "end": "17:30",
+   "title": "Что останется после дизайнера",
+   "kind": "talk",
+   "track": "Дизайн интерьера",
+   "trackCurator": "Степан Бугаев",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "степан бугаев"
+   ],
+   "speakerSlugs": [
+    "stepan-bugaev"
+   ],
+   "speakerNames": [
+    "Степан Бугаев"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e043",
+   "date": "2026-09-11",
+   "start": "17:30",
+   "end": "17:50",
+   "title": "ПРОДУКТ. Больше, чем дизайн",
+   "kind": "talk",
+   "track": "Дизайн интерьера",
+   "trackCurator": "Степан Бугаев",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "лиза жолтая"
+   ],
+   "speakerSlugs": [
+    "liza-zholtaya"
+   ],
+   "speakerNames": [
+    "Лиза Жолтая"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e044",
+   "date": "2026-09-11",
+   "start": "17:50",
+   "end": "18:10",
+   "title": "ПОСЛЕ WOW. Новая глава дизайна. Когда главным результатом дизайна становится человеческий опыт",
+   "kind": "talk",
+   "track": "Дизайн интерьера",
+   "trackCurator": "Степан Бугаев",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "сергей трегубов"
+   ],
+   "speakerSlugs": [
+    "sergei-tregubov"
+   ],
+   "speakerNames": [
+    "Сергей Трегубов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e046",
+   "date": "2026-09-11",
+   "start": "18:30",
+   "end": "18:40",
+   "title": "Предметный дизайн сегодня: карта индустрии в России и в мире",
+   "kind": "talk",
+   "track": "Предметный дизайн",
+   "trackCurator": "Кира Полянина",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "татьяна белохина"
+   ],
+   "speakerSlugs": [
+    "tatyana-belohina"
+   ],
+   "speakerNames": [
+    "Татьяна Белохина"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e047",
+   "date": "2026-09-11",
+   "start": "18:40",
+   "end": "18:50",
+   "title": "От идеи к объекту: как рождается предмет",
+   "kind": "talk",
+   "track": "Предметный дизайн",
+   "trackCurator": "Кира Полянина",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "дима логинов"
+   ],
+   "speakerSlugs": [
+    "dima-loginov"
+   ],
+   "speakerNames": [
+    "Дима Логинов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e048",
+   "date": "2026-09-11",
+   "start": "18:50",
+   "end": "19:00",
+   "title": "Когда предмет становится пространством: как создаётся интерьерная история",
+   "kind": "talk",
+   "track": "Предметный дизайн",
+   "trackCurator": "Кира Полянина",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "ксения караваева",
+    "мурат гукетлов"
+   ],
+   "speakerSlugs": [
+    "kseniya-karavaeva",
+    "murat-guketlov"
+   ],
+   "speakerNames": [
+    "Ксения Караваева",
+    "Мурат Гукетлов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e049",
+   "date": "2026-09-11",
+   "start": "19:00",
+   "end": "20:00",
+   "title": "Дискуссия: Кто и как создаёт новую сцену предметного дизайна в России?",
+   "kind": "disc",
+   "track": "Предметный дизайн",
+   "trackCurator": "Кира Полянина",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "кира полянина",
+    "дима логинов",
+    "татьяна белохина",
+    "ксения караваева",
+    "мурат гукетлов"
+   ],
+   "speakerSlugs": [
+    "kira-polyanina",
+    "dima-loginov",
+    "tatyana-belohina",
+    "kseniya-karavaeva",
+    "murat-guketlov"
+   ],
+   "speakerNames": [
+    "Кира Полянина",
+    "Дима Логинов",
+    "Татьяна Белохина",
+    "Ксения Караваева",
+    "Мурат Гукетлов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e051",
+   "date": "2026-09-11",
+   "start": "20:20",
+   "end": null,
+   "title": "КИНОПОКАЗ GIFF",
+   "kind": "special",
+   "track": "Предметный дизайн",
+   "trackCurator": "Кира Полянина",
+   "hall": "Центр Внутри",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [],
+   "speakerSlugs": [],
+   "speakerNames": []
+  },
+  {
+   "sessionId": "g8-2026-e052",
+   "date": "2026-09-11",
+   "start": "10:40",
+   "end": "11:00",
+   "title": "5 стрёмных решений, которые мне пришлось принять как главреду медиа за последний год",
+   "kind": "talk",
+   "track": "Медиа",
+   "trackCurator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "оксана запевалова"
+   ],
+   "speakerSlugs": [
+    "oksana-zapevalova"
+   ],
+   "speakerNames": [
+    "Оксана Запевалова"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e053",
+   "date": "2026-09-11",
+   "start": "11:00",
+   "end": "11:20",
+   "title": "Заткнись и забери мои деньги: почему спокойствие стало главным товаром",
+   "kind": "talk",
+   "track": "Медиа",
+   "trackCurator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "татьяна эшназарова"
+   ],
+   "speakerSlugs": [
+    "tatyana-eshnazarova"
+   ],
+   "speakerNames": [
+    "Татьяна Эшназарова"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e054",
+   "date": "2026-09-11",
+   "start": "11:20",
+   "end": "11:40",
+   "title": "Зачем и кому нужны коллаборации? И как их делать соответственно",
+   "kind": "talk",
+   "track": "Медиа",
+   "trackCurator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "дарья решке"
+   ],
+   "speakerSlugs": [
+    "darya-reshke"
+   ],
+   "speakerNames": [
+    "Дарья Решке"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e055",
+   "date": "2026-09-11",
+   "start": "11:40",
+   "end": "12:00",
+   "title": "Дикий диджитал для дикого эфира",
+   "kind": "talk",
+   "track": "Медиа",
+   "trackCurator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "дарья переходюк"
+   ],
+   "speakerSlugs": [
+    "darya-perehodyuk"
+   ],
+   "speakerNames": [
+    "Дарья Переходюк"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e057",
+   "date": "2026-09-11",
+   "start": "12:20",
+   "end": "12:40",
+   "title": "ЧМ-2026 в главных сюжетах Спортса\"",
+   "kind": "talk",
+   "track": "Медиа",
+   "trackCurator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "влад воронин"
+   ],
+   "speakerSlugs": [
+    "vlad-voronin"
+   ],
+   "speakerNames": [
+    "Влад Воронин"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e058",
+   "date": "2026-09-11",
+   "start": "12:40",
+   "end": "13:00",
+   "title": "Презентация нового СМИ",
+   "kind": "talk",
+   "track": "Медиа",
+   "trackCurator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "александр сокольников"
+   ],
+   "speakerSlugs": [
+    "aleksandr-sokolnikov"
+   ],
+   "speakerNames": [
+    "Александр Сокольников"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e059",
+   "date": "2026-09-11",
+   "start": "13:00",
+   "end": "13:30",
+   "title": "Дискуссия: Куда перетекают медиа и что вообще сегодня считается медиа",
+   "kind": "disc",
+   "track": "Медиа",
+   "trackCurator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "эльвина абибуллаева",
+    "зелим габисов",
+    "эльбрус такулов",
+    "катя иванова"
+   ],
+   "speakerSlugs": [
+    "elvina-abibullaeva",
+    "zelim-gabisov",
+    "elbrus-takulov",
+    "katya-ivanova"
+   ],
+   "speakerNames": [
+    "Эльвина Абибуллаева",
+    "Зелим Габисов",
+    "Эльбрус Такулов",
+    "Катя Иванова"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e060",
+   "date": "2026-09-11",
+   "start": "13:30",
+   "end": "13:50",
+   "title": "PR и СМИ. Антагонисты или партнеры?",
+   "kind": "talk",
+   "track": "Медиа",
+   "trackCurator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "дмитрий щугорев"
+   ],
+   "speakerSlugs": [
+    "dmitrii-schugorev"
+   ],
+   "speakerNames": [
+    "Дмитрий Щугорев"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e061",
+   "date": "2026-09-11",
+   "start": "13:50",
+   "end": "14:10",
+   "title": "Как стать героем журнала «Правила жизни» за 10 шагов (и 3 ошибки, которые всё испортят)",
+   "kind": "talk",
+   "track": "Медиа",
+   "trackCurator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "григорий туманов"
+   ],
+   "speakerSlugs": [
+    "grigorii-tumanov"
+   ],
+   "speakerNames": [
+    "Григорий Туманов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e063",
+   "date": "2026-09-11",
+   "start": "14:30",
+   "end": "14:50",
+   "title": "Вперед в прошлое: рывок из ада синтетики",
+   "kind": "talk",
+   "track": "Медиа",
+   "trackCurator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "рома бетретдинов"
+   ],
+   "speakerSlugs": [
+    "roma-betretdinov"
+   ],
+   "speakerNames": [
+    "Рома Бетретдинов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e064",
+   "date": "2026-09-11",
+   "start": "14:50",
+   "end": "15:10",
+   "title": "Секретная тема",
+   "kind": "talk",
+   "track": "Медиа",
+   "trackCurator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "ирина парфентьева",
+    "илья доронов"
+   ],
+   "speakerSlugs": [
+    "irina-parfenteva",
+    "ilya-doronov"
+   ],
+   "speakerNames": [
+    "Ирина Парфентьева",
+    "Илья Доронов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e065",
+   "date": "2026-09-11",
+   "start": "15:10",
+   "end": "15:30",
+   "title": "Что происходит в мире новостных медиа? Взгляд генерального директора",
+   "kind": "talk",
+   "track": "Медиа",
+   "trackCurator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "андрей цыпер"
+   ],
+   "speakerSlugs": [
+    "andrei-tsyper"
+   ],
+   "speakerNames": [
+    "Андрей Цыпер"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e066",
+   "date": "2026-09-11",
+   "start": "15:30",
+   "end": "15:50",
+   "title": "Бизнес = система. Как креативному бизнесу расти и масштабироваться, не теряя автора?",
+   "kind": "talk",
+   "track": "Медиа",
+   "trackCurator": "Андрей Червонский, Соня Гофина",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "ева шумляева"
+   ],
+   "speakerSlugs": [
+    "eva-shumlyaeva"
+   ],
+   "speakerNames": [
+    "Ева Шумляева"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e068",
+   "date": "2026-09-11",
+   "start": "16:10",
+   "end": "16:40",
+   "title": "Дискуссия: Ответственность создателей за ПП и фастфуд",
+   "kind": "disc",
+   "track": "Кино",
+   "trackCurator": "Катя Норштейн",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "катя норштейн",
+    "ольга никулина",
+    "владимир котт",
+    "илья учитель",
+    "иван шаров"
+   ],
+   "speakerSlugs": [
+    "katya-norshtein",
+    "olga-nikulina",
+    "vladimir-kott",
+    "ilya-uchitel",
+    "ivan-sharov"
+   ],
+   "speakerNames": [
+    "Катя Норштейн",
+    "Ольга Никулина",
+    "Владимир Котт",
+    "Илья Учитель",
+    "Иван Шаров"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e069",
+   "date": "2026-09-11",
+   "start": "16:40",
+   "end": "17:00",
+   "title": "«Жанровый субстрат» от режиссёра КиШа",
+   "kind": "talk",
+   "track": "Кино",
+   "trackCurator": "Катя Норштейн",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "рустам мосафир"
+   ],
+   "speakerSlugs": [
+    "rustam-mosafir"
+   ],
+   "speakerNames": [
+    "Рустам Мосафир"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e070",
+   "date": "2026-09-11",
+   "start": "17:00",
+   "end": "17:20",
+   "title": "С чего начинается хит: за год до первой серии. Девелопмент больших сериалов",
+   "kind": "talk",
+   "track": "Кино",
+   "trackCurator": "Катя Норштейн",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "ольга никулина"
+   ],
+   "speakerSlugs": [
+    "olga-nikulina"
+   ],
+   "speakerNames": [
+    "Ольга Никулина"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e071",
+   "date": "2026-09-11",
+   "start": "17:20",
+   "end": "17:40",
+   "title": "Любимый ингредиент. Темы и приемы, к которым возвращаешься снова и снова. Как формируется почерк автора",
+   "kind": "talk",
+   "track": "Кино",
+   "trackCurator": "Катя Норштейн",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "владимир котт"
+   ],
+   "speakerSlugs": [
+    "vladimir-kott"
+   ],
+   "speakerNames": [
+    "Владимир Котт"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e072",
+   "date": "2026-09-11",
+   "start": "17:40",
+   "end": "18:00",
+   "title": "Кто здесь главный? Кому принадлежит последнее слово в кино — автору, продюсеру, платформе или зрителю?",
+   "kind": "talk",
+   "track": "Кино",
+   "trackCurator": "Катя Норштейн",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "илья учитель"
+   ],
+   "speakerSlugs": [
+    "ilya-uchitel"
+   ],
+   "speakerNames": [
+    "Илья Учитель"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e073",
+   "date": "2026-09-11",
+   "start": "18:00",
+   "end": "18:20",
+   "title": "Производство впечатлений. Как из сериала сделать событие",
+   "kind": "talk",
+   "track": "Кино",
+   "trackCurator": "Катя Норштейн",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "иван шаров"
+   ],
+   "speakerSlugs": [
+    "ivan-sharov"
+   ],
+   "speakerNames": [
+    "Иван Шаров"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e075",
+   "date": "2026-09-11",
+   "start": "18:40",
+   "end": "19:00",
+   "title": "Книги «по краям»: как Ad Marginem проводит фестивали от Калининграда до Владивостока",
+   "kind": "talk",
+   "track": "Издательское дело",
+   "trackCurator": "Кирилл Шелест",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "кирилл шелест"
+   ],
+   "speakerSlugs": [
+    "kirill-shelest"
+   ],
+   "speakerNames": [
+    "Кирилл Шелест"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e076",
+   "date": "2026-09-11",
+   "start": "19:00",
+   "end": "19:20",
+   "title": "Moscow Book Week: как главный фестиваль книжной культуры меняет город",
+   "kind": "talk",
+   "track": "Издательское дело",
+   "trackCurator": "Кирилл Шелест",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "дмитрий харьков"
+   ],
+   "speakerSlugs": [
+    "dmitrii-harkov"
+   ],
+   "speakerNames": [
+    "Дмитрий Харьков"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e077",
+   "date": "2026-09-11",
+   "start": "19:20",
+   "end": "19:40",
+   "title": "«Книга как объект дизайна»: издательский проект о русском авангарде от Ad Marginem и ABCdesign",
+   "kind": "talk",
+   "track": "Издательское дело",
+   "trackCurator": "Кирилл Шелест",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "дмитрий мордвинцев"
+   ],
+   "speakerSlugs": [
+    "dmitrii-mordvintsev"
+   ],
+   "speakerNames": [
+    "Дмитрий Мордвинцев"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e079",
+   "date": "2026-09-11",
+   "start": "20:00",
+   "end": null,
+   "title": "Стендап-концерт",
+   "kind": "special",
+   "track": "Стендап",
+   "trackCurator": "Арсений Ашомко",
+   "hall": "Котельная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "полина накрайникова",
+    "владимир гуринович",
+    "лиза ягуарушкина",
+    "влад сидоров"
+   ],
+   "speakerSlugs": [
+    "polina-nakrainikova",
+    "vladimir-gurinovich",
+    "liza-yaguarushkina",
+    "vlad-sidorov"
+   ],
+   "speakerNames": [
+    "Полина Накрайникова",
+    "Владимир Гуринович",
+    "Лиза Ягуарушкина",
+    "Влад Сидоров"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e080",
+   "date": "2026-09-11",
+   "start": "10:00",
+   "end": "10:20",
+   "title": "Вступительное слово",
+   "kind": "talk",
+   "track": "Веб",
+   "trackCurator": "Денис Ломов",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "денис ломов"
+   ],
+   "speakerSlugs": [
+    "denis-lomov"
+   ],
+   "speakerNames": [
+    "Денис Ломов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e081",
+   "date": "2026-09-11",
+   "start": "10:20",
+   "end": "10:40",
+   "title": "± вайб: нейросети, тревога и новая роль дизайнера",
+   "kind": "talk",
+   "track": "Веб",
+   "trackCurator": "Денис Ломов",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "евгений филатов"
+   ],
+   "speakerSlugs": [
+    "evgenii-filatov"
+   ],
+   "speakerNames": [
+    "Евгений Филатов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e082",
+   "date": "2026-09-11",
+   "start": "10:40",
+   "end": "11:00",
+   "title": "Этот чудн(ы/о)й новый UX",
+   "kind": "talk",
+   "track": "Веб",
+   "trackCurator": "Денис Ломов",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "артём федоров"
+   ],
+   "speakerSlugs": [
+    "artem-fedorov"
+   ],
+   "speakerNames": [
+    "Артём Федоров"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e083",
+   "date": "2026-09-11",
+   "start": "11:00",
+   "end": "11:20",
+   "title": "AI в creative dev: как меняется граница между генерацией и ручной доработкой в креативном вебе и спецпроектах",
+   "kind": "talk",
+   "track": "Веб",
+   "trackCurator": "Денис Ломов",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "антон бондарь"
+   ],
+   "speakerSlugs": [
+    "anton-bondar"
+   ],
+   "speakerNames": [
+    "Антон Бондарь"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e084",
+   "date": "2026-09-11",
+   "start": "11:20",
+   "end": "11:50",
+   "title": "Дискуссия: AI: про новые правила игры в UX",
+   "kind": "disc",
+   "track": "Веб",
+   "trackCurator": "Денис Ломов",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "денис ломов",
+    "евгений филатов",
+    "артём федоров",
+    "антон бондарь"
+   ],
+   "speakerSlugs": [
+    "denis-lomov",
+    "evgenii-filatov",
+    "artem-fedorov",
+    "anton-bondar"
+   ],
+   "speakerNames": [
+    "Денис Ломов",
+    "Евгений Филатов",
+    "Артём Федоров",
+    "Антон Бондарь"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e086",
+   "date": "2026-09-11",
+   "start": "12:10",
+   "end": "12:40",
+   "title": "Дискуссия: Нужны ли оценки: талант против критериев",
+   "kind": "disc",
+   "track": "Образование",
+   "trackCurator": "Наташа Климчук",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "наташа климчук",
+    "наадя (надя грицкевич)",
+    "иван стельмах",
+    "пётр сафронов"
+   ],
+   "speakerSlugs": [
+    "natasha-klimchuk",
+    "naadya-nadya-gritskevich",
+    "ivan-stelmah",
+    "petr-safronov"
+   ],
+   "speakerNames": [
+    "Наташа Климчук",
+    "Наадя (Надя Грицкевич)",
+    "Иван Стельмах",
+    "Пётр Сафронов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e087",
+   "date": "2026-09-11",
+   "start": "12:40",
+   "end": "13:00",
+   "title": "Экспериментальные техники при написании песен, или почему мы пока обойдемся без ИИ",
+   "kind": "talk",
+   "track": "Образование",
+   "trackCurator": "Наташа Климчук",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "наадя грицкевич"
+   ],
+   "speakerSlugs": [
+    "naadya-gritskevich"
+   ],
+   "speakerNames": [
+    "Наадя Грицкевич"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e088",
+   "date": "2026-09-11",
+   "start": "13:00",
+   "end": "13:20",
+   "title": "Высшее образование как продукт",
+   "kind": "talk",
+   "track": "Образование",
+   "trackCurator": "Наташа Климчук",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "иван стельмах"
+   ],
+   "speakerSlugs": [
+    "ivan-stelmah"
+   ],
+   "speakerNames": [
+    "Иван Стельмах"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e089",
+   "date": "2026-09-11",
+   "start": "13:20",
+   "end": "13:40",
+   "title": "Что такое изобретение? Образование и «причинение» добра",
+   "kind": "talk",
+   "track": "Образование",
+   "trackCurator": "Наташа Климчук",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "пётр сафронов"
+   ],
+   "speakerSlugs": [
+    "petr-safronov"
+   ],
+   "speakerNames": [
+    "Пётр Сафронов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e091",
+   "date": "2026-09-11",
+   "start": "14:00",
+   "end": "14:20",
+   "title": "State of Music 2026",
+   "kind": "talk",
+   "track": "Музыка",
+   "trackCurator": "S&P Records",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "денис глазин"
+   ],
+   "speakerSlugs": [
+    "denis-glazin"
+   ],
+   "speakerNames": [
+    "Денис Глазин"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e092",
+   "date": "2026-09-11",
+   "start": "14:20",
+   "end": "14:40",
+   "title": "Маркетинг: как заставить вас слушать музыку",
+   "kind": "talk",
+   "track": "Музыка",
+   "trackCurator": "S&P Records",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "арам даниелян"
+   ],
+   "speakerSlugs": [
+    "aram-danielyan"
+   ],
+   "speakerNames": [
+    "Арам Даниелян"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e093",
+   "date": "2026-09-11",
+   "start": "14:40",
+   "end": "15:00",
+   "title": "Кто пишет ваш следующий хит — человек или машина?",
+   "kind": "talk",
+   "track": "Музыка",
+   "trackCurator": "S&P Records",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "максим ворошилов"
+   ],
+   "speakerSlugs": [
+    "maksim-voroshilov"
+   ],
+   "speakerNames": [
+    "Максим Ворошилов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e094",
+   "date": "2026-09-11",
+   "start": "15:00",
+   "end": "15:20",
+   "title": "Как быть заметным среди заметных?",
+   "kind": "talk",
+   "track": "Музыка",
+   "trackCurator": "S&P Records",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "травма"
+   ],
+   "speakerSlugs": [
+    "travma"
+   ],
+   "speakerNames": [
+    "ТРАВМА"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e096",
+   "date": "2026-09-11",
+   "start": "15:40",
+   "end": "16:00",
+   "title": "Не будь квадратом: четыре способа творить в жестких рамках",
+   "kind": "talk",
+   "track": "Бюро Глагол",
+   "trackCurator": "",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "юрий наумов"
+   ],
+   "speakerSlugs": [
+    "yurii-naumov"
+   ],
+   "speakerNames": [
+    "Юрий Наумов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e097",
+   "date": "2026-09-11",
+   "start": "16:00",
+   "end": "16:20",
+   "title": "Чрезмерное потребление критики вредит вашему здоровью",
+   "kind": "talk",
+   "track": "Бюро Глагол",
+   "trackCurator": "",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "ксения литвинова",
+    "миляуша лукманова"
+   ],
+   "speakerSlugs": [
+    "kseniya-litvinova",
+    "milyausha-lukmanova"
+   ],
+   "speakerNames": [
+    "Ксения Литвинова",
+    "Миляуша Лукманова"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e099",
+   "date": "2026-09-11",
+   "start": "16:30",
+   "end": "17:40",
+   "title": "Специальный показ Яндекса: «Где я пригодился» — фильм о том, как выходить за рамки и быть шире обстоятельств",
+   "kind": "special",
+   "track": "Бюро Глагол",
+   "trackCurator": "",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [],
+   "speakerSlugs": [],
+   "speakerNames": []
+  },
+  {
+   "sessionId": "g8-2026-e101",
+   "date": "2026-09-11",
+   "start": "18:00",
+   "end": "18:20",
+   "title": "Тиндер для блогеров. Неудачные свидания брендов, агентств и креаторов",
+   "kind": "talk",
+   "track": "Блогеры",
+   "trackCurator": "Юлия Белая",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "пётр губанов"
+   ],
+   "speakerSlugs": [
+    "petr-gubanov"
+   ],
+   "speakerNames": [
+    "Пётр Губанов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e102",
+   "date": "2026-09-11",
+   "start": "18:20",
+   "end": "18:40",
+   "title": "Где живет аудитория, что такое контент-заводы, в чем сила креаторов и чего ждать от 2027-го",
+   "kind": "talk",
+   "track": "Блогеры",
+   "trackCurator": "Юлия Белая",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "ярослав андреев"
+   ],
+   "speakerSlugs": [
+    "yaroslav-andreev"
+   ],
+   "speakerNames": [
+    "Ярослав Андреев"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e103",
+   "date": "2026-09-11",
+   "start": "18:40",
+   "end": "19:00",
+   "title": "Инженерный взгляд на креатив",
+   "kind": "talk",
+   "track": "Блогеры",
+   "trackCurator": "Юлия Белая",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "даня крастер"
+   ],
+   "speakerSlugs": [
+    "danya-kraster"
+   ],
+   "speakerNames": [
+    "Даня Крастер"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e104",
+   "date": "2026-09-11",
+   "start": "19:00",
+   "end": "19:20",
+   "title": "Аффирмация на интеграцию. Почему бренды выбирают одних блогеров, а других — нет",
+   "kind": "talk",
+   "track": "Блогеры",
+   "trackCurator": "Юлия Белая",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "денгадден"
+   ],
+   "speakerSlugs": [
+    "dengadden"
+   ],
+   "speakerNames": [
+    "ДЕНГАДДЕН"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e105",
+   "date": "2026-09-11",
+   "start": "19:20",
+   "end": null,
+   "title": "Дискуссия: Инфлюенс-маркетинг 2026/2027: новые платформы, новые деньги, новые звезды. Или нет?",
+   "kind": "disc",
+   "track": "Блогеры",
+   "trackCurator": "Юлия Белая",
+   "hall": "Simple Music",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "юлия белая",
+    "максим перлин",
+    "ярослав андреев",
+    "карлен ходикян",
+    "андрей глазунов"
+   ],
+   "speakerSlugs": [
+    "yuliya-belaya",
+    "maksim-perlin",
+    "yaroslav-andreev",
+    "karlen-hodikyan",
+    "andrei-glazunov"
+   ],
+   "speakerNames": [
+    "Юлия Белая",
+    "Максим Перлин",
+    "Ярослав Андреев",
+    "Карлен Ходикян",
+    "Андрей Глазунов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e106",
+   "date": "2026-09-11",
+   "start": "11:00",
+   "end": "11:10",
+   "title": "Открытие секции",
+   "kind": "service",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [],
+   "speakerSlugs": [],
+   "speakerNames": []
+  },
+  {
+   "sessionId": "g8-2026-e107",
+   "date": "2026-09-11",
+   "start": "11:10",
+   "end": "11:30",
+   "title": "Клиентский сервис: как не пересолить в отношениях с клиентом",
+   "kind": "talk",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "анна зайцева"
+   ],
+   "speakerSlugs": [
+    "anna-zaitseva"
+   ],
+   "speakerNames": [
+    "Анна Зайцева"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e108",
+   "date": "2026-09-11",
+   "start": "11:30",
+   "end": "11:50",
+   "title": "Острая нехватка продающего креатива",
+   "kind": "talk",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "николай осин"
+   ],
+   "speakerSlugs": [
+    "nikolai-osin"
+   ],
+   "speakerNames": [
+    "Николай Осин"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e110",
+   "date": "2026-09-11",
+   "start": "11:55",
+   "end": "12:15",
+   "title": "Искусство брифа: превращаем мысли в идею, или как направлять креативную команду",
+   "kind": "talk",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "виктория горшкова"
+   ],
+   "speakerSlugs": [
+    "viktoriya-gorshkova"
+   ],
+   "speakerNames": [
+    "Виктория Горшкова"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e111",
+   "date": "2026-09-11",
+   "start": "12:15",
+   "end": "12:35",
+   "title": "Баланс ингредиентов в ивенте: тренды + креатив + визуал",
+   "kind": "talk",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "ирина волкова"
+   ],
+   "speakerSlugs": [
+    "irina-volkova"
+   ],
+   "speakerNames": [
+    "Ирина Волкова"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e113",
+   "date": "2026-09-11",
+   "start": "12:40",
+   "end": "13:00",
+   "title": "Тонкости международной ивент-кухни",
+   "kind": "talk",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "артём минасян"
+   ],
+   "speakerSlugs": [
+    "artem-minasyan"
+   ],
+   "speakerNames": [
+    "Артём Минасян"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e114",
+   "date": "2026-09-11",
+   "start": "13:00",
+   "end": "13:20",
+   "title": "Когда ивент не нужен",
+   "kind": "talk",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "карина шабанова"
+   ],
+   "speakerSlugs": [
+    "karina-shabanova"
+   ],
+   "speakerNames": [
+    "Карина Шабанова"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e116",
+   "date": "2026-09-11",
+   "start": "13:40",
+   "end": "14:25",
+   "title": "Дискуссия ПРО ЗАКУПКИ. Сладкий вкус победы в тендере: внутренняя кухня отдела закупок",
+   "kind": "disc",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "александр литвин",
+    "регина каллагова",
+    "артём кондратенко",
+    "нелли наджарян",
+    "виктория бутикова",
+    "ксения масчан"
+   ],
+   "speakerSlugs": [
+    "aleksandr-litvin",
+    "regina-kallagova",
+    "artem-kondratenko",
+    "nelli-nadzharyan",
+    "viktoriya-butikova",
+    "kseniya-maschan"
+   ],
+   "speakerNames": [
+    "Александр Литвин",
+    "Регина Каллагова",
+    "Артём Кондратенко",
+    "Нелли Наджарян",
+    "Виктория Бутикова",
+    "Ксения Масчан"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e118",
+   "date": "2026-09-11",
+   "start": "14:35",
+   "end": "14:55",
+   "title": "Как выстраивать режиссуру на простых приемах вместо сложных концепций",
+   "kind": "talk",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "никита прядко"
+   ],
+   "speakerSlugs": [
+    "nikita-pryadko"
+   ],
+   "speakerNames": [
+    "Никита Прядко"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e119",
+   "date": "2026-09-11",
+   "start": "14:55",
+   "end": "15:15",
+   "title": "Принципиально масштабно, или как реализуются большие проекты",
+   "kind": "talk",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "ольга рыдзевская"
+   ],
+   "speakerSlugs": [
+    "olga-rydzevskaya"
+   ],
+   "speakerNames": [
+    "Ольга Рыдзевская"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e121",
+   "date": "2026-09-11",
+   "start": "15:20",
+   "end": "15:40",
+   "title": "Соль по рецепту: как дисциплина проектного менеджмента выигрывает на длинной дистанции",
+   "kind": "talk",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "евгения галетка"
+   ],
+   "speakerSlugs": [
+    "evgeniya-galetka"
+   ],
+   "speakerNames": [
+    "Евгения Галетка"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e122",
+   "date": "2026-09-11",
+   "start": "15:40",
+   "end": "16:00",
+   "title": "Перца по вкусу не бывает: как натренировать чувство креатива",
+   "kind": "talk",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "алексей мочалов"
+   ],
+   "speakerSlugs": [
+    "aleksei-mochalov"
+   ],
+   "speakerNames": [
+    "Алексей Мочалов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e124",
+   "date": "2026-09-11",
+   "start": "16:05",
+   "end": "16:25",
+   "title": "Всё решают детали. Неочевидные решения, которые влияют на отношения с клиентом",
+   "kind": "talk",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "игорь демидов"
+   ],
+   "speakerSlugs": [
+    "igor-demidov"
+   ],
+   "speakerNames": [
+    "Игорь Демидов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e125",
+   "date": "2026-09-11",
+   "start": "16:25",
+   "end": "16:45",
+   "title": "Как за 4 дня построить замок в Лужниках. Опыт креативной студии при работе со стадионными концертами",
+   "kind": "talk",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "алексей журавлёв"
+   ],
+   "speakerSlugs": [
+    "aleksei-zhuravlev"
+   ],
+   "speakerNames": [
+    "Алексей Журавлёв"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e126",
+   "date": "2026-09-11",
+   "start": "16:45",
+   "end": "17:05",
+   "title": "Mamma mia! Или как делать проекты со страстью",
+   "kind": "talk",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "алина абрамова",
+    "константин беляков"
+   ],
+   "speakerSlugs": [
+    "alina-abramova",
+    "konstantin-belyakov"
+   ],
+   "speakerNames": [
+    "Алина Абрамова",
+    "Константин Беляков"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e128",
+   "date": "2026-09-11",
+   "start": "17:25",
+   "end": null,
+   "title": "Дискуссия ПРО ФЕСТИВАЛИ. Идеальный десерт: рецепт фестиваля. Где взять деньги на ингредиенты — партнёры, продажи и правда о том, как это работает",
+   "kind": "disc",
+   "track": "REDDAY",
+   "trackCurator": "",
+   "hall": "Гостиная",
+   "venueKey": "хлебозавод №9",
+   "place": "Хлебозавод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "михаил шутов",
+    "юрий субботин",
+    "андрей кадышев",
+    "андрей тубольцев",
+    "борис альхимович"
+   ],
+   "speakerSlugs": [
+    "mihail-shutov",
+    "yurii-subbotin",
+    "andrei-kadyshev",
+    "andrei-tuboltsev",
+    "boris-alhimovich"
+   ],
+   "speakerNames": [
+    "Михаил Шутов",
+    "Юрий Субботин",
+    "Андрей Кадышев",
+    "Андрей Тубольцев",
+    "Борис Альхимович"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e129",
+   "date": "2026-09-11",
+   "start": "10:30",
+   "end": "11:15",
+   "title": "MATE + LAB. Как сэкономить бюджет и продолжать снимать. Гибридный продакшн",
+   "kind": "disc",
+   "track": "Big Picture",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "аня коновалова",
+    "ира лаврова",
+    "каролина кириченко",
+    "владимир гранкин",
+    "марьям ахунова"
+   ],
+   "speakerSlugs": [
+    "anya-konovalova",
+    "ira-lavrova",
+    "karolina-kirichenko",
+    "vladimir-grankin",
+    "maryam-ahunova"
+   ],
+   "speakerNames": [
+    "Аня Коновалова",
+    "Ира Лаврова",
+    "Каролина Кириченко",
+    "Владимир Гранкин",
+    "Марьям Ахунова"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e130",
+   "date": "2026-09-11",
+   "start": "11:15",
+   "end": "12:30",
+   "title": "TAKESHOT. Когда AI становится врагом и почему съемка — новый чёрный",
+   "kind": "talk",
+   "track": "Big Picture",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [],
+   "speakerSlugs": [],
+   "speakerNames": []
+  },
+  {
+   "sessionId": "g8-2026-e131",
+   "date": "2026-09-11",
+   "start": "12:30",
+   "end": "13:45",
+   "title": "BALLPARK. Крафтовые специалисты, которых AI не заменит",
+   "kind": "disc",
+   "track": "Big Picture",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "тигран бежанов",
+    "марат адельшин",
+    "юлия фролова-митирева",
+    "федор савельев"
+   ],
+   "speakerSlugs": [
+    "tigran-bezhanov",
+    "marat-adelshin",
+    "yuliya-frolova-mitireva",
+    "fedor-savelev"
+   ],
+   "speakerNames": [
+    "Тигран Бежанов",
+    "Марат Адельшин",
+    "Юлия Фролова-Митирева",
+    "Федор Савельев"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e132",
+   "date": "2026-09-11",
+   "start": "13:45",
+   "end": "15:00",
+   "title": "БЮРО «РАБОЧЕЕ НАЗВАНИЕ». Новая архитектура рекламного производства: все делают всё",
+   "kind": "disc",
+   "track": "Big Picture",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "игорь сайфуллин",
+    "аня никич",
+    "максим ежов",
+    "вася губин",
+    "виталий урезченко"
+   ],
+   "speakerSlugs": [
+    "igor-saifullin",
+    "anya-nikich",
+    "maksim-ezhov",
+    "vasya-gubin",
+    "vitalii-urezchenko"
+   ],
+   "speakerNames": [
+    "Игорь Сайфуллин",
+    "Аня Никич",
+    "Максим Ежов",
+    "Вася Губин",
+    "Виталий Урезченко"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e134",
+   "date": "2026-09-11",
+   "start": "15:30",
+   "end": "15:50",
+   "title": "Креативный директор без команды — реально ли презентовать, придумывать идеи в одиночку? Как это помогает бизнесу и помогает ли?",
+   "kind": "talk",
+   "track": "Клуб",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "анастасия харитонова"
+   ],
+   "speakerSlugs": [
+    "anastasiya-haritonova"
+   ],
+   "speakerNames": [
+    "Анастасия Харитонова"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e135",
+   "date": "2026-09-11",
+   "start": "15:50",
+   "end": "16:10",
+   "title": "Новые форматы взаимодействия с аудиторией на примере кейсов с Пятёрочкой",
+   "kind": "talk",
+   "track": "Клуб",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "роман ступин"
+   ],
+   "speakerSlugs": [
+    "roman-stupin"
+   ],
+   "speakerNames": [
+    "Роман Ступин"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e136",
+   "date": "2026-09-11",
+   "start": "16:10",
+   "end": "16:30",
+   "title": "Не урезать, а переосмыслить: как кризис меняет бренд-коммуникации в эпоху новой экономии",
+   "kind": "talk",
+   "track": "Клуб",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "анна левант"
+   ],
+   "speakerSlugs": [
+    "anna-levant"
+   ],
+   "speakerNames": [
+    "Анна Левант"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e137",
+   "date": "2026-09-11",
+   "start": "16:30",
+   "end": "16:50",
+   "title": "Никого не увольняют за скучную рекламу. Почему рынок системно выбирает посредственность",
+   "kind": "talk",
+   "track": "Клуб",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "виктор донюков"
+   ],
+   "speakerSlugs": [
+    "viktor-donyukov"
+   ],
+   "speakerNames": [
+    "Виктор Донюков"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e138",
+   "date": "2026-09-11",
+   "start": "16:50",
+   "end": "17:10",
+   "title": "Как работать с госкомпаниями и быть счастливым",
+   "kind": "talk",
+   "track": "Клуб",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "иван черкалов"
+   ],
+   "speakerSlugs": [
+    "ivan-cherkalov"
+   ],
+   "speakerNames": [
+    "Иван Черкалов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e139",
+   "date": "2026-09-11",
+   "start": "17:10",
+   "end": "17:30",
+   "title": "Православие и креатив: искусство создания вирусных роликов",
+   "kind": "talk",
+   "track": "Клуб",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "тимур исмаев"
+   ],
+   "speakerSlugs": [
+    "timur-ismaev"
+   ],
+   "speakerNames": [
+    "Тимур Исмаев"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e140",
+   "date": "2026-09-11",
+   "start": "17:30",
+   "end": "17:50",
+   "title": "Как побеждать кризис внимания (ситуативный маркетинг, работа с субкультурами, смелый креатив)",
+   "kind": "talk",
+   "track": "Клуб",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "илья корнеев"
+   ],
+   "speakerSlugs": [
+    "ilya-korneev"
+   ],
+   "speakerNames": [
+    "Илья Корнеев"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e141",
+   "date": "2026-09-11",
+   "start": "17:50",
+   "end": "18:10",
+   "title": "Идеи без человека, без агентства, без тендера",
+   "kind": "talk",
+   "track": "Клуб",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "влад ситников"
+   ],
+   "speakerSlugs": [
+    "vlad-sitnikov"
+   ],
+   "speakerNames": [
+    "Влад Ситников"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e142",
+   "date": "2026-09-11",
+   "start": "18:10",
+   "end": "18:30",
+   "title": "Какие ценности самые важные для креативных агентств и как не упустить контроль над рынком идей",
+   "kind": "talk",
+   "track": "Клуб",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "олег туманов"
+   ],
+   "speakerSlugs": [
+    "oleg-tumanov"
+   ],
+   "speakerNames": [
+    "Олег Туманов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e143",
+   "date": "2026-09-11",
+   "start": "18:30",
+   "end": null,
+   "title": "Плохая реклама vs плохая креативная реклама",
+   "kind": "talk",
+   "track": "Клуб",
+   "trackCurator": "",
+   "hall": "Лекторий",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "макс пономарев"
+   ],
+   "speakerSlugs": [
+    "maks-ponomarev"
+   ],
+   "speakerNames": [
+    "Макс Пономарев"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e144",
+   "date": "2026-09-11",
+   "start": "11:00",
+   "end": "11:15",
+   "title": "Стрижка — это дизайн, а хороший человек — профессия",
+   "kind": "talk",
+   "track": "Konstruct и Слой",
+   "trackCurator": "",
+   "hall": "Konstruct Space",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "владимир амосов"
+   ],
+   "speakerSlugs": [
+    "vladimir-amosov"
+   ],
+   "speakerNames": [
+    "Владимир Амосов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e145",
+   "date": "2026-09-11",
+   "start": "11:15",
+   "end": "11:45",
+   "title": "«Делаю то, во что верю». Как из дизайна волос сделать секту",
+   "kind": "talk",
+   "track": "Konstruct и Слой",
+   "trackCurator": "",
+   "hall": "Konstruct Space",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "юра шевел"
+   ],
+   "speakerSlugs": [
+    "yura-shevel"
+   ],
+   "speakerNames": [
+    "Юра Шевел"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e146",
+   "date": "2026-09-11",
+   "start": "11:45",
+   "end": "12:15",
+   "title": "Человек — Геймификация — Волосы",
+   "kind": "talk",
+   "track": "Konstruct и Слой",
+   "trackCurator": "",
+   "hall": "Konstruct Space",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "владимир амосов"
+   ],
+   "speakerSlugs": [
+    "vladimir-amosov"
+   ],
+   "speakerNames": [
+    "Владимир Амосов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e147",
+   "date": "2026-09-11",
+   "start": "12:15",
+   "end": "12:45",
+   "title": "Тренды, стиль и клиент: как меняется профессия парикмахера",
+   "kind": "talk",
+   "track": "Konstruct и Слой",
+   "trackCurator": "",
+   "hall": "Konstruct Space",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "ксения сторожева"
+   ],
+   "speakerSlugs": [
+    "kseniya-storozheva"
+   ],
+   "speakerNames": [
+    "Ксения Сторожева"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e148",
+   "date": "2026-09-11",
+   "start": "12:45",
+   "end": "13:45",
+   "title": "Презентация метода «Констракт». Подход к вашей стрижке как к дизайн-проекту",
+   "kind": "talk",
+   "track": "Konstruct и Слой",
+   "trackCurator": "",
+   "hall": "Konstruct Space",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "андрей ульянов"
+   ],
+   "speakerSlugs": [
+    "andrei-ulyanov"
+   ],
+   "speakerNames": [
+    "Андрей Ульянов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e149",
+   "date": "2026-09-11",
+   "start": "13:45",
+   "end": "14:30",
+   "title": "Консультации у стилистов команды фестиваля и «Констракта». Дегустация стилька",
+   "kind": "special",
+   "track": "Konstruct и Слой",
+   "trackCurator": "",
+   "hall": "Konstruct Space",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [],
+   "speakerSlugs": [],
+   "speakerNames": []
+  },
+  {
+   "sessionId": "g8-2026-e151",
+   "date": "2026-09-11",
+   "start": "14:45",
+   "end": "15:15",
+   "title": "Трансформация среды, общества, человека",
+   "kind": "talk",
+   "track": "Konstruct и Слой",
+   "trackCurator": "",
+   "hall": "Konstruct Space",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "даниил кожаринов"
+   ],
+   "speakerSlugs": [
+    "daniil-kozharinov"
+   ],
+   "speakerNames": [
+    "Даниил Кожаринов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e152",
+   "date": "2026-09-11",
+   "start": "15:15",
+   "end": "15:45",
+   "title": "Фестиваль барбер-культуры RBW: как нишевый барбер-фестиваль вырос в бизнес и медиа",
+   "kind": "talk",
+   "track": "Konstruct и Слой",
+   "trackCurator": "",
+   "hall": "Konstruct Space",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "мария иванова"
+   ],
+   "speakerSlugs": [
+    "mariya-ivanova"
+   ],
+   "speakerNames": [
+    "Мария Иванова"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e153",
+   "date": "2026-09-11",
+   "start": "15:45",
+   "end": "16:35",
+   "title": "Как пришествие ИИ меняет beauty-индустрию: новые механики обратной связи, примерки стиля и что нас ждет завтра",
+   "kind": "talk",
+   "track": "Konstruct и Слой",
+   "trackCurator": "",
+   "hall": "Konstruct Space",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "ник эрлан",
+    "лидия шахидовна"
+   ],
+   "speakerSlugs": [
+    "nik-erlan",
+    "lidiya-shahidovna"
+   ],
+   "speakerNames": [
+    "Ник Эрлан",
+    "Лидия Шахидовна"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e154",
+   "date": "2026-09-11",
+   "start": "16:35",
+   "end": "16:40",
+   "title": "Вступительное слово к демонстрациям",
+   "kind": "service",
+   "track": "Konstruct и Слой",
+   "trackCurator": "",
+   "hall": "Konstruct Space",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "владимир амосов"
+   ],
+   "speakerSlugs": [
+    "vladimir-amosov"
+   ],
+   "speakerNames": [
+    "Владимир Амосов"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e155",
+   "date": "2026-09-11",
+   "start": "16:40",
+   "end": "17:55",
+   "title": "Демонстрация техник и направлений в стрижках. Дискуссия: Человек — часть архитектуры города",
+   "kind": "disc",
+   "track": "Konstruct и Слой",
+   "trackCurator": "",
+   "hall": "Konstruct Space",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "владимир амосов",
+    "андрей грибков",
+    "андрей ульянов",
+    "ксения сторожева",
+    "юра шевел"
+   ],
+   "speakerSlugs": [
+    "vladimir-amosov",
+    "andrei-gribkov",
+    "andrei-ulyanov",
+    "kseniya-storozheva",
+    "yura-shevel"
+   ],
+   "speakerNames": [
+    "Владимир Амосов",
+    "Андрей Грибков",
+    "Андрей Ульянов",
+    "Ксения Сторожева",
+    "Юра Шевел"
+   ]
+  },
+  {
+   "sessionId": "g8-2026-e156",
+   "date": "2026-09-11",
+   "start": "17:55",
+   "end": null,
+   "title": "Закрывающее слово секции: «Стиль — это не обои, мама, хотя и обои тоже»",
+   "kind": "talk",
+   "track": "Konstruct и Слой",
+   "trackCurator": "",
+   "hall": "Konstruct Space",
+   "venueKey": "дизайн-завод",
+   "place": "Дизайн-завод",
+   "organizerKey": "g8",
+   "speakerKeys": [
+    "владимир амосов"
+   ],
+   "speakerSlugs": [
+    "vladimir-amosov"
+   ],
+   "speakerNames": [
+    "Владимир Амосов"
+   ]
+  }
+ ],
+ "speakers": [
+  {
+   "name": "Владимир Амосов",
+   "entityKey": "владимир амосов",
+   "slug": "vladimir-amosov",
+   "profileUrl": "https://www.design-events.fun/speaker/vladimir-amosov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 5,
+   "sessionIds": [
+    "e144",
+    "e146",
+    "e154",
+    "e155",
+    "e156"
+   ],
+   "role": "стилист-парикмахер, игропрактик",
+   "sections": [
+    "Konstruct и Слой"
+   ],
+   "halls": [
+    "Konstruct Space"
+   ]
+  },
+  {
+   "name": "Андрей Тубольцев",
+   "entityKey": "андрей тубольцев",
+   "slug": "andrei-tuboltsev",
+   "profileUrl": "https://www.design-events.fun/speaker/andrei-tuboltsev",
+   "inAfishaGraph": true,
+   "hasProfilePage": true,
+   "sessions": 2,
+   "sessionIds": [
+    "e033",
+    "e128"
+   ],
+   "role": "сооснователь и генеральный директор DREAMLASER, генеральный продюсер INTERVALS и пространства ЦЕХ",
+   "sections": [
+    "REDDAY",
+    "Медиаарт"
+   ],
+   "halls": [
+    "Гостиная",
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Андрей Ульянов",
+   "entityKey": "андрей ульянов",
+   "slug": "andrei-ulyanov",
+   "profileUrl": "https://www.design-events.fun/speaker/andrei-ulyanov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e148",
+    "e155"
+   ],
+   "role": "парикмахер, тренер, основатель парикмахерской POPS, сооснователь школы KONSTRUCT",
+   "sections": [
+    "Konstruct и Слой"
+   ],
+   "halls": [
+    "Konstruct Space"
+   ]
+  },
+  {
+   "name": "Антон Бондарь",
+   "entityKey": "антон бондарь",
+   "slug": "anton-bondar",
+   "profileUrl": "https://www.design-events.fun/speaker/anton-bondar",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e083",
+    "e084"
+   ],
+   "role": "генеральный директор и сооснователь SALT AND PEPPER, сооснователь CUSP, ментор Duo Sapiens",
+   "sections": [
+    "Веб"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Арсений Попов",
+   "entityKey": "арсений попов",
+   "slug": "arsenii-popov",
+   "profileUrl": "https://www.design-events.fun/speaker/arsenii-popov",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e025",
+    "e027"
+   ],
+   "role": "художник, резидент объединения koshta.collective, партнер студии MA, лектор AI Mindset LAB, автор телеграм-канала «дельфин дружит с кукушкой»",
+   "sections": [
+    "ИИ"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Артём Федоров",
+   "entityKey": "артём федоров",
+   "slug": "artem-fedorov",
+   "profileUrl": "https://www.design-events.fun/speaker/artem-fedorov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e082",
+    "e084"
+   ],
+   "role": "дизайн-директор Red Collar",
+   "sections": [
+    "Веб"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Владимир Котт",
+   "entityKey": "владимир котт",
+   "slug": "vladimir-kott",
+   "profileUrl": "https://www.design-events.fun/speaker/vladimir-kott",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e068",
+    "e071"
+   ],
+   "role": "режиссёр театра и кино, сценарист, продюсер и педагог",
+   "sections": [
+    "Кино"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Денис Ломов",
+   "entityKey": "денис ломов",
+   "slug": "denis-lomov",
+   "profileUrl": "https://www.design-events.fun/speaker/denis-lomov",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e080",
+    "e084"
+   ],
+   "role": "CEO Red Collar",
+   "sections": [
+    "Веб"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Дима Логинов",
+   "entityKey": "дима логинов",
+   "slug": "dima-loginov",
+   "profileUrl": "https://www.design-events.fun/speaker/dima-loginov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e047",
+    "e049"
+   ],
+   "role": "предметный дизайнер",
+   "sections": [
+    "Предметный дизайн"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Евгений Филатов",
+   "entityKey": "евгений филатов",
+   "slug": "evgenii-filatov",
+   "profileUrl": "https://www.design-events.fun/speaker/evgenii-filatov",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e081",
+    "e084"
+   ],
+   "role": "дизайн-директор ГигаЧат",
+   "sections": [
+    "Веб"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Иван Стельмах",
+   "entityKey": "иван стельмах",
+   "slug": "ivan-stelmah",
+   "profileUrl": "https://www.design-events.fun/speaker/ivan-stelmah",
+   "inAfishaGraph": true,
+   "hasProfilePage": true,
+   "sessions": 2,
+   "sessionIds": [
+    "e086",
+    "e088"
+   ],
+   "role": "CPO в Центральном университете",
+   "sections": [
+    "Образование"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Иван Шаров",
+   "entityKey": "иван шаров",
+   "slug": "ivan-sharov",
+   "profileUrl": "https://www.design-events.fun/speaker/ivan-sharov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e068",
+    "e073"
+   ],
+   "role": "креативный директор Okko",
+   "sections": [
+    "Кино"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Илья Учитель",
+   "entityKey": "илья учитель",
+   "slug": "ilya-uchitel",
+   "profileUrl": "https://www.design-events.fun/speaker/ilya-uchitel",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e068",
+    "e072"
+   ],
+   "role": "режиссёр и сценарист",
+   "sections": [
+    "Кино"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Ксения Караваева",
+   "entityKey": "ксения караваева",
+   "slug": "kseniya-karavaeva",
+   "profileUrl": "https://www.design-events.fun/speaker/kseniya-karavaeva",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e048",
+    "e049"
+   ],
+   "role": "архитектор, сооснователь бюро .dpt",
+   "sections": [
+    "Предметный дизайн"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Ксения Сторожева",
+   "entityKey": "ксения сторожева",
+   "slug": "kseniya-storozheva",
+   "profileUrl": "https://www.design-events.fun/speaker/kseniya-storozheva",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e147",
+    "e155"
+   ],
+   "role": "топ-стилист парикмахерской Konstruct и преподаватель школы Konstruct",
+   "sections": [
+    "Konstruct и Слой"
+   ],
+   "halls": [
+    "Konstruct Space"
+   ]
+  },
+  {
+   "name": "Лиза Жолтая",
+   "entityKey": "лиза жолтая",
+   "slug": "liza-zholtaya",
+   "profileUrl": "https://www.design-events.fun/speaker/liza-zholtaya",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e041",
+    "e043"
+   ],
+   "role": "партнер архитектурной студии, ведущий архитектор DA BUREU",
+   "sections": [
+    "Дизайн интерьера"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Мурат Гукетлов",
+   "entityKey": "мурат гукетлов",
+   "slug": "murat-guketlov",
+   "profileUrl": "https://www.design-events.fun/speaker/murat-guketlov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e048",
+    "e049"
+   ],
+   "role": "архитектор, сооснователь бюро .dpt",
+   "sections": [
+    "Предметный дизайн"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Ольга Никулина",
+   "entityKey": "ольга никулина",
+   "slug": "olga-nikulina",
+   "profileUrl": "https://www.design-events.fun/speaker/olga-nikulina",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e068",
+    "e070"
+   ],
+   "role": "креативный продюсер, сценарист, шоураннер «Среда»",
+   "sections": [
+    "Кино"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Пётр Сафронов",
+   "entityKey": "пётр сафронов",
+   "slug": "petr-safronov",
+   "profileUrl": "https://www.design-events.fun/speaker/petr-safronov",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e086",
+    "e089"
+   ],
+   "role": "руководитель академического направления, Фонд «Наше будущее»",
+   "sections": [
+    "Образование"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Сергей Трегубов",
+   "entityKey": "сергей трегубов",
+   "slug": "sergei-tregubov",
+   "profileUrl": "https://www.design-events.fun/speaker/sergei-tregubov",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e041",
+    "e044"
+   ],
+   "role": "основатель и владелец студии INROOM.design",
+   "sections": [
+    "Дизайн интерьера"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Степан Бугаев",
+   "entityKey": "степан бугаев",
+   "slug": "stepan-bugaev",
+   "profileUrl": "https://www.design-events.fun/speaker/stepan-bugaev",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e041",
+    "e042"
+   ],
+   "role": "модератор; основатель, арт-директор студии «Точка дизайна»",
+   "sections": [
+    "Дизайн интерьера"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Татьяна Белохина",
+   "entityKey": "татьяна белохина",
+   "slug": "tatyana-belohina",
+   "profileUrl": "https://www.design-events.fun/speaker/tatyana-belohina",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e046",
+    "e049"
+   ],
+   "role": "главный редактор журнала INTERIOR+DESIGN",
+   "sections": [
+    "Предметный дизайн"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Юра Шевел",
+   "entityKey": "юра шевел",
+   "slug": "yura-shevel",
+   "profileUrl": "https://www.design-events.fun/speaker/yura-shevel",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e145",
+    "e155"
+   ],
+   "role": "барбер, преподаватель, основатель мужской парикмахерской TYPE",
+   "sections": [
+    "Konstruct и Слой"
+   ],
+   "halls": [
+    "Konstruct Space"
+   ]
+  },
+  {
+   "name": "Юрий Субботин",
+   "entityKey": "юрий субботин",
+   "slug": "yurii-subbotin",
+   "profileUrl": "https://www.design-events.fun/speaker/yurii-subbotin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e004",
+    "e128"
+   ],
+   "role": "эксперт по спонсорству",
+   "sections": [
+    "REDDAY",
+    "Маркетинг"
+   ],
+   "halls": [
+    "Бойлерная",
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Ярослав Андреев",
+   "entityKey": "ярослав андреев",
+   "slug": "yaroslav-andreev",
+   "profileUrl": "https://www.design-events.fun/speaker/yaroslav-andreev",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 2,
+   "sessionIds": [
+    "e102",
+    "e105"
+   ],
+   "role": "CEO Wildjam",
+   "sections": [
+    "Блогеры"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "SOLAR W (Алексей Ефремов)",
+   "entityKey": "solar w (алексей ефремов)",
+   "slug": "solar-w-aleksei-efremov",
+   "profileUrl": "https://www.design-events.fun/speaker/solar-w-aleksei-efremov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e031"
+   ],
+   "role": "цифровой художник, исследователь генеративных систем",
+   "sections": [
+    "Медиаарт"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Александр Доброкотов",
+   "entityKey": "александр доброкотов",
+   "slug": "aleksandr-dobrokotov",
+   "profileUrl": "https://www.design-events.fun/speaker/aleksandr-dobrokotov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e027"
+   ],
+   "role": "CEO и креативный директор AI MOLODCA",
+   "sections": [
+    "ИИ"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Александр Кадыкеев",
+   "entityKey": "александр кадыкеев",
+   "slug": "aleksandr-kadykeev",
+   "profileUrl": "https://www.design-events.fun/speaker/aleksandr-kadykeev",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e027"
+   ],
+   "role": "CEO VOVA family, part of JAMI LUP",
+   "sections": [
+    "ИИ"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Александр Литвин",
+   "entityKey": "александр литвин",
+   "slug": "aleksandr-litvin",
+   "profileUrl": "https://www.design-events.fun/speaker/aleksandr-litvin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e116"
+   ],
+   "role": "модератор",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Александр Сокольников",
+   "entityKey": "александр сокольников",
+   "slug": "aleksandr-sokolnikov",
+   "profileUrl": "https://www.design-events.fun/speaker/aleksandr-sokolnikov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e058"
+   ],
+   "role": "главный редактор DROP",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Александр Ус",
+   "entityKey": "александр ус",
+   "slug": "aleksandr-us",
+   "profileUrl": "https://www.design-events.fun/speaker/aleksandr-us",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e033"
+   ],
+   "role": "сооснователь и креативный директор SILA SVETA, куратор фестиваля Outline",
+   "sections": [
+    "Медиаарт"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Александра Дубинина",
+   "entityKey": "александра дубинина",
+   "slug": "aleksandra-dubinina",
+   "profileUrl": "https://www.design-events.fun/speaker/aleksandra-dubinina",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e039"
+   ],
+   "role": "режиссер, креативный директор и основатель Interstellar Production",
+   "sections": [
+    "Компьютерная графика"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Алексей Журавлёв",
+   "entityKey": "алексей журавлёв",
+   "slug": "aleksei-zhuravlev",
+   "profileUrl": "https://www.design-events.fun/speaker/aleksei-zhuravlev",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e125"
+   ],
+   "role": "руководитель и основатель студии OOPS TEAM",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Алексей Мочалов",
+   "entityKey": "алексей мочалов",
+   "slug": "aleksei-mochalov",
+   "profileUrl": "https://www.design-events.fun/speaker/aleksei-mochalov",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e122"
+   ],
+   "role": "руководитель креативной студии ВИ.ру",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Алексей Пушкарёв",
+   "entityKey": "алексей пушкарёв",
+   "slug": "aleksei-pushkarev",
+   "profileUrl": "https://www.design-events.fun/speaker/aleksei-pushkarev",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e009"
+   ],
+   "role": "дизайнер Odd works",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Алина Абрамова",
+   "entityKey": "алина абрамова",
+   "slug": "alina-abramova",
+   "profileUrl": "https://www.design-events.fun/speaker/alina-abramova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e126"
+   ],
+   "role": "босс и сооснователь BALAGAN",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Анастасия Ступина",
+   "entityKey": "анастасия ступина",
+   "slug": "anastasiya-stupina",
+   "profileUrl": "https://www.design-events.fun/speaker/anastasiya-stupina",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e014"
+   ],
+   "role": "руководитель дизайна B2B Альфа-Банк",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Анастасия Тулумджан",
+   "entityKey": "анастасия тулумджан",
+   "slug": "anastasiya-tulumdzhan",
+   "profileUrl": "https://www.design-events.fun/speaker/anastasiya-tulumdzhan",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e037"
+   ],
+   "role": "руководитель производственного направления Filmway Production",
+   "sections": [
+    "Компьютерная графика"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Анастасия Харитонова",
+   "entityKey": "анастасия харитонова",
+   "slug": "anastasiya-haritonova",
+   "profileUrl": "https://www.design-events.fun/speaker/anastasiya-haritonova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e134"
+   ],
+   "role": "",
+   "sections": [
+    "Клуб"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Андрей Глазунов",
+   "entityKey": "андрей глазунов",
+   "slug": "andrei-glazunov",
+   "profileUrl": "https://www.design-events.fun/speaker/andrei-glazunov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e105"
+   ],
+   "role": "инфлюенсер, режиссёр и креатор",
+   "sections": [
+    "Блогеры"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Андрей Грибков",
+   "entityKey": "андрей грибков",
+   "slug": "andrei-gribkov",
+   "profileUrl": "https://www.design-events.fun/speaker/andrei-gribkov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e155"
+   ],
+   "role": "",
+   "sections": [
+    "Konstruct и Слой"
+   ],
+   "halls": [
+    "Konstruct Space"
+   ]
+  },
+  {
+   "name": "Андрей Дансков",
+   "entityKey": "андрей дансков",
+   "slug": "andrei-danskov",
+   "profileUrl": "https://www.design-events.fun/speaker/andrei-danskov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e017"
+   ],
+   "role": "управляющий партнёр и креативный директор GREAT",
+   "sections": [
+    "Реклама"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Андрей Ильин",
+   "entityKey": "андрей ильин",
+   "slug": "andrei-ilin",
+   "profileUrl": "https://www.design-events.fun/speaker/andrei-ilin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e014"
+   ],
+   "role": "арт-директор Додо",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Андрей Кадышев",
+   "entityKey": "андрей кадышев",
+   "slug": "andrei-kadyshev",
+   "profileUrl": "https://www.design-events.fun/speaker/andrei-kadyshev",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e128"
+   ],
+   "role": "руководитель отдела ивент-маркетинга и оффлайн спецпроектов Т-Банк",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Андрей Цыпер",
+   "entityKey": "андрей цыпер",
+   "slug": "andrei-tsyper",
+   "profileUrl": "https://www.design-events.fun/speaker/andrei-tsyper",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e065"
+   ],
+   "role": "исполнительный директор по медиа Rambler&Co",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Анна Зайцева",
+   "entityKey": "анна зайцева",
+   "slug": "anna-zaitseva",
+   "profileUrl": "https://www.design-events.fun/speaker/anna-zaitseva",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e107"
+   ],
+   "role": "CEO и партнёр REDDAY",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Анна Левант",
+   "entityKey": "анна левант",
+   "slug": "anna-levant",
+   "profileUrl": "https://www.design-events.fun/speaker/anna-levant",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e136"
+   ],
+   "role": "",
+   "sections": [
+    "Клуб"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Анна Смирнова",
+   "entityKey": "анна смирнова",
+   "slug": "anna-smirnova",
+   "profileUrl": "https://www.design-events.fun/speaker/anna-smirnova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e033"
+   ],
+   "role": "модератор; куратор и руководитель Generative Gallery, искусствовед и арт-менеджер",
+   "sections": [
+    "Медиаарт"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Антон Черногоров",
+   "entityKey": "антон черногоров",
+   "slug": "anton-chernogorov",
+   "profileUrl": "https://www.design-events.fun/speaker/anton-chernogorov",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e013"
+   ],
+   "role": "основатель студии Работяги",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Аня Коновалова",
+   "entityKey": "аня коновалова",
+   "slug": "anya-konovalova",
+   "profileUrl": "https://www.design-events.fun/speaker/anya-konovalova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e129"
+   ],
+   "role": "руководитель группы маркома Авито Услуги",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Аня Никич",
+   "entityKey": "аня никич",
+   "slug": "anya-nikich",
+   "profileUrl": "https://www.design-events.fun/speaker/anya-nikich",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e132"
+   ],
+   "role": "креативный директор Яндекс Еда",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Арам Даниелян",
+   "entityKey": "арам даниелян",
+   "slug": "aram-danielyan",
+   "profileUrl": "https://www.design-events.fun/speaker/aram-danielyan",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e092"
+   ],
+   "role": "директор по маркетингу S&P Records",
+   "sections": [
+    "Музыка"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Артем Полянский",
+   "entityKey": "артем полянский",
+   "slug": "artem-polyanskii",
+   "profileUrl": "https://www.design-events.fun/speaker/artem-polyanskii",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e026"
+   ],
+   "role": "основатель и CEO We Are Magnets",
+   "sections": [
+    "ИИ"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Артём Кондратенко",
+   "entityKey": "артём кондратенко",
+   "slug": "artem-kondratenko",
+   "profileUrl": "https://www.design-events.fun/speaker/artem-kondratenko",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e116"
+   ],
+   "role": "руководитель группы закупок ивентов, мерча, дизайна и контента Яндекс",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Артём Минасян",
+   "entityKey": "артём минасян",
+   "slug": "artem-minasyan",
+   "profileUrl": "https://www.design-events.fun/speaker/artem-minasyan",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e113"
+   ],
+   "role": "генеральный директор, сооснователь YEP Event Agency",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Артём Царегородцев",
+   "entityKey": "артём царегородцев",
+   "slug": "artem-tsaregorodtsev",
+   "profileUrl": "https://www.design-events.fun/speaker/artem-tsaregorodtsev",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e018"
+   ],
+   "role": "сооснователь и креативный директор Zebra Hero",
+   "sections": [
+    "Реклама"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Артём Щербаков",
+   "entityKey": "артём щербаков",
+   "slug": "artem-scherbakov",
+   "profileUrl": "https://www.design-events.fun/speaker/artem-scherbakov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e036"
+   ],
+   "role": "креативный директор, режиссер ZHEESHEE",
+   "sections": [
+    "Компьютерная графика"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Борис Альхимович",
+   "entityKey": "борис альхимович",
+   "slug": "boris-alhimovich",
+   "profileUrl": "https://www.design-events.fun/speaker/boris-alhimovich",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e128"
+   ],
+   "role": "сооснователь REDDAY и фестиваля предпринимателей Атланты Сити, генеральный продюсер GEF",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Борис Шилин",
+   "entityKey": "борис шилин",
+   "slug": "boris-shilin",
+   "profileUrl": "https://www.design-events.fun/speaker/boris-shilin",
+   "inAfishaGraph": true,
+   "hasProfilePage": true,
+   "sessions": 1,
+   "sessionIds": [
+    "e009"
+   ],
+   "role": "основатель бюро Щёлочь",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Вадим Белов",
+   "entityKey": "вадим белов",
+   "slug": "vadim-belov",
+   "profileUrl": "https://www.design-events.fun/speaker/vadim-belov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e035"
+   ],
+   "role": "основатель, руководитель It's alive",
+   "sections": [
+    "Компьютерная графика"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Вася Губин",
+   "entityKey": "вася губин",
+   "slug": "vasya-gubin",
+   "profileUrl": "https://www.design-events.fun/speaker/vasya-gubin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e132"
+   ],
+   "role": "креативный директор «Родной Речи», режиссёр",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Виктор Донюков",
+   "entityKey": "виктор донюков",
+   "slug": "viktor-donyukov",
+   "profileUrl": "https://www.design-events.fun/speaker/viktor-donyukov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e137"
+   ],
+   "role": "",
+   "sections": [
+    "Клуб"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Виктория Бутикова",
+   "entityKey": "виктория бутикова",
+   "slug": "viktoriya-butikova",
+   "profileUrl": "https://www.design-events.fun/speaker/viktoriya-butikova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e116"
+   ],
+   "role": "руководитель направления закупок маркетинговых услуг Альфа Банк",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Виктория Василевская",
+   "entityKey": "виктория василевская",
+   "slug": "viktoriya-vasilevskaya",
+   "profileUrl": "https://www.design-events.fun/speaker/viktoriya-vasilevskaya",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e010"
+   ],
+   "role": "лидер проекта Универмаг Точка Банк",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Виктория Горшкова",
+   "entityKey": "виктория горшкова",
+   "slug": "viktoriya-gorshkova",
+   "profileUrl": "https://www.design-events.fun/speaker/viktoriya-gorshkova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e110"
+   ],
+   "role": "руководитель команды внутренних событий и комьюнити Яндекс",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Виталий Быков",
+   "entityKey": "виталий быков",
+   "slug": "vitalii-bykov",
+   "profileUrl": "https://www.design-events.fun/speaker/vitalii-bykov",
+   "inAfishaGraph": true,
+   "hasProfilePage": true,
+   "sessions": 1,
+   "sessionIds": [
+    "e003"
+   ],
+   "role": "генеральный директор REDKEDS, идеолог и сооснователь фестиваля G8",
+   "sections": [],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Виталий Урезченко",
+   "entityKey": "виталий урезченко",
+   "slug": "vitalii-urezchenko",
+   "profileUrl": "https://www.design-events.fun/speaker/vitalii-urezchenko",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e132"
+   ],
+   "role": "Ex-CMO Yota, CarPrice, PREMIER, Tutu.ru и СберМобайла",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Влад Воронин",
+   "entityKey": "влад воронин",
+   "slug": "vlad-voronin",
+   "profileUrl": "https://www.design-events.fun/speaker/vlad-voronin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e057"
+   ],
+   "role": "главный редактор Спортса\"",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Влад Сидоров",
+   "entityKey": "влад сидоров",
+   "slug": "vlad-sidorov",
+   "profileUrl": "https://www.design-events.fun/speaker/vlad-sidorov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e079"
+   ],
+   "role": "",
+   "sections": [
+    "Стендап"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Влад Ситников",
+   "entityKey": "влад ситников",
+   "slug": "vlad-sitnikov",
+   "profileUrl": "https://www.design-events.fun/speaker/vlad-sitnikov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e141"
+   ],
+   "role": "",
+   "sections": [
+    "Клуб"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Владимир Гранкин",
+   "entityKey": "владимир гранкин",
+   "slug": "vladimir-grankin",
+   "profileUrl": "https://www.design-events.fun/speaker/vladimir-grankin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e129"
+   ],
+   "role": "основатель LAB Production",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Владимир Гуринович",
+   "entityKey": "владимир гуринович",
+   "slug": "vladimir-gurinovich",
+   "profileUrl": "https://www.design-events.fun/speaker/vladimir-gurinovich",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e079"
+   ],
+   "role": "",
+   "sections": [
+    "Стендап"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Григорий Туманов",
+   "entityKey": "григорий туманов",
+   "slug": "grigorii-tumanov",
+   "profileUrl": "https://www.design-events.fun/speaker/grigorii-tumanov",
+   "inAfishaGraph": true,
+   "hasProfilePage": true,
+   "sessions": 1,
+   "sessionIds": [
+    "e061"
+   ],
+   "role": "контент-директор медиабренда «Правила жизни», автор тг-канала «Мужчина, вы куда?», журналист",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Гульнара Туктарова",
+   "entityKey": "гульнара туктарова",
+   "slug": "gulnara-tuktarova",
+   "profileUrl": "https://www.design-events.fun/speaker/gulnara-tuktarova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e010"
+   ],
+   "role": "основатель Decoding",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Гюльнара Акамова",
+   "entityKey": "гюльнара акамова",
+   "slug": "gyulnara-akamova",
+   "profileUrl": "https://www.design-events.fun/speaker/gyulnara-akamova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e003"
+   ],
+   "role": "генеральный директор АНО «Агентство креативных индустрий» (Правительство Москвы)",
+   "sections": [],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "ДЕНГАДДЕН",
+   "entityKey": "денгадден",
+   "slug": "dengadden",
+   "profileUrl": "https://www.design-events.fun/speaker/dengadden",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e104"
+   ],
+   "role": "креатор, сценарист в агентстве, TikTok- и Instagram-блогер",
+   "sections": [
+    "Блогеры"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Даниил Кожаринов",
+   "entityKey": "даниил кожаринов",
+   "slug": "daniil-kozharinov",
+   "profileUrl": "https://www.design-events.fun/speaker/daniil-kozharinov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e151"
+   ],
+   "role": "игротехник, социотехник, футуролог, психолог, визионер",
+   "sections": [
+    "Konstruct и Слой"
+   ],
+   "halls": [
+    "Konstruct Space"
+   ]
+  },
+  {
+   "name": "Даня Крастер",
+   "entityKey": "даня крастер",
+   "slug": "danya-kraster",
+   "profileUrl": "https://www.design-events.fun/speaker/danya-kraster",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e103"
+   ],
+   "role": "блогер и изобретатель",
+   "sections": [
+    "Блогеры"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Дарья Переходюк",
+   "entityKey": "дарья переходюк",
+   "slug": "darya-perehodyuk",
+   "profileUrl": "https://www.design-events.fun/speaker/darya-perehodyuk",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e055"
+   ],
+   "role": "руководитель диджитал-маркетинга «Нового Радио»",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Дарья Решке",
+   "entityKey": "дарья решке",
+   "slug": "darya-reshke",
+   "profileUrl": "https://www.design-events.fun/speaker/darya-reshke",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e054"
+   ],
+   "role": "издатель журнала «Москвичка» и главный редактор журнала «Огород»",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Денис Глазин",
+   "entityKey": "денис глазин",
+   "slug": "denis-glazin",
+   "profileUrl": "https://www.design-events.fun/speaker/denis-glazin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e091"
+   ],
+   "role": "A&R-директор S&P Records",
+   "sections": [
+    "Музыка"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Денис Лапшинов",
+   "entityKey": "денис лапшинов",
+   "slug": "denis-lapshinov",
+   "profileUrl": "https://www.design-events.fun/speaker/denis-lapshinov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e016"
+   ],
+   "role": "основатель независимого креативного агентства SLAVA",
+   "sections": [
+    "Реклама"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Диана Халилова",
+   "entityKey": "диана халилова",
+   "slug": "diana-halilova",
+   "profileUrl": "https://www.design-events.fun/speaker/diana-halilova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e005"
+   ],
+   "role": "руководитель отдела маркетинг-коммуникаций Бургер Кинг",
+   "sections": [
+    "Маркетинг"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Дмитрий Костюченко",
+   "entityKey": "дмитрий костюченко",
+   "slug": "dmitrii-kostyuchenko",
+   "profileUrl": "https://www.design-events.fun/speaker/dmitrii-kostyuchenko",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e011"
+   ],
+   "role": "нейротипичный иллюстратор",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Дмитрий Мордвинцев",
+   "entityKey": "дмитрий мордвинцев",
+   "slug": "dmitrii-mordvintsev",
+   "profileUrl": "https://www.design-events.fun/speaker/dmitrii-mordvintsev",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e077"
+   ],
+   "role": "руководитель студии графического дизайна ABCdesign",
+   "sections": [
+    "Издательское дело"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Дмитрий Харьков",
+   "entityKey": "дмитрий харьков",
+   "slug": "dmitrii-harkov",
+   "profileUrl": "https://www.design-events.fun/speaker/dmitrii-harkov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e076"
+   ],
+   "role": "директор по маркетингу и пиару издательства Ad Marginem",
+   "sections": [
+    "Издательское дело"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Дмитрий Щугорев",
+   "entityKey": "дмитрий щугорев",
+   "slug": "dmitrii-schugorev",
+   "profileUrl": "https://www.design-events.fun/speaker/dmitrii-schugorev",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e060"
+   ],
+   "role": "главный редактор телеканала Москва24",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Ева Шумляева",
+   "entityKey": "ева шумляева",
+   "slug": "eva-shumlyaeva",
+   "profileUrl": "https://www.design-events.fun/speaker/eva-shumlyaeva",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e066"
+   ],
+   "role": "продюсер по маркетингу и коммуникациям Plan the Best",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Евгения Галетка",
+   "entityKey": "евгения галетка",
+   "slug": "evgeniya-galetka",
+   "profileUrl": "https://www.design-events.fun/speaker/evgeniya-galetka",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e121"
+   ],
+   "role": "основатель и генеральный директор Journey",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Евгения Новокрещенова",
+   "entityKey": "евгения новокрещенова",
+   "slug": "evgeniya-novokreschenova",
+   "profileUrl": "https://www.design-events.fun/speaker/evgeniya-novokreschenova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e014"
+   ],
+   "role": "арт-директор DDVB",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Екатерина Беляева",
+   "entityKey": "екатерина беляева",
+   "slug": "ekaterina-belyaeva",
+   "profileUrl": "https://www.design-events.fun/speaker/ekaterina-belyaeva",
+   "inAfishaGraph": true,
+   "hasProfilePage": true,
+   "sessions": 1,
+   "sessionIds": [
+    "e032"
+   ],
+   "role": "академический руководитель «Медиаискусство» в Центральном университете",
+   "sections": [
+    "Медиаарт"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Женя Ефанов",
+   "entityKey": "женя ефанов",
+   "slug": "zhenya-efanov",
+   "profileUrl": "https://www.design-events.fun/speaker/zhenya-efanov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e012"
+   ],
+   "role": "управляющий партнер AIC",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Женя Редкэпп",
+   "entityKey": "женя редкэпп",
+   "slug": "zhenya-redkepp",
+   "profileUrl": "https://www.design-events.fun/speaker/zhenya-redkepp",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e038"
+   ],
+   "role": "режиссер, основатель Ai-платформы Reddeck.ai",
+   "sections": [
+    "Компьютерная графика"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Зелим Габисов",
+   "entityKey": "зелим габисов",
+   "slug": "zelim-gabisov",
+   "profileUrl": "https://www.design-events.fun/speaker/zelim-gabisov",
+   "inAfishaGraph": true,
+   "hasProfilePage": true,
+   "sessions": 1,
+   "sessionIds": [
+    "e059"
+   ],
+   "role": "креативный редактор в A! Magazine",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Иван Нефёдкин",
+   "entityKey": "иван нефёдкин",
+   "slug": "ivan-nefedkin",
+   "profileUrl": "https://www.design-events.fun/speaker/ivan-nefedkin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e033"
+   ],
+   "role": "основатель и креативный директор Radugadesign, основатель Generative Gallery",
+   "sections": [
+    "Медиаарт"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Иван Смелянский",
+   "entityKey": "иван смелянский",
+   "slug": "ivan-smelyanskii",
+   "profileUrl": "https://www.design-events.fun/speaker/ivan-smelyanskii",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e007"
+   ],
+   "role": "руководитель маркетинга Авито.Подработка",
+   "sections": [
+    "Маркетинг"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Иван Черкалов",
+   "entityKey": "иван черкалов",
+   "slug": "ivan-cherkalov",
+   "profileUrl": "https://www.design-events.fun/speaker/ivan-cherkalov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e138"
+   ],
+   "role": "",
+   "sections": [
+    "Клуб"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Игорь Демидов",
+   "entityKey": "игорь демидов",
+   "slug": "igor-demidov",
+   "profileUrl": "https://www.design-events.fun/speaker/igor-demidov",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e124"
+   ],
+   "role": "сооснователь и CEO агентства событийного маркетинга N:OW, партнёр агентства Teammate",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Игорь Сайфуллин",
+   "entityKey": "игорь сайфуллин",
+   "slug": "igor-saifullin",
+   "profileUrl": "https://www.design-events.fun/speaker/igor-saifullin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e132"
+   ],
+   "role": "генеральный директор Бюро «Рабочее название»",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Игорь Фроловский",
+   "entityKey": "игорь фроловский",
+   "slug": "igor-frolovskii",
+   "profileUrl": "https://www.design-events.fun/speaker/igor-frolovskii",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e014"
+   ],
+   "role": "сооснователь и дизайн-директор в агентстве AffArts",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Илья Доронов",
+   "entityKey": "илья доронов",
+   "slug": "ilya-doronov",
+   "profileUrl": "https://www.design-events.fun/speaker/ilya-doronov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e064"
+   ],
+   "role": "управляющий директор объединенной вещательной редакции РБК",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Илья Корнеев",
+   "entityKey": "илья корнеев",
+   "slug": "ilya-korneev",
+   "profileUrl": "https://www.design-events.fun/speaker/ilya-korneev",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e140"
+   ],
+   "role": "",
+   "sections": [
+    "Клуб"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Ира Лаврова",
+   "entityKey": "ира лаврова",
+   "slug": "ira-lavrova",
+   "profileUrl": "https://www.design-events.fun/speaker/ira-lavrova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e129"
+   ],
+   "role": "Head of production Friends",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Ирина Волкова",
+   "entityKey": "ирина волкова",
+   "slug": "irina-volkova",
+   "profileUrl": "https://www.design-events.fun/speaker/irina-volkova",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e111"
+   ],
+   "role": "основатель и арт-директор в ATTENTION, исследователь глобальных трендов в TRENDSTORM",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Ирина Парфентьева",
+   "entityKey": "ирина парфентьева",
+   "slug": "irina-parfenteva",
+   "profileUrl": "https://www.design-events.fun/speaker/irina-parfenteva",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e064"
+   ],
+   "role": "главный редактор Телеканала РБК",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Карина Шабанова",
+   "entityKey": "карина шабанова",
+   "slug": "karina-shabanova",
+   "profileUrl": "https://www.design-events.fun/speaker/karina-shabanova",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e114"
+   ],
+   "role": "сооснователь креативного агентства You Know Studio",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Карлен Ходикян",
+   "entityKey": "карлен ходикян",
+   "slug": "karlen-hodikyan",
+   "profileUrl": "https://www.design-events.fun/speaker/karlen-hodikyan",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e105"
+   ],
+   "role": "креативный директор коммуникационного агентства DIDENOK TEAM",
+   "sections": [
+    "Блогеры"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Каролина Кириченко",
+   "entityKey": "каролина кириченко",
+   "slug": "karolina-kirichenko",
+   "profileUrl": "https://www.design-events.fun/speaker/karolina-kirichenko",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e129"
+   ],
+   "role": "руководитель AI-направления и креативный продюсер MATE Production",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Катя Иванова",
+   "entityKey": "катя иванова",
+   "slug": "katya-ivanova",
+   "profileUrl": "https://www.design-events.fun/speaker/katya-ivanova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e059"
+   ],
+   "role": "креативный директор КБ «Золотые тигры», журнала «Пчела»",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Катя Норштейн",
+   "entityKey": "катя норштейн",
+   "slug": "katya-norshtein",
+   "profileUrl": "https://www.design-events.fun/speaker/katya-norshtein",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e068"
+   ],
+   "role": "модератор; креативный продюсер проектов агентства «Стрелка»",
+   "sections": [
+    "Кино"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Кир Павлюкевич",
+   "entityKey": "кир павлюкевич",
+   "slug": "kir-pavlyukevich",
+   "profileUrl": "https://www.design-events.fun/speaker/kir-pavlyukevich",
+   "inAfishaGraph": true,
+   "hasProfilePage": true,
+   "sessions": 1,
+   "sessionIds": [
+    "e023"
+   ],
+   "role": "независимый креативный директор",
+   "sections": [
+    "ИИ"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Кира Полянина",
+   "entityKey": "кира полянина",
+   "slug": "kira-polyanina",
+   "profileUrl": "https://www.design-events.fun/speaker/kira-polyanina",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e049"
+   ],
+   "role": "модератор; независимый стратег дизайн-индустрии и продюсер культурных партнерств",
+   "sections": [
+    "Предметный дизайн"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Кирилл Шелест",
+   "entityKey": "кирилл шелест",
+   "slug": "kirill-shelest",
+   "profileUrl": "https://www.design-events.fun/speaker/kirill-shelest",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e075"
+   ],
+   "role": "продюсер офлайн мероприятий в издательстве Ad Marginem",
+   "sections": [
+    "Издательское дело"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Константин Беляков",
+   "entityKey": "константин беляков",
+   "slug": "konstantin-belyakov",
+   "profileUrl": "https://www.design-events.fun/speaker/konstantin-belyakov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e126"
+   ],
+   "role": "креативный лидер и сооснователь BALAGAN",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Ксения Литвинова",
+   "entityKey": "ксения литвинова",
+   "slug": "kseniya-litvinova",
+   "profileUrl": "https://www.design-events.fun/speaker/kseniya-litvinova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e097"
+   ],
+   "role": "senior creator, креативное digital-агентство SOCIALIST",
+   "sections": [
+    "Бюро Глагол"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Ксения Масчан",
+   "entityKey": "ксения масчан",
+   "slug": "kseniya-maschan",
+   "profileUrl": "https://www.design-events.fun/speaker/kseniya-maschan",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e116"
+   ],
+   "role": "заместитель вице-президента по экономике и финансам, директор по закупкам и логистике VK",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Лидия Шахидовна",
+   "entityKey": "лидия шахидовна",
+   "slug": "lidiya-shahidovna",
+   "profileUrl": "https://www.design-events.fun/speaker/lidiya-shahidovna",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e153"
+   ],
+   "role": "миротворец, продюсер, мультидисциплинарный артист, дизайнер, художник и блогер",
+   "sections": [
+    "Konstruct и Слой"
+   ],
+   "halls": [
+    "Konstruct Space"
+   ]
+  },
+  {
+   "name": "Лиза Тринич-Афанасьева",
+   "entityKey": "лиза тринич-афанасьева",
+   "slug": "liza-trinich-afanaseva",
+   "profileUrl": "https://www.design-events.fun/speaker/liza-trinich-afanaseva",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e006"
+   ],
+   "role": "директор креативного агентства СберМаркетинг",
+   "sections": [
+    "Маркетинг"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Лиза Ягуарушкина",
+   "entityKey": "лиза ягуарушкина",
+   "slug": "liza-yaguarushkina",
+   "profileUrl": "https://www.design-events.fun/speaker/liza-yaguarushkina",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e079"
+   ],
+   "role": "",
+   "sections": [
+    "Стендап"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Макс Пономарев",
+   "entityKey": "макс пономарев",
+   "slug": "maks-ponomarev",
+   "profileUrl": "https://www.design-events.fun/speaker/maks-ponomarev",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e143"
+   ],
+   "role": "",
+   "sections": [
+    "Клуб"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Максим Ворошилов",
+   "entityKey": "максим ворошилов",
+   "slug": "maksim-voroshilov",
+   "profileUrl": "https://www.design-events.fun/speaker/maksim-voroshilov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e093"
+   ],
+   "role": "директор по развитию бизнеса S&P Records, операционный директор дистрибьютора Pulse",
+   "sections": [
+    "Музыка"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Максим Ежов",
+   "entityKey": "максим ежов",
+   "slug": "maksim-ezhov",
+   "profileUrl": "https://www.design-events.fun/speaker/maksim-ezhov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e132"
+   ],
+   "role": "креативный директор студии WB360 (Wildberries)",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Максим Козлов",
+   "entityKey": "максим козлов",
+   "slug": "maksim-kozlov",
+   "profileUrl": "https://www.design-events.fun/speaker/maksim-kozlov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e033"
+   ],
+   "role": "руководитель Центра иммерсивных решений Сбера",
+   "sections": [
+    "Медиаарт"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Максим Перлин",
+   "entityKey": "максим перлин",
+   "slug": "maksim-perlin",
+   "profileUrl": "https://www.design-events.fun/speaker/maksim-perlin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e105"
+   ],
+   "role": "CEO агентства креативных коммуникаций Blacklight, сооснователь АБА",
+   "sections": [
+    "Блогеры"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Марат Адельшин",
+   "entityKey": "марат адельшин",
+   "slug": "marat-adelshin",
+   "profileUrl": "https://www.design-events.fun/speaker/marat-adelshin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e131"
+   ],
+   "role": "режиссер и оператор",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Мария Иванова",
+   "entityKey": "мария иванова",
+   "slug": "mariya-ivanova",
+   "profileUrl": "https://www.design-events.fun/speaker/mariya-ivanova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e152"
+   ],
+   "role": "генеральный продюсер RBW",
+   "sections": [
+    "Konstruct и Слой"
+   ],
+   "halls": [
+    "Konstruct Space"
+   ]
+  },
+  {
+   "name": "Мария Ищенко",
+   "entityKey": "мария ищенко",
+   "slug": "mariya-ischenko",
+   "profileUrl": "https://www.design-events.fun/speaker/mariya-ischenko",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e013"
+   ],
+   "role": "сооснователь е-б эдженси",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Марьям Ахунова",
+   "entityKey": "марьям ахунова",
+   "slug": "maryam-ahunova",
+   "profileUrl": "https://www.design-events.fun/speaker/maryam-ahunova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e129"
+   ],
+   "role": "креативный директор Big Picture Festival",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Миляуша Лукманова",
+   "entityKey": "миляуша лукманова",
+   "slug": "milyausha-lukmanova",
+   "profileUrl": "https://www.design-events.fun/speaker/milyausha-lukmanova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e097"
+   ],
+   "role": "creative team lead, креативное digital-агентство SOCIALIST",
+   "sections": [
+    "Бюро Глагол"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Митя Осадчук",
+   "entityKey": "митя осадчук",
+   "slug": "mitya-osadchuk",
+   "profileUrl": "https://www.design-events.fun/speaker/mitya-osadchuk",
+   "inAfishaGraph": true,
+   "hasProfilePage": true,
+   "sessions": 1,
+   "sessionIds": [
+    "e014"
+   ],
+   "role": "дизайн-директор B2C Сбера",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Михаил Шутов",
+   "entityKey": "михаил шутов",
+   "slug": "mihail-shutov",
+   "profileUrl": "https://www.design-events.fun/speaker/mihail-shutov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e128"
+   ],
+   "role": "модератор; сооснователь креативного агентства «МЕЛ»",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Миша Петрик",
+   "entityKey": "миша петрик",
+   "slug": "misha-petrik",
+   "profileUrl": "https://www.design-events.fun/speaker/misha-petrik",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e027"
+   ],
+   "role": "со-основатель и креативный директор Petrick",
+   "sections": [
+    "ИИ"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Наадя (Надя Грицкевич)",
+   "entityKey": "наадя (надя грицкевич)",
+   "slug": "naadya-nadya-gritskevich",
+   "profileUrl": "https://www.design-events.fun/speaker/naadya-nadya-gritskevich",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e086"
+   ],
+   "role": "куратор направления «Автор песен» в Moscow Music School",
+   "sections": [
+    "Образование"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Наадя Грицкевич",
+   "entityKey": "наадя грицкевич",
+   "slug": "naadya-gritskevich",
+   "profileUrl": "https://www.design-events.fun/speaker/naadya-gritskevich",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e087"
+   ],
+   "role": "куратор направления «Автор песен» в Moscow Music School",
+   "sections": [
+    "Образование"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Наташа Климчук",
+   "entityKey": "наташа климчук",
+   "slug": "natasha-klimchuk",
+   "profileUrl": "https://www.design-events.fun/speaker/natasha-klimchuk",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e086"
+   ],
+   "role": "модератор",
+   "sections": [
+    "Образование"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Нелли Наджарян",
+   "entityKey": "нелли наджарян",
+   "slug": "nelli-nadzharyan",
+   "profileUrl": "https://www.design-events.fun/speaker/nelli-nadzharyan",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e116"
+   ],
+   "role": "руководитель по закупкам категории «Маркетинговые услуги» X5",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Ник Эрлан",
+   "entityKey": "ник эрлан",
+   "slug": "nik-erlan",
+   "profileUrl": "https://www.design-events.fun/speaker/nik-erlan",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e153"
+   ],
+   "role": "волшебник, физтех, мастер медитации, Senior IT/AI Architect",
+   "sections": [
+    "Konstruct и Слой"
+   ],
+   "halls": [
+    "Konstruct Space"
+   ]
+  },
+  {
+   "name": "Никита Прядко",
+   "entityKey": "никита прядко",
+   "slug": "nikita-pryadko",
+   "profileUrl": "https://www.design-events.fun/speaker/nikita-pryadko",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e118"
+   ],
+   "role": "основатель режиссёрского и видеопродакшена \"run\", режиссёр",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Николай Осин",
+   "entityKey": "николай осин",
+   "slug": "nikolai-osin",
+   "profileUrl": "https://www.design-events.fun/speaker/nikolai-osin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e108"
+   ],
+   "role": "креативный директор и партнёр REDDAY",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Оксана Запевалова",
+   "entityKey": "оксана запевалова",
+   "slug": "oksana-zapevalova",
+   "profileUrl": "https://www.design-events.fun/speaker/oksana-zapevalova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e052"
+   ],
+   "role": "главный редактор «Лайфхакера»",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Олег Баринбойм",
+   "entityKey": "олег баринбойм",
+   "slug": "oleg-barinboim",
+   "profileUrl": "https://www.design-events.fun/speaker/oleg-barinboim",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e011"
+   ],
+   "role": "креативный директор TUTKOVBUDKOV",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Олег Туманов",
+   "entityKey": "олег туманов",
+   "slug": "oleg-tumanov",
+   "profileUrl": "https://www.design-events.fun/speaker/oleg-tumanov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e142"
+   ],
+   "role": "",
+   "sections": [
+    "Клуб"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Олег Юсупов",
+   "entityKey": "олег юсупов",
+   "slug": "oleg-yusupov",
+   "profileUrl": "https://www.design-events.fun/speaker/oleg-yusupov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e027"
+   ],
+   "role": "CEO и сооснователь Phygital+",
+   "sections": [
+    "ИИ"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Ольга Зуева",
+   "entityKey": "ольга зуева",
+   "slug": "olga-zueva",
+   "profileUrl": "https://www.design-events.fun/speaker/olga-zueva",
+   "inAfishaGraph": true,
+   "hasProfilePage": true,
+   "sessions": 1,
+   "sessionIds": [
+    "e022"
+   ],
+   "role": "co-founder Phygital+",
+   "sections": [
+    "ИИ"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Ольга Рыдзевская",
+   "entityKey": "ольга рыдзевская",
+   "slug": "olga-rydzevskaya",
+   "profileUrl": "https://www.design-events.fun/speaker/olga-rydzevskaya",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e119"
+   ],
+   "role": "генеральный директор и партнёр Worlds",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Покрас Лампас",
+   "entityKey": "покрас лампас",
+   "slug": "pokras-lampas",
+   "profileUrl": "https://www.design-events.fun/speaker/pokras-lampas",
+   "inAfishaGraph": true,
+   "hasProfilePage": true,
+   "sessions": 1,
+   "sessionIds": [
+    "e020"
+   ],
+   "role": "современный художник, каллиграф",
+   "sections": [
+    "Реклама"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Полина Накрайникова",
+   "entityKey": "полина накрайникова",
+   "slug": "polina-nakrainikova",
+   "profileUrl": "https://www.design-events.fun/speaker/polina-nakrainikova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e079"
+   ],
+   "role": "",
+   "sections": [
+    "Стендап"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Пётр Губанов",
+   "entityKey": "пётр губанов",
+   "slug": "petr-gubanov",
+   "profileUrl": "https://www.design-events.fun/speaker/petr-gubanov",
+   "inAfishaGraph": true,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e101"
+   ],
+   "role": "основатель контент-агентства PostPost",
+   "sections": [
+    "Блогеры"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Регина Каллагова",
+   "entityKey": "регина каллагова",
+   "slug": "regina-kallagova",
+   "profileUrl": "https://www.design-events.fun/speaker/regina-kallagova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e116"
+   ],
+   "role": "менеджер по закупкам hh.ru",
+   "sections": [
+    "REDDAY"
+   ],
+   "halls": [
+    "Гостиная"
+   ]
+  },
+  {
+   "name": "Рома Бетретдинов",
+   "entityKey": "рома бетретдинов",
+   "slug": "roma-betretdinov",
+   "profileUrl": "https://www.design-events.fun/speaker/roma-betretdinov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e063"
+   ],
+   "role": "главный редактор Sostav",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Рома Цикада",
+   "entityKey": "рома цикада",
+   "slug": "roma-tsikada",
+   "profileUrl": "https://www.design-events.fun/speaker/roma-tsikada",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e024"
+   ],
+   "role": "генеральный директор агентства Phygital.team",
+   "sections": [
+    "ИИ"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Роман Ступин",
+   "entityKey": "роман ступин",
+   "slug": "roman-stupin",
+   "profileUrl": "https://www.design-events.fun/speaker/roman-stupin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e135"
+   ],
+   "role": "Бюро",
+   "sections": [
+    "Клуб"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Рустам Мосафир",
+   "entityKey": "рустам мосафир",
+   "slug": "rustam-mosafir",
+   "profileUrl": "https://www.design-events.fun/speaker/rustam-mosafir",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e069"
+   ],
+   "role": "режиссёр, сценарист и актёр",
+   "sections": [
+    "Кино"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Саша Ковальский",
+   "entityKey": "саша ковальский",
+   "slug": "sasha-kovalskii",
+   "profileUrl": "https://www.design-events.fun/speaker/sasha-kovalskii",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e012"
+   ],
+   "role": "дизайн-директор CreativePeople",
+   "sections": [
+    "Дизайн"
+   ],
+   "halls": [
+    "Бойлерная"
+   ]
+  },
+  {
+   "name": "Святослав Деньгин",
+   "entityKey": "святослав деньгин",
+   "slug": "svyatoslav-dengin",
+   "profileUrl": "https://www.design-events.fun/speaker/svyatoslav-dengin",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e039"
+   ],
+   "role": "сооснователь Interstellar Production, продакшн-директор",
+   "sections": [
+    "Компьютерная графика"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "ТРАВМА",
+   "entityKey": "травма",
+   "slug": "travma",
+   "profileUrl": "https://www.design-events.fun/speaker/travma",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e094"
+   ],
+   "role": "артист",
+   "sections": [
+    "Музыка"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Татьяна Эшназарова",
+   "entityKey": "татьяна эшназарова",
+   "slug": "tatyana-eshnazarova",
+   "profileUrl": "https://www.design-events.fun/speaker/tatyana-eshnazarova",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e053"
+   ],
+   "role": "главный редактор AdIndex.ru",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Тигран Бежанов",
+   "entityKey": "тигран бежанов",
+   "slug": "tigran-bezhanov",
+   "profileUrl": "https://www.design-events.fun/speaker/tigran-bezhanov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e131"
+   ],
+   "role": "режиссёр",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Тимур Исмаев",
+   "entityKey": "тимур исмаев",
+   "slug": "timur-ismaev",
+   "profileUrl": "https://www.design-events.fun/speaker/timur-ismaev",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e139"
+   ],
+   "role": "",
+   "sections": [
+    "Клуб"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Федор Савельев",
+   "entityKey": "федор савельев",
+   "slug": "fedor-savelev",
+   "profileUrl": "https://www.design-events.fun/speaker/fedor-savelev",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e131"
+   ],
+   "role": "художник-постановщик",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Эльбрус Такулов",
+   "entityKey": "эльбрус такулов",
+   "slug": "elbrus-takulov",
+   "profileUrl": "https://www.design-events.fun/speaker/elbrus-takulov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e059"
+   ],
+   "role": "основатель издания СорокаМедиа",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Эльвина Абибуллаева",
+   "entityKey": "эльвина абибуллаева",
+   "slug": "elvina-abibullaeva",
+   "profileUrl": "https://www.design-events.fun/speaker/elvina-abibullaeva",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e059"
+   ],
+   "role": "фаундер и генеральный директор медиа «Щука» (PIKE)",
+   "sections": [
+    "Медиа"
+   ],
+   "halls": [
+    "Котельная"
+   ]
+  },
+  {
+   "name": "Эрадж Нидоев",
+   "entityKey": "эрадж нидоев",
+   "slug": "eradzh-nidoev",
+   "profileUrl": "https://www.design-events.fun/speaker/eradzh-nidoev",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e037"
+   ],
+   "role": "режиссер, креативный директор AI-направления Filmway Production",
+   "sections": [
+    "Компьютерная графика"
+   ],
+   "halls": [
+    "Центр Внутри"
+   ]
+  },
+  {
+   "name": "Юлия Белая",
+   "entityKey": "юлия белая",
+   "slug": "yuliya-belaya",
+   "profileUrl": "https://www.design-events.fun/speaker/yuliya-belaya",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e105"
+   ],
+   "role": "модератор; PRD JAMI LUP",
+   "sections": [
+    "Блогеры"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  },
+  {
+   "name": "Юлия Фролова-Митирева",
+   "entityKey": "юлия фролова-митирева",
+   "slug": "yuliya-frolova-mitireva",
+   "profileUrl": "https://www.design-events.fun/speaker/yuliya-frolova-mitireva",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e131"
+   ],
+   "role": "стилист",
+   "sections": [
+    "Big Picture"
+   ],
+   "halls": [
+    "Лекторий"
+   ]
+  },
+  {
+   "name": "Юрий Наумов",
+   "entityKey": "юрий наумов",
+   "slug": "yurii-naumov",
+   "profileUrl": "https://www.design-events.fun/speaker/yurii-naumov",
+   "inAfishaGraph": false,
+   "hasProfilePage": false,
+   "sessions": 1,
+   "sessionIds": [
+    "e096"
+   ],
+   "role": "генеральный креативный продюсер, BAR creative agency",
+   "sections": [
+    "Бюро Глагол"
+   ],
+   "halls": [
+    "Simple Music"
+   ]
+  }
+ ]
+}
