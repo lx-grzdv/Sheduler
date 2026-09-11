@@ -108,14 +108,14 @@ select.sel{background:var(--surface); border:1px solid var(--line-2); border-rad
 .hourlab{position:absolute; right:8px; font-size:11px; color:var(--ink-3); transform:translateY(-50%)}
 .ev{
   position:absolute; left:3px; right:3px; overflow:hidden; text-align:left;
-  border-radius:6px; padding:5px 7px; border:1px solid transparent;
+  border-radius:6px; padding:4px 6px; border:1px solid transparent;
   border-left:3px solid var(--v); background:color-mix(in srgb,var(--v) var(--tint),var(--surface));
   display:block; transition:transform .1s ease;
 }
 .ev:hover{background:color-mix(in srgb,var(--v) var(--tint-2),var(--surface))}
-.ev .t{font-size:10.5px; font-weight:700; color:var(--ink-2); display:block}
-.ev .ti{font-size:12px; font-weight:600; line-height:1.22; display:block; margin-top:1px;
-  display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden}
+.ev .t{font-size:11px; font-weight:700; color:var(--ink-2); margin-right:5px}
+.ev .ti{font-size:12.5px; font-weight:600; line-height:1.2;
+  display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; overflow-wrap:break-word; hyphens:auto}
 .ev.break{background:repeating-linear-gradient(135deg,transparent,transparent 5px,color-mix(in srgb,var(--ink) 6%,transparent) 5px,color-mix(in srgb,var(--ink) 6%,transparent) 10px); border-left-color:var(--line-2)}
 .ev.break .ti{font-weight:500; color:var(--ink-3)}
 .ev.picked{border-color:var(--ink); box-shadow:inset 0 0 0 2px var(--lime)}
@@ -191,11 +191,31 @@ select.sel{background:var(--surface); border:1px solid var(--line-2); border-rad
 footer{border-top:1px solid var(--line); margin-top:40px; padding-block:22px 40px; color:var(--ink-3); font-size:12.5px}
 footer a{color:var(--ink-2)}
 main{padding-bottom:30px}
-@media (max-width:640px){
-  .slot{grid-template-columns:52px 1fr; gap:8px}
-  .slot .st{font-size:13px; top:150px}
+@media (max-width:700px){
+  header.top{padding-block:14px 8px}
+  h1{margin-top:8px}
+  .subline{font-size:13px; margin-top:6px}
+  .counts{display:none}
+  .tabs{margin-top:12px; flex-wrap:nowrap; width:100%; overflow-x:auto; scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{padding:7px 11px; font-size:13.5px}
+  .toolbar{padding-block:8px}
+  .toolbar .wrap{gap:7px}
+  .searchrow{flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; padding-bottom:1px}
+  .searchrow::-webkit-scrollbar{display:none}
+  .search{flex:1 0 58%}
+  select.sel{flex:none}
+  .searchrow .chip{flex:none}
+  .chips{flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; padding-bottom:1px; -webkit-overflow-scrolling:touch}
+  .chips::-webkit-scrollbar{display:none}
+  .chip .hint{display:none}
+  .slot{grid-template-columns:50px 1fr; gap:8px}
+  .slot .st{font-size:13px; top:112px}
   .cards{grid-template-columns:1fr}
-  .gridwrap{max-height:calc(100vh - 170px)}
+  .gridwrap{max-height:calc(100vh - 150px)}
+  .gridhead .hcell{padding:7px 8px}
+  .hplace{display:none}
+  .hourlab{right:5px}
   .sheet{left:0; top:auto; width:100%; max-height:86vh; border-left:none; border-top:1px solid var(--line-2); border-radius:16px 16px 0 0}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important; scroll-behavior:auto!important}}
@@ -212,8 +232,8 @@ main{padding-bottom:30px}
       <div class="counts" id="counts"></div>
     </div>
     <div class="tabs" role="tablist">
-      <button class="tab" role="tab" data-view="grid" aria-selected="true">Сетка залов</button>
-      <button class="tab" role="tab" data-view="list" aria-selected="false">Списком</button>
+      <button class="tab" role="tab" data-view="grid" aria-selected="false">Сетка залов</button>
+      <button class="tab" role="tab" data-view="list" aria-selected="true">Списком</button>
       <button class="tab" role="tab" data-view="plan" aria-selected="false">Мой план <span class="badge" id="planBadge">0</span></button>
     </div>
   </div>
@@ -262,7 +282,7 @@ const plural = (n, one, few, many) => {
 const hhmm = m => String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
 
 const state = {
-  view:'grid', q:'', section:'', venues:new Set(), breaks:true, onlyPlan:false,
+  view: window.innerWidth < 700 ? 'list' : 'grid', q:'', section:'', venues:new Set(), breaks:true, onlyPlan:false,
   plan:new Set(), open:null
 };
 
@@ -319,12 +339,14 @@ function matches(e){
 const filtering = () => state.q || state.section || state.venues.size || state.onlyPlan;
 
 /* ---------- header ---------- */
-const T0=480, T1=1290, PPM=2.6, PAD=14;
+const T0=480, T1=1290, PAD=14;
+const narrow = () => window.innerWidth < 700;
 function header(){
   const f=DATA.festival;
-  document.getElementById('subline').innerHTML =
-    `<b>${esc(f.dateLabel)}</b> · ${f.places.map(p=>esc(p.name)).join(' + ')} · ${plural(CONTENT.length,'событие','события','событий')} в 7 залах параллельно. `+
-    `Отмечайте звёздочкой то, что хотите — план соберётся во вкладке «Мой план» и предупредит о накладках.`;
+  document.getElementById('subline').innerHTML = narrow()
+    ? `<b>${esc(f.dateLabel)}</b> · ${plural(CONTENT.length,'событие','события','событий')} в 7 залах. Отмечайте ★ — план соберётся во вкладке «Мой план».`
+    : `<b>${esc(f.dateLabel)}</b> · ${f.places.map(p=>esc(p.name)).join(' + ')} · ${plural(CONTENT.length,'событие','события','событий')} в 7 залах параллельно. `+
+      `Отмечайте звёздочкой то, что хотите — план соберётся во вкладке «Мой план» и предупредит о накладках.`;
   document.getElementById('counts').innerHTML =
     [[CONTENT.length,'событий'],[7,'залов'],[DATA.sections.length,'секций'],
      [new Set(EV.flatMap(e=>e.speakers.map(s=>s.name))).size,'спикеров']]
@@ -350,8 +372,9 @@ function controls(){
 
 /* ---------- grid ---------- */
 function renderGrid(){
+  const PPM = narrow() ? 3.4 : 2.6;
   const cols = DATA.venues.filter(v=>!state.venues.size || state.venues.has(v.id));
-  const tpl = `76px repeat(${cols.length}, minmax(160px,1fr))`;
+  const tpl = `${narrow()?50:76}px repeat(${cols.length}, minmax(${narrow()?170:160}px,1fr))`;
   const H = (T1-T0)*PPM + PAD*2;
   let lines='';
   for(let m=T0;m<=T1;m+=30){
@@ -370,8 +393,9 @@ function renderGrid(){
       const cls = `ev${e.kind==='break'?' break':''}${state.plan.has(e.id)?' picked':''}${dim}`;
       const tag = e.kind==='break' ? 'div' : 'button';
       const at  = e.kind==='break' ? '' : ` data-ev="${e.id}"`;
+      const lines = Math.max(1, Math.floor((h - 11) / 15));
       return `<${tag} class="${cls}"${at} style="top:${top}px;height:${h}px">
-        <span class="t mono">${e.start}</span><span class="ti">${esc(e.title)}</span></${tag}>`;
+        <span class="ti" style="-webkit-line-clamp:${lines}"><span class="t mono">${e.start}</span>${esc(e.title.replace(/\.$/,""))}</span></${tag}>`;
     }).join('') + `</div>`;
   }).join('');
 
@@ -538,4 +562,6 @@ document.getElementById('onlyPlanBtn').addEventListener('click', e=>{ state.only
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeSheet(); });
 
 header(); render();
+let wasNarrow = narrow();
+addEventListener('resize', ()=>{ if(narrow()!==wasNarrow){ wasNarrow=narrow(); header(); render(); } });
 </script>
