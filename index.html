@@ -189,6 +189,13 @@ select.sel{background:var(--surface); border:1px solid var(--line-2); border-rad
 .warn.walk{border-left-color:#7A8A12} .warn.walk b{color:#7A8A12}
 .warn.gap{border-left-color:var(--line-2)} .warn.gap b{color:var(--ink-3)}
 @media (max-width:700px){.warn{margin-left:58px}}
+.prow.clash > div:last-child{border-left:2px solid var(--g8); padding-left:13px; margin-left:-13px}
+.clash__head{font-size:12.5px; color:var(--ink-2); padding-bottom:9px}
+.clash__head b{font-family:var(--display); font-weight:500; font-size:10px; letter-spacing:.07em;
+  text-transform:uppercase; color:var(--g8); margin-right:8px}
+.clash__cards{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); align-items:start}
+.prow.clash .card{padding-left:11px}
+@media (max-width:700px){.clash__cards{grid-template-columns:1fr; gap:12px}}
 .empty{text-align:center; padding:56px 20px; color:var(--ink-2); max-width:46ch; margin:0 auto}
 .empty h2{font-family:var(--display); font-size:18px; text-transform:uppercase; margin-bottom:8px}
 .planbar{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:14px}
@@ -674,22 +681,39 @@ function renderPlan(){
       <p>Откройте «Сетку залов» или «Списком» и отмечайте звёздочкой то, что цепляет. Здесь всё выстроится по времени, а накладки и переходы между площадками подсветятся.</p></div>`;
     return;
   }
+  // пересекающиеся события собираются в одну группу — их показываем рядом
+  const clusters=[]; let cur=null, curEnd=0;
+  picks.forEach(e=>{
+    if(cur && e.startMin < curEnd){ cur.push(e); curEnd=Math.max(curEnd,e.endMin); }
+    else { if(cur) clusters.push(cur); cur=[e]; curEnd=e.endMin; }
+  });
+  if(cur) clusters.push(cur);
+
   let html='<div class="plan">';
-  picks.forEach((e,i)=>{
-    const v=V[e.venue], prev=picks[i-1];
-    if(prev){
-      if(e.startMin < prev.endMin){
-        html += `<div class="warn"><b>Накладка</b>«${esc(prev.title)}» идёт до ${prev.end} в зале ${esc(V[prev.venue].name)} — придётся выбрать.</div>`;
-      } else if(V[prev.venue].place!==v.place && e.startMin-prev.endMin < 10){
-        html += `<div class="warn walk"><b>Переход</b>${esc(V[prev.venue].place)} → ${esc(v.place)} за ${e.startMin-prev.endMin} мин. Площадки соседние, но заложите 5–7 минут.</div>`;
-      } else if(e.startMin-prev.endMin >= 45){
-        html += `<div class="warn gap"><b>Окно ${e.startMin-prev.endMin} мин</b>фудкорт, ярмарка или нетворкинг.</div>`;
+  clusters.forEach((group,gi)=>{
+    const first=group[0], prevGroup=clusters[gi-1];
+    if(prevGroup){
+      const prev=prevGroup.reduce((a,b)=>a.endMin>=b.endMin?a:b);
+      const gap=first.startMin-prev.endMin;
+      if(V[prev.venue].place!==V[first.venue].place && gap < 10){
+        html += `<div class="warn walk"><b>Переход</b>${esc(V[prev.venue].place)} → ${esc(V[first.venue].place)} ${gap ? 'за '+gap+' мин' : 'встык, без зазора'}. Площадки соседние, но заложите 5–7 минут.</div>`;
+      } else if(gap >= 45){
+        html += `<div class="warn gap"><b>Окно ${gap} мин</b>фудкорт, ярмарка или нетворкинг.</div>`;
       }
     }
-    html += `<div class="prow">
-      <div class="pt mono">${e.start}<small>${e.end||''}</small></div>
-      <div>${cardHTML(e)}</div>
-    </div>`;
+    const last=group.reduce((a,b)=>a.endMin>=b.endMin?a:b);
+    const when=`${first.start}<small>${last.end||''}</small>`;
+    if(group.length===1){
+      html += `<div class="prow"><div class="pt mono">${when}</div><div>${cardHTML(first)}</div></div>`;
+    } else {
+      html += `<div class="prow clash">
+        <div class="pt mono">${when}</div>
+        <div>
+          <div class="clash__head"><b>Накладка</b>${plural(group.length,'событие','события','событий')} пересекаются по времени — снимите звезду с лишнего</div>
+          <div class="clash__cards">${group.map(cardHTML).join('')}</div>
+        </div>
+      </div>`;
+    }
   });
   html += '</div>';
   const last=picks[picks.length-1];
