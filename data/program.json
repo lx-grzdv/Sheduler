@@ -26,7 +26,17 @@
    "note": "вход строго до 19:10"
   },
   "tagline": "Живая кухня креативных индустрий",
-  "organizer": "REDKEDS"
+  "organizer": "REDKEDS",
+  "artProgram": {
+   "name": "Арт-программа G8 × NEIGHBORS",
+   "dates": "11–13 сентября 2026",
+   "place": "Дизайн-завод",
+   "note": "ярмарка и маркет современного искусства; в этом расписании только день конференции"
+  },
+  "officialSchedule": {
+   "url": "https://g8.2do.agency/",
+   "label": "g8.2do.agency"
+  }
  },
  "venues": [
   {
@@ -39,25 +49,34 @@
    "id": "kotel",
    "name": "Котельная",
    "place": "Хлебозавод",
-   "num": "2"
+   "num": "2",
+   "address": "строение 23",
+   "addressSource": "g8.2do.agency"
   },
   {
    "id": "simple",
    "name": "Simple Music",
    "place": "Хлебозавод",
-   "num": "3"
+   "num": "3",
+   "address": "строение 1, 5 этаж",
+   "addressSource": "g8.2do.agency"
   },
   {
    "id": "vnutri",
    "name": "Центр Внутри",
    "place": "Хлебозавод",
-   "num": "4"
+   "num": "4",
+   "address": "строение 4, Ангар",
+   "addressSource": "g8.2do.agency"
   },
   {
    "id": "gostin",
    "name": "Гостиная",
    "place": "Хлебозавод",
-   "num": "5"
+   "num": "5",
+   "address": "строение 1, 3 этаж",
+   "addressSource": "g8.2do.agency",
+   "altName": "Гостиная №9"
   },
   {
    "id": "lector",
@@ -106,7 +125,8 @@
   {
    "name": "Компьютерная графика",
    "curator": "Влад Ткачук",
-   "venue": "vnutri"
+   "venue": "vnutri",
+   "curatorDetailed": "Влад Ткачук — основатель и CEO Студии Synticate"
   },
   {
    "name": "Дизайн интерьера",
@@ -121,7 +141,8 @@
   {
    "name": "Медиа",
    "curator": "Андрей Червонский, Соня Гофина",
-   "venue": "kotel"
+   "venue": "kotel",
+   "curatorDetailed": "Андрей Червонский — владелец агентства Lavry; Соня Гофина — PR-менеджер REDKEDS"
   },
   {
    "name": "Кино",
@@ -165,8 +186,10 @@
   },
   {
    "name": "REDDAY",
-   "curator": null,
-   "venue": "gostin"
+   "curator": "Анна Зайцева",
+   "venue": "gostin",
+   "tag": "ивенты от REDDAY",
+   "curatorDetailed": "Анна Зайцева — CEO, партнёр REDDAY"
   },
   {
    "name": "Big Picture",
@@ -851,7 +874,7 @@
    "speakers": [
     {
      "name": "Артём Щербаков",
-     "role": "креативный директор, режиссер ZHEESHEE"
+     "role": "режиссёр и креативный директор, создатель студии ZHEESHEE"
     }
    ]
   },
@@ -1324,7 +1347,7 @@
    "speakers": [
     {
      "name": "Григорий Туманов",
-     "role": "контент-директор медиабренда «Правила жизни», автор тг-канала «Мужчина, вы куда?», журналист"
+     "role": "контент-директор и журналист медиахолдинга Independent Media, медиабренд «Правила жизни», автор тг-канала «Мужчина, вы куда?»"
     }
    ]
   },
@@ -1354,7 +1377,7 @@
    "kind": "talk",
    "speakers": [
     {
-     "name": "Рома Бетретдинов",
+     "name": "Рома Бедретдинов",
      "role": "главный редактор Sostav"
     }
    ]
@@ -1908,7 +1931,7 @@
    "speakers": [
     {
      "name": "Арам Даниелян",
-     "role": "директор по маркетингу S&P Records"
+     "role": "директор по маркетингу S&P Digital"
     }
    ]
   },
@@ -2150,7 +2173,7 @@
    "id": "e106",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "11:00",
    "end": "11:10",
    "startMin": 660,
@@ -2163,7 +2186,7 @@
    "id": "e107",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "11:10",
    "end": "11:30",
    "startMin": 670,
@@ -2181,7 +2204,7 @@
    "id": "e108",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "11:30",
    "end": "11:50",
    "startMin": 690,
@@ -2199,7 +2222,7 @@
    "id": "e109",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "11:50",
    "end": "11:55",
    "startMin": 710,
@@ -2212,7 +2235,7 @@
    "id": "e110",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "11:55",
    "end": "12:15",
    "startMin": 715,
@@ -2230,7 +2253,7 @@
    "id": "e111",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "12:15",
    "end": "12:35",
    "startMin": 735,
@@ -2248,7 +2271,7 @@
    "id": "e112",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "12:35",
    "end": "12:40",
    "startMin": 755,
@@ -2261,7 +2284,7 @@
    "id": "e113",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "12:40",
    "end": "13:00",
    "startMin": 760,
@@ -2279,7 +2302,7 @@
    "id": "e114",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "13:00",
    "end": "13:20",
    "startMin": 780,
@@ -2297,7 +2320,7 @@
    "id": "e115",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "13:20",
    "end": "13:40",
    "startMin": 800,
@@ -2310,7 +2333,7 @@
    "id": "e116",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "13:40",
    "end": "14:25",
    "startMin": 820,
@@ -2348,7 +2371,7 @@
    "id": "e117",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "14:25",
    "end": "14:35",
    "startMin": 865,
@@ -2361,7 +2384,7 @@
    "id": "e118",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "14:35",
    "end": "14:55",
    "startMin": 875,
@@ -2379,7 +2402,7 @@
    "id": "e119",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "14:55",
    "end": "15:15",
    "startMin": 895,
@@ -2397,7 +2420,7 @@
    "id": "e120",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "15:15",
    "end": "15:20",
    "startMin": 915,
@@ -2410,7 +2433,7 @@
    "id": "e121",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "15:20",
    "end": "15:40",
    "startMin": 920,
@@ -2428,7 +2451,7 @@
    "id": "e122",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "15:40",
    "end": "16:00",
    "startMin": 940,
@@ -2446,7 +2469,7 @@
    "id": "e123",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "16:00",
    "end": "16:05",
    "startMin": 960,
@@ -2459,7 +2482,7 @@
    "id": "e124",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "16:05",
    "end": "16:25",
    "startMin": 965,
@@ -2477,7 +2500,7 @@
    "id": "e125",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "16:25",
    "end": "16:45",
    "startMin": 985,
@@ -2495,7 +2518,7 @@
    "id": "e126",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "16:45",
    "end": "17:05",
    "startMin": 1005,
@@ -2517,7 +2540,7 @@
    "id": "e127",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "17:05",
    "end": "17:25",
    "startMin": 1025,
@@ -2530,7 +2553,7 @@
    "id": "e128",
    "venue": "gostin",
    "section": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "start": "17:25",
    "end": null,
    "startMin": 1045,

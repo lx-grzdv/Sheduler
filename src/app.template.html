@@ -490,6 +490,8 @@ const VCOLOR = id => `var(--v-${id})`;
 const EV = DATA.events;
 const byId = {}; EV.forEach(e=>byId[e.id]=e);
 const CONTENT = EV.filter(e=>e.kind!=='break');
+const SECTION_INFO = {}; DATA.sections.forEach(x=>{ SECTION_INFO[x.name]=x; });
+const venueAddress = v => v.address ? `${v.place}, ${v.address}` : v.place;
 const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const plural = (n, one, few, many) => {
   const n10=n%10, n100=n%100;
@@ -589,6 +591,9 @@ function header(){
   document.getElementById('footnote').innerHTML =
     `Расписание собрано из официальной PDF-программы фестиваля <a href="${esc(f.site)}" target="_blank" rel="noopener">G8</a> — «${esc(f.edition)}», ${esc(f.dateLabel)}. ${esc(f.places[0].note)}. `+
     `Церемония награждения ${esc(f.ceremony.time)}, ${esc(f.ceremony.place)} (${esc(f.ceremony.note)}). Афтепати ${esc(f.afterparty.time)}, ${esc(f.afterparty.place)} — ${esc(f.afterparty.note)}. `+
+    `${f.artProgram ? esc(f.artProgram.name)+' — '+esc(f.artProgram.dates)+', '+esc(f.artProgram.place)+'; здесь только день конференции. ' : ''}`+
+    `Адреса строений и должности кураторов сверены с официальным расписанием `+
+    `<a href="${esc(f.officialSchedule.url)}" target="_blank" rel="noopener">${esc(f.officialSchedule.label)}</a>. `+
     `Организаторы могут менять программу: сверяйтесь на месте.`;
 }
 
@@ -640,7 +645,7 @@ function renderGrid(){
         <div class="hcell"></div>
         ${cols.map(v=>`<div class="hcell" style="--v:${VCOLOR(v.id)}">
             <div class="hname"><span class="dot"></span>${esc(v.name)}</div>
-            <div class="hplace">${esc(v.place)}</div></div>`).join('')}
+            <div class="hplace">${esc(venueAddress(v))}</div></div>`).join('')}
       </div>
       <div class="gridbody" style="grid-template-columns:${tpl}; height:${H}px">
         <div class="gcol ruler">${lines}${ruler}</div>
@@ -922,7 +927,10 @@ function openSheet(id){
     <span class="vtag" style="--v:${VCOLOR(e.venue)}"><span class="dot"></span>${esc(v.name)}</span>
     <h2>${esc(e.title)}</h2>
     <div class="when mono">${e.start}${e.end?' – '+e.end:''}</div>
-    <div class="where">${esc(v.place)}${e.section?` · секция «${esc(e.section)}»`:''}${e.curator?` · куратор: ${esc(e.curator)}`:''}</div>
+    <div class="where">${esc(venueAddress(v))}${e.section?` · секция «${esc(e.section)}»`:''}</div>
+    ${(() => { const si = e.section ? SECTION_INFO[e.section] : null;
+       const cur = si && (si.curatorDetailed || si.curator);
+       return cur ? `<div class="where">Куратор: ${esc(cur)}</div>` : ''; })()}
     ${e.speakers.length?`<div class="splist">${e.speakers.map(s=>{
        const l = afishaLink(s.name);
        const nameHtml = l

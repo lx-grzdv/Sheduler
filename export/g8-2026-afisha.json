@@ -139,7 +139,7 @@
   },
   {
    "name": "REDDAY",
-   "curator": null,
+   "curator": "Анна Зайцева",
    "hall": "Гостиная"
   },
   {
@@ -1406,13 +1406,13 @@
    "place": "Хлебозавод",
    "organizerKey": "g8",
    "speakerKeys": [
-    "рома бетретдинов"
+    "рома бедретдинов"
    ],
    "speakerSlugs": [
-    "roma-betretdinov"
+    "roma-bedretdinov"
    ],
    "speakerNames": [
-    "Рома Бетретдинов"
+    "Рома Бедретдинов"
    ]
   },
   {
@@ -2256,7 +2256,7 @@
    "title": "Открытие секции",
    "kind": "service",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2273,7 +2273,7 @@
    "title": "Клиентский сервис: как не пересолить в отношениях с клиентом",
    "kind": "talk",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2296,7 +2296,7 @@
    "title": "Острая нехватка продающего креатива",
    "kind": "talk",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2319,7 +2319,7 @@
    "title": "Искусство брифа: превращаем мысли в идею, или как направлять креативную команду",
    "kind": "talk",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2342,7 +2342,7 @@
    "title": "Баланс ингредиентов в ивенте: тренды + креатив + визуал",
    "kind": "talk",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2365,7 +2365,7 @@
    "title": "Тонкости международной ивент-кухни",
    "kind": "talk",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2388,7 +2388,7 @@
    "title": "Когда ивент не нужен",
    "kind": "talk",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2411,7 +2411,7 @@
    "title": "Дискуссия ПРО ЗАКУПКИ. Сладкий вкус победы в тендере: внутренняя кухня отдела закупок",
    "kind": "disc",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2449,7 +2449,7 @@
    "title": "Как выстраивать режиссуру на простых приемах вместо сложных концепций",
    "kind": "talk",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2472,7 +2472,7 @@
    "title": "Принципиально масштабно, или как реализуются большие проекты",
    "kind": "talk",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2495,7 +2495,7 @@
    "title": "Соль по рецепту: как дисциплина проектного менеджмента выигрывает на длинной дистанции",
    "kind": "talk",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2518,7 +2518,7 @@
    "title": "Перца по вкусу не бывает: как натренировать чувство креатива",
    "kind": "talk",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2541,7 +2541,7 @@
    "title": "Всё решают детали. Неочевидные решения, которые влияют на отношения с клиентом",
    "kind": "talk",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2564,7 +2564,7 @@
    "title": "Как за 4 дня построить замок в Лужниках. Опыт креативной студии при работе со стадионными концертами",
    "kind": "talk",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2587,7 +2587,7 @@
    "title": "Mamma mia! Или как делать проекты со страстью",
    "kind": "talk",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -2613,7 +2613,7 @@
    "title": "Дискуссия ПРО ФЕСТИВАЛИ. Идеальный десерт: рецепт фестиваля. Где взять деньги на ингредиенты — партнёры, продажи и правда о том, как это работает",
    "kind": "disc",
    "track": "REDDAY",
-   "trackCurator": "",
+   "trackCurator": "Анна Зайцева",
    "hall": "Гостиная",
    "venueKey": "хлебозавод №9",
    "place": "Хлебозавод",
@@ -4288,7 +4288,7 @@
    "sessionIds": [
     "e092"
    ],
-   "role": "директор по маркетингу S&P Records",
+   "role": "директор по маркетингу S&P Digital",
    "sections": [
     "Музыка"
    ],
@@ -4383,7 +4383,7 @@
    "sessionIds": [
     "e036"
    ],
-   "role": "креативный директор, режиссер ZHEESHEE",
+   "role": "режиссёр и креативный директор, создатель студии ZHEESHEE",
    "sections": [
     "Компьютерная графика"
    ],
@@ -4685,7 +4685,7 @@
    "sessionIds": [
     "e061"
    ],
-   "role": "контент-директор медиабренда «Правила жизни», автор тг-канала «Мужчина, вы куда?», журналист",
+   "role": "контент-директор и журналист медиахолдинга Independent Media, медиабренд «Правила жизни», автор тг-канала «Мужчина, вы куда?»",
    "sections": [
     "Медиа"
    ],
@@ -6136,10 +6136,10 @@
    ]
   },
   {
-   "name": "Рома Бетретдинов",
-   "entityKey": "рома бетретдинов",
-   "slug": "roma-betretdinov",
-   "profileUrl": "https://www.design-events.fun/speaker/roma-betretdinov",
+   "name": "Рома Бедретдинов",
+   "entityKey": "рома бедретдинов",
+   "slug": "roma-bedretdinov",
+   "profileUrl": "https://www.design-events.fun/speaker/roma-bedretdinov",
    "inAfishaGraph": false,
    "hasProfilePage": false,
    "sessions": 1,
