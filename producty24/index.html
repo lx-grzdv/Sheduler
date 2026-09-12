@@ -342,12 +342,118 @@ const DATA = {
     "organizer": "Т-Банк",
     "tagline": "Продукт, аналитика и дизайн на одной сцене",
     "places": [{"name": "Пространство «Мечта»", "note": "набережная Парка Горького, Москва"}],
-    "dayWindow": "10:00–18:00",
-    "extras": []
+    "dayWindow": "с 12:30",
+    "extras": [{"label": "Регистрация участников", "time": "с 12:30", "place": ""}]
   },
-  "venues": [],
+  "venues": [
+    {"id":"z1","name":"Достигаем результатов","hall":"Зал 1",
+     "hosts":[{"name":"Юлия Гурова","role":"руководитель дизайна платформы, Т-Банк"},
+              {"name":"Филипп Лях","role":"руководитель отдела дизайна операционных платформ, Т-Банк"}]},
+    {"id":"z2","name":"Ломаем шаблоны","hall":"Зал 2",
+     "hosts":[{"name":"Камилла Самохина","role":"руководитель продуктового направления RnD и Growth Hacking, Т-Банк"},
+              {"name":"Данила Наурбиев","role":"руководитель аналитики Города и лидер стрима по ИИ в аналитике, Т-Банк"}]},
+    {"id":"z3","name":"Говорим прямо","hall":"Зал 3","hosts":[]}
+  ],
   "sections": [],
-  "events": []
+  "events": [
+    /* ---- Зал 1 · достигаем результатов ---- */
+    {"id":"e101","venue":"z1","section":null,"curator":null,"start":"14:00","end":"14:30",
+     "startMin":840,"endMin":870,"kind":"talk","title":"Рисуй в стол",
+     "speakers":[{"name":"Вячеслав Ишков","role":"арт-директор, Авито Авто"}]},
+    {"id":"e102","venue":"z1","section":null,"curator":null,"start":"14:30","end":"15:00",
+     "startMin":870,"endMin":900,"kind":"talk",
+     "title":"Кого уже заменил AI, или почему агентства обогнали продукты по марже",
+     "speakers":[{"name":"Татьяна Савельева","role":"основатель UplinkAI, предприниматель и эксперт в сфере искусственного интеллекта"}]},
+    {"id":"e103","venue":"z1","section":null,"curator":null,"start":"15:00","end":"15:30",
+     "startMin":900,"endMin":930,"kind":"talk",
+     "title":"Запустить, провалить, понять, повторить: как мы делали большой редизайн приложения Т-Банка",
+     "speakers":[{"name":"Пётр Самсонов","role":"руководитель продуктового развития, Т-Банк"},
+                 {"name":"Владислав Петраков","role":"руководитель аналитики, Т-Банк"}]},
+    {"id":"e104","venue":"z1","section":null,"curator":null,"start":"15:30","end":"16:00",
+     "startMin":930,"endMin":960,"kind":"talk",
+     "title":"Т-Мобайл: оператор, который всех бесит, смог",
+     "speakers":[{"name":"Антон Никольский-Волконский","role":"руководитель бизнес-направления, Т-Мобайл"}]},
+    {"id":"e105","venue":"z1","section":null,"curator":null,"start":"16:00","end":"16:30",
+     "startMin":960,"endMin":990,"kind":"talk",
+     "title":"Сделали то, о чём нас не просили, и это сработало",
+     "speakers":[{"name":"Анна Горохова","role":"ведущий концепт-дизайнер, Ozon"}]},
+    {"id":"e106","venue":"z1","section":null,"curator":null,"start":"16:30","end":"17:00",
+     "startMin":990,"endMin":1020,"kind":"talk",
+     "title":"1 000 и одна ошибка при создании вселенной",
+     "speakers":[{"name":"Анна Подображных","role":"руководитель вселенной AI-ассистентов, Т-Банк"}]},
+    {"id":"e107","venue":"z1","section":null,"curator":null,"start":"17:00","end":"17:30",
+     "startMin":1020,"endMin":1050,"kind":"talk",
+     "title":"Когда локальная оптимизация перестала работать: ваш продукт в плюсе, а компания?",
+     "speakers":[{"name":"Антон Усачев","role":"заместитель директора по аналитике, Т-Банк"},
+                 {"name":"Григорий Засько","role":"руководитель лаборатории прикладной статистики (ASL), Т-Банк"}]},
+    {"id":"e108","venue":"z1","section":null,"curator":null,"start":"17:30","end":"18:00",
+     "startMin":1050,"endMin":1080,"kind":"talk",
+     "title":"Зачем нам вау, если и так всё норм",
+     "speakers":[{"name":"Павел Коростелев","role":"руководитель дизайн-развития, Т-Банк"}]},
+    {"id":"e109","venue":"z1","section":null,"curator":null,"start":"18:00","end":"18:30",
+     "startMin":1080,"endMin":1110,"kind":"talk",
+     "title":"Расти не в лоб: как искать точки роста на зрелых рынках",
+     "speakers":[{"name":"Роман Тевосьян","role":"CPO продуктов Яндекс Про в офлайне, Яндекс"}]},
+
+    /* ---- Зал 2 · ломаем шаблоны ---- */
+    {"id":"e201","venue":"z2","section":null,"curator":null,"start":"14:00","end":"15:00",
+     "startMin":840,"endMin":900,"kind":"talk",
+     "title":"Почему хорошие решения не всегда рождаются по правилам",
+     "speakers":[{"name":"Максим Кирилычев","role":"директор интерфейсов экосистемы, Т-Банк"}]},
+    {"id":"e202","venue":"z2","section":null,"curator":null,"start":"15:00","end":"16:00",
+     "startMin":900,"endMin":960,"kind":"talk",
+     "title":"Расти не ломая: как предсказуемость меняет рынок услуг",
+     "speakers":[{"name":"Александр Куроптев","role":"старший директор, Авито Услуги"}]},
+    {"id":"e203","venue":"z2","section":null,"curator":null,"start":"16:00","end":"17:00",
+     "startMin":960,"endMin":1020,"kind":"talk",
+     "title":"От белков к лекарствам: как ИИ меняет разработку новых препаратов",
+     "speakers":[{"name":"Дмитрий Иванков","role":"доцент Центра био- и медицинских технологий Сколтеха"}]},
+    {"id":"e204","venue":"z2","section":null,"curator":null,"start":"17:00","end":"18:00",
+     "startMin":1020,"endMin":1080,"kind":"talk",
+     "title":"Стань тем, не знаю кем. Что такое современный университет",
+     "speakers":[{"name":"Иван Стельмах","role":"профессор РЭШ и директор по продукту Центрального университета"}]},
+    {"id":"e205","venue":"z2","section":null,"curator":null,"start":"18:00","end":"19:00",
+     "startMin":1080,"endMin":1140,"kind":"disc",
+     "title":"Не по шаблону. Как фундаментальное образование, научный подход и неожиданные связи помогают находить новые решения",
+     "speakers":[{"name":"Андрей Коняев","role":"журналист, математик, издатель научно-популярного интернет-издания N+1"},
+                 {"name":"Кирилл Николаев","role":"директор по аналитике, Т-Банк"}]},
+    {"id":"e206","venue":"z2","section":null,"curator":null,"start":"19:15","end":"20:30",
+     "startMin":1155,"endMin":1230,"kind":"special",
+     "title":"Стендап. Продукты 24 × ffdd2d × акустика: мы так устроены",
+     "speakers":[{"name":"Иван Бахмадов","role":"программист, разработчик средств альтернативной коммуникации"},
+                 {"name":"Михаил Вишневский","role":"креативный директор"},
+                 {"name":"Маргарита Якунина","role":"основатель и издатель коллекционного журнала о кино ORNAMENT"},
+                 {"name":"Камилла Самохина","role":"руководитель продуктового направления RnD и Growth Hacking, Т-Банк"},
+                 {"name":"Юлия Садова","role":"стендап-комик, продюсер конференций TEDx и TEDxWomen · модератор"},
+                 {"name":"Максим Котов","role":"врач-онколог, хирург"},
+                 {"name":"Софья Донец","role":"руководитель управления аналитики фондового рынка Т-Инвестиции, Т-Банк"}]},
+
+    /* ---- Зал 3 · говорим прямо ---- */
+    {"id":"e301","venue":"z3","section":null,"curator":null,"start":"14:00","end":"15:00",
+     "startMin":840,"endMin":900,"kind":"disc","title":"Как? Кому? Зачем?",
+     "speakers":[{"name":"Эльза Ожегова","role":""},
+                 {"name":"Даниил","role":""},
+                 {"name":"Татьяна Чернявская","role":"продакт-менеджер ML-продуктов, Т-Банк · модератор"}]},
+    {"id":"e302","venue":"z3","section":null,"curator":null,"start":"15:00","end":"16:00",
+     "startMin":900,"endMin":960,"kind":"disc","title":"Твоя игра",
+     "speakers":[{"name":"Даниил Чураков","role":"дизайн-директор, ВТБ Онлайн"},
+                 {"name":"Иван Турлаев","role":"директор по дизайну продукта экосистемы, Т-Банк"},
+                 {"name":"Антон Смирнов","role":"руководитель направления дизайна внутренних сервисов, Т-Банк · модератор"},
+                 {"name":"Сергей Мекрюков","role":"дизайн-директор цифровых каналов, Альфа-Банк"},
+                 {"name":"Митя Осадчук","role":"директор Центра дизайн-компетенции B2C, Сбер"}]},
+    {"id":"e303","venue":"z3","section":null,"curator":null,"start":"16:00","end":"17:00",
+     "startMin":960,"endMin":1020,"kind":"disc","title":"100 к 1",
+     "speakers":[{"name":"Сергей Михайлов","role":"дизайн-директор, Т-Банк"},
+                 {"name":"Максим Андреев","role":"руководитель аналитики, Т-Банк"},
+                 {"name":"Андрей Королев","role":"руководитель аналитики сервис-линий, Т-Банк · модератор"},
+                 {"name":"Антон Никольский-Волконский","role":"руководитель бизнес-направления, Т-Мобайл"}]},
+    {"id":"e304","venue":"z3","section":null,"curator":null,"start":"17:00","end":"18:00",
+     "startMin":1020,"endMin":1080,"kind":"disc","title":"Пускай говорят",
+     "speakers":[{"name":"Елена Щеплова","role":"Яндекс Еда"},
+                 {"name":"Сергей Ковтунов","role":"Яндекс Такси"},
+                 {"name":"Михаил Прокофьев","role":"руководитель продукта Навигация и Рост Шопинга, Т-Банк · модератор"},
+                 {"name":"Екатерина Трофимова","role":"Яндекс Лавка"}]}
+  ]
 };
 
 /* ---------- палитра залов: у каждого зала свой hex ---------- */
@@ -496,9 +602,13 @@ function header(){
   const extras = c.extras.length
     ? ' ' + c.extras.map(x=>`${esc(x.label)} — ${esc(x.time)}${x.place?', '+esc(x.place):''}.`).join(' ')
     : '';
+  const hosted = DATA.venues.filter(v=>v.hosts && v.hosts.length);
+  const hosts = hosted.length
+    ? ' ' + hosted.map(v=>`${esc(v.hall)} ведут ${v.hosts.map(h=>esc(h.name)).join(' и ')}`).join('; ') + '. '
+    : '';
   document.getElementById('footnote').innerHTML =
     `Расписание собрано из программы конференции <a href="${esc(c.site)}" target="_blank" rel="noopener">«${esc(c.name)}»</a>, ${esc(c.dateLabel)}. `+
-    `${esc(c.places[0].name)} — ${esc(c.places[0].note)}.${extras} `+
+    `${esc(c.places[0].name)} — ${esc(c.places[0].note)}.${extras}${hosts}`+
     `Организаторы могут менять программу: сверяйтесь на месте.`;
 }
 
@@ -506,7 +616,7 @@ function header(){
 function controls(){
   document.getElementById('venueChips').innerHTML = DATA.venues.map(v=>
     `<button class="chip" data-venue="${v.id}" style="--v:${VCOLOR(v.id)}" aria-pressed="${state.venues.has(v.id)}">
-       <span class="dot"></span>${esc(v.name)}<span class="hex">${esc(v.color)}</span></button>`).join('');
+       <span class="dot"></span>${esc(v.name)}<span class="hex">${esc(v.hall||v.color)}</span></button>`).join('');
   const sel=document.getElementById('sectionSel');
   if(!sel.options.length){
     sel.innerHTML = `<option value="">Все секции</option>` + DATA.sections.map(s=>
@@ -558,7 +668,7 @@ function renderGrid(){
         <div class="hcell"></div>
         ${cols.map(v=>`<div class="hcell" style="--v:${VCOLOR(v.id)}">
             <div class="hname"><span class="dot"></span>${esc(v.name)}</div>
-            <div class="hhex">${esc(v.color)}</div></div>`).join('')}
+            <div class="hhex">${esc(v.hall||'')} · ${esc(v.color)}</div></div>`).join('')}
       </div>
       <div class="gridbody" style="grid-template-columns:${tpl}; height:${H}px">
         <div class="gcol ruler">${lines}${ruler}</div>
@@ -852,7 +962,7 @@ function openSheet(id){
     <span class="vtag" style="--v:${VCOLOR(e.venue)}"><span class="dot"></span>${esc(v.name)}</span>
     <h2>${esc(e.title)}</h2>
     <div class="when">${e.start}${e.end?' – '+e.end:''}</div>
-    <div class="where">${esc(DATA.conf.places[0].name)}${e.section?` · секция «${esc(e.section)}»`:''}${e.curator?` · куратор: ${esc(e.curator)}`:''}</div>
+    <div class="where">${v.hall?esc(v.hall)+' · ':''}${esc(DATA.conf.places[0].name)}${e.section?` · секция «${esc(e.section)}»`:''}${e.curator?` · куратор: ${esc(e.curator)}`:''}</div>
     ${e.speakers.length?`<div class="splist">${e.speakers.map(s=>
       `<div class="sp-item"><b>${esc(s.name)}</b>${s.role?`<span>${esc(s.role)}</span>`:''}</div>`).join('')}</div>`:''}
     <div class="act">
