@@ -1,0 +1,914 @@
+<title>Куда пойти на Продукты 24</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+:root{
+  /* ---- брендовая палитра: жёлтый #FFDD2D на тёплом нейтральном ---- */
+  --display:"Unbounded","Golos Text",system-ui,sans-serif;
+  --ui:"Golos Text",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+
+  --bg:#F7F6F2; --surface:#FFFFFF; --surface-2:#EFEEE8; --sunk:#E3E1D9;
+  --ink:#14140F; --ink-2:#5C5B52; --ink-3:#8E8C80;
+  --line:#E4E2DA; --line-2:#CFCCC1;
+  --y:#FFDD2D; --y-ink:#14140F; --plate:#14140F; --paper:#F7F6F2;
+  --hot:#E0321E;            /* накладка */
+  --walk:#0E7C6B;           /* переход между залами */
+  --tint:14%; --tint-2:28%;
+  --shadow:0 1px 2px rgba(20,20,15,.05),0 8px 22px rgba(20,20,15,.05);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141413; --surface:#1D1D1B; --surface-2:#262623; --sunk:#0C0C0B;
+    --ink:#F7F6F2; --ink-2:#A8A69B; --ink-3:#807E74;
+    --line:#302F2B; --line-2:#434138;
+    --y:#FFDD2D; --y-ink:#14140F; --plate:#0C0C0B; --paper:#141413;
+    --hot:#FF5A44; --walk:#3FC2AC;
+    --tint:24%; --tint-2:40%;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 26px rgba(0,0,0,.34);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141413; --surface:#1D1D1B; --surface-2:#262623; --sunk:#0C0C0B;
+  --ink:#F7F6F2; --ink-2:#A8A69B; --ink-3:#807E74;
+  --line:#302F2B; --line-2:#434138;
+  --y:#FFDD2D; --y-ink:#14140F; --plate:#0C0C0B; --paper:#141413;
+  --hot:#FF5A44; --walk:#3FC2AC;
+  --tint:24%; --tint-2:40%;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 26px rgba(0,0,0,.34);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--ink); font-family:var(--ui);
+  font-size:15px; line-height:1.45; margin:0; -webkit-text-size-adjust:100%}
+.wrap{max-width:1360px; margin:0 auto; padding-inline:16px}
+h1,h2,h3{margin:0; text-wrap:balance}
+button{font:inherit; color:inherit; background:none; border:none; cursor:pointer}
+:focus-visible{outline:2px solid var(--ink); outline-offset:2px; border-radius:4px}
+.mono{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+/* ---------- шапка ---------- */
+.ticker{background:var(--plate); color:var(--y); overflow:hidden; padding-block:8px}
+.ticker__track{display:flex; width:max-content; animation:tick 75s linear infinite}
+.ticker:hover .ticker__track{animation-play-state:paused}
+.ticker span{font-family:var(--mono); font-weight:500; font-size:11px; letter-spacing:.06em;
+  padding-right:20px; white-space:nowrap; text-transform:uppercase}
+.ticker span i{font-style:normal; color:#FFFFFF; opacity:.45}
+@keyframes tick{from{transform:translateX(0)} to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker__track{animation:none}}
+.swatchbar{display:flex; height:7px}
+.swatchbar i{flex:1}
+header.top{padding-block:22px 14px; border-bottom:1px solid var(--line)}
+.brandrow{display:flex; align-items:flex-start; gap:18px; flex-wrap:wrap; justify-content:space-between}
+.mark{display:inline-flex; align-items:center; gap:8px}
+.mark b{font-family:var(--display); font-weight:800; font-size:13px; letter-spacing:-.02em;
+  background:var(--y); color:var(--y-ink); padding:3px 8px 4px; border-radius:3px}
+.mark u{text-decoration:none; font-family:var(--mono); font-size:11px; letter-spacing:.07em;
+  color:var(--ink-3); text-transform:uppercase}
+h1{font-family:var(--display); font-weight:800; font-size:clamp(25px,4.6vw,40px);
+  line-height:1.05; letter-spacing:-.02em; margin-top:14px}
+h1 mark{background:linear-gradient(to top, var(--y) 0 42%, transparent 42%);
+  color:var(--ink); padding-inline:2px}
+.subline{color:var(--ink-2); font-size:14px; margin-top:10px; max-width:64ch}
+.subline b{color:var(--ink); font-weight:600}
+.counts{display:flex; gap:20px; flex-wrap:wrap; margin-top:12px}
+.count{display:flex; flex-direction:column; gap:2px}
+.count .n{font-family:var(--display); font-weight:700; font-size:20px; line-height:1}
+.count .l{font-family:var(--mono); font-size:10px; letter-spacing:.07em;
+  text-transform:uppercase; color:var(--ink-3)}
+
+/* ---------- вкладки ---------- */
+.tabs{display:flex; gap:3px; margin-top:18px; background:var(--sunk); padding:3px;
+  border-radius:9px; width:fit-content; max-width:100%; flex-wrap:wrap}
+.tab{padding:8px 14px; border-radius:6px; font-family:var(--display); font-weight:500;
+  font-size:12px; letter-spacing:-.01em; color:var(--ink-2); white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--surface); color:var(--ink); box-shadow:var(--shadow)}
+.tab .badge{display:inline-block; min-width:18px; padding:0 5px; margin-left:7px; border-radius:9px;
+  background:var(--y); color:var(--y-ink); font-family:var(--mono); font-size:11px; font-weight:700; text-align:center}
+
+/* ---------- панель фильтров ---------- */
+.toolbar{position:sticky; top:0; z-index:30; padding-block:10px;
+  background:color-mix(in srgb,var(--bg) 88%, transparent);
+  backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+.toolbar .wrap{display:flex; flex-direction:column; gap:9px}
+.searchrow{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+.search{flex:1 1 240px; min-width:0; display:flex; align-items:center; gap:8px;
+  background:var(--surface); border:1px solid var(--line-2); border-radius:8px; padding:8px 11px}
+.search input{flex:1; min-width:0; border:none; background:none; font:inherit; color:inherit; outline:none}
+.search svg{flex:none; color:var(--ink-3)}
+.chips{display:flex; gap:6px; flex-wrap:wrap; align-items:center}
+.chip{display:inline-flex; align-items:center; gap:7px; padding:5px 11px 5px 9px; border-radius:7px;
+  border:1px solid var(--line-2); background:var(--surface); font-size:13px; font-weight:500;
+  color:var(--ink-2); white-space:nowrap}
+.chip .dot{width:9px; height:9px; border-radius:2px; background:var(--v); flex:none}
+.chip[aria-pressed="true"]{border-color:var(--ink); color:var(--ink);
+  background:color-mix(in srgb,var(--v) var(--tint),var(--surface))}
+.chip.plain[aria-pressed="true"]{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+.chip .hex{font-family:var(--mono); font-size:10.5px; color:var(--ink-3); letter-spacing:.02em}
+select.sel{background:var(--surface); border:1px solid var(--line-2); border-radius:7px;
+  padding:7px 10px; font-size:13px; color:var(--ink-2); max-width:230px}
+.hint{font-size:12px; color:var(--ink-3)}
+
+/* ---------- сетка залов ---------- */
+.gridwrap{margin-top:14px; border:1px solid var(--line); border-radius:10px; background:var(--surface);
+  overflow:auto; max-height:calc(100vh - 210px); position:relative; box-shadow:var(--shadow)}
+.gridhead{display:grid; position:sticky; top:0; z-index:12; background:var(--surface-2);
+  border-bottom:1px solid var(--line-2)}
+.gridhead .hcell{padding:9px 10px; border-left:1px solid var(--line); min-width:0}
+.gridhead .hcell:first-child{border-left:none; position:sticky; left:0; background:var(--surface-2); z-index:13}
+.hname{font-family:var(--display); font-weight:700; font-size:12px; letter-spacing:-.02em;
+  line-height:1.2; display:flex; gap:7px; align-items:center}
+.hname .dot{width:10px; height:10px; border-radius:2px; background:var(--v); flex:none}
+.hhex{font-family:var(--mono); font-size:9.5px; letter-spacing:.04em; color:var(--ink-3);
+  margin-top:3px; padding-left:17px}
+.gridbody{display:grid; position:relative}
+.gcol{position:relative; border-left:1px solid var(--line); min-width:0}
+.gcol.ruler{border-left:none; position:sticky; left:0; z-index:11; background:var(--surface)}
+.hourline{position:absolute; left:0; right:0; border-top:1px solid var(--line); pointer-events:none}
+.hourline.half{border-top-style:dotted; opacity:.55}
+.hourlab{position:absolute; right:8px; font-size:11px; color:var(--ink-3); transform:translateY(-50%)}
+.ev{position:absolute; left:3px; right:3px; overflow:hidden; text-align:left; border-radius:5px;
+  padding:4px 6px; border:1px solid transparent; border-left:3px solid var(--v);
+  background:color-mix(in srgb,var(--v) var(--tint),var(--surface)); display:block}
+.ev:hover{background:color-mix(in srgb,var(--v) var(--tint-2),var(--surface))}
+.ev .t{font-family:var(--mono); font-size:10.5px; font-weight:700; color:var(--ink-2); margin-right:5px}
+.ev .ti{font-size:12.5px; font-weight:600; line-height:1.21; display:-webkit-box;
+  -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; overflow-wrap:break-word; hyphens:auto}
+.ev.break{border-left-color:var(--line-2); background:repeating-linear-gradient(135deg,
+  transparent,transparent 5px,color-mix(in srgb,var(--ink) 6%,transparent) 5px,
+  color-mix(in srgb,var(--ink) 6%,transparent) 10px)}
+.ev.break .ti{font-weight:500; color:var(--ink-3)}
+.ev.picked{background:color-mix(in srgb,var(--y) 46%,var(--surface)); border-left-color:var(--y-ink)}
+.ev.picked .ti{color:var(--y-ink)}
+.ev.picked .ti::after{content:"★"; margin-left:4px}
+.ev.picked .t{color:var(--y-ink); opacity:.7}
+.ev.dim{opacity:.26}
+.nowline{position:absolute; left:0; right:0; height:2px; background:var(--hot); z-index:10; pointer-events:none}
+.nowline::before{content:"сейчас"; position:absolute; left:4px; top:-15px; font-family:var(--mono);
+  font-size:9.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:#fff; background:var(--hot); padding:1px 5px; border-radius:3px}
+
+/* ---------- список ---------- */
+.slot{display:grid; grid-template-columns:64px 1fr; gap:12px; padding-block:12px; border-top:1px solid var(--line)}
+.slot:first-child{border-top:none}
+.slot .st{font-family:var(--mono); font-weight:700; font-size:15px; padding-top:9px;
+  position:sticky; top:122px; align-self:start}
+.cards{display:grid; gap:8px; grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.card{text-align:left; background:var(--surface); border:1px solid var(--line);
+  border-left:4px solid var(--v); border-radius:8px; padding:11px 12px;
+  display:flex; gap:10px; align-items:flex-start}
+.card:hover{border-color:var(--line-2); background:color-mix(in srgb,var(--v) 6%,var(--surface))}
+.card.picked{background:color-mix(in srgb,var(--y) 14%,var(--surface));
+  border-color:color-mix(in srgb,var(--y) 50%,var(--line))}
+.card .body{flex:1; min-width:0}
+.meta{display:flex; gap:7px; align-items:center; flex-wrap:wrap; font-size:11px; color:var(--ink-3)}
+.meta .vn{font-family:var(--display); font-weight:700; font-size:10px; letter-spacing:-.01em;
+  text-transform:uppercase; color:var(--v)}
+.meta .mono{font-weight:500}
+.seclabel{font-family:var(--mono); font-size:10px; letter-spacing:.04em; color:var(--ink-3)}
+.seclabel::before{content:"·"; margin-right:6px; color:var(--line-2)}
+.card h3{font-size:15.5px; font-weight:600; line-height:1.26; margin-top:5px; letter-spacing:-.01em}
+.card .sp{font-size:13.5px; color:var(--ink-2); margin-top:6px}
+.card .sp b{font-weight:600; color:var(--ink)}
+.star{flex:none; width:28px; height:28px; border-radius:6px; border:1px solid transparent;
+  display:grid; place-items:center; font-size:15px; color:var(--ink-3)}
+.card:hover .star{border-color:var(--line-2)}
+.card.picked .star{background:var(--y); color:var(--y-ink); border-color:var(--y)}
+.kind{font-family:var(--mono); font-size:9.5px; padding:2px 6px; border-radius:3px; letter-spacing:.04em;
+  text-transform:uppercase}
+.kind.disc{background:color-mix(in srgb,var(--v) 22%,var(--surface)); color:var(--ink-2)}
+.kind.special{background:var(--plate); color:var(--y)}
+
+/* ---------- мой план ---------- */
+.plan{display:flex; flex-direction:column; margin-top:12px}
+.prow{display:grid; grid-template-columns:66px 1fr; gap:12px; padding-block:12px; border-top:1px solid var(--line)}
+.prow:first-child{border-top:none}
+.prow .pt{font-family:var(--mono); font-weight:700; font-size:14px; padding-top:3px}
+.prow .pt small{display:block; font-weight:400; color:var(--ink-3); font-size:11px}
+.prow .card{width:100%; border:none; border-left:3px solid var(--v); border-radius:0;
+  padding:2px 0 2px 13px; background:none}
+.prow .card:hover{background:none}
+.prow .card:hover h3{text-decoration:underline; text-underline-offset:3px}
+.prow .card.picked{background:none; border-left-color:var(--v)}
+.warn{font-size:12.5px; color:var(--ink-2); padding:7px 0 7px 13px; margin-left:78px;
+  border-left:2px solid var(--line-2); line-height:1.4}
+.warn b{font-family:var(--mono); font-size:10px; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--ink-3); margin-right:8px}
+.warn.walk{border-left-color:var(--walk)} .warn.walk b{color:var(--walk)}
+.prow.clash > div:last-child{border-left:2px solid var(--hot); padding-left:13px; margin-left:-13px}
+.clash__head{font-size:12.5px; color:var(--ink-2); padding-bottom:9px}
+.clash__head b{font-family:var(--mono); font-size:10px; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--hot); margin-right:8px}
+.clash__cards{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); align-items:start}
+.prow.clash .card{padding-left:11px}
+.planbar{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:16px}
+.btn{border:1px solid var(--line-2); background:var(--surface); padding:8px 14px; border-radius:7px;
+  font-family:var(--display); font-size:11.5px; font-weight:500; letter-spacing:-.01em}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--y); color:var(--y-ink); border-color:var(--y)}
+.btn:disabled{opacity:.55}
+.empty{text-align:center; padding:56px 20px; color:var(--ink-2); max-width:48ch; margin:0 auto}
+.empty h2{font-family:var(--display); font-weight:700; font-size:17px; letter-spacing:-.02em; margin-bottom:10px; color:var(--ink)}
+
+/* ---------- карточка события ---------- */
+.scrim{position:fixed; inset:0; background:rgba(12,12,11,.46); z-index:50; display:none}
+.scrim.open{display:block}
+.sheet{position:fixed; z-index:51; right:0; top:0; bottom:0; width:min(460px,100%);
+  background:var(--surface); border-left:1px solid var(--line-2); overflow-y:auto;
+  padding:20px 20px 40px; display:none}
+.sheet.open{display:block}
+.sheet .close{position:absolute; right:14px; top:14px; width:32px; height:32px; border-radius:8px;
+  border:1px solid var(--line); display:grid; place-items:center}
+.sheet .vtag{display:inline-flex; align-items:center; gap:7px; font-family:var(--display);
+  font-size:11px; font-weight:700; color:var(--v); text-transform:uppercase; letter-spacing:-.01em}
+.sheet .vtag .dot{width:10px; height:10px; border-radius:2px; background:var(--v)}
+.sheet h2{font-size:22px; font-weight:600; line-height:1.22; margin-top:10px; letter-spacing:-.015em}
+.sheet .when{font-family:var(--mono); font-size:14px; font-weight:700; margin-top:12px}
+.sheet .where{font-size:13px; color:var(--ink-2); margin-top:3px}
+.splist{margin-top:16px; display:flex; flex-direction:column; gap:11px;
+  border-top:1px solid var(--line); padding-top:14px}
+.sp-item b{display:block; font-size:14.5px; font-weight:600}
+.sp-item span{font-size:13px; color:var(--ink-2)}
+.sheet .act{margin-top:18px; display:flex; gap:8px}
+.parallel{margin-top:18px; border-top:1px solid var(--line); padding-top:14px}
+.parallel h4{font-family:var(--mono); font-size:10px; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--ink-3); margin:0 0 8px}
+.pl{display:block; text-align:left; width:100%; padding:8px 0; border-top:1px solid var(--line);
+  font-size:13px; color:var(--ink-2)}
+.pl:first-of-type{border-top:none}
+.pl b{color:var(--ink); font-weight:600}
+.pl .vn{font-family:var(--display); color:var(--v); font-weight:700; font-size:10px;
+  text-transform:uppercase; letter-spacing:-.01em}
+.sheet img.shot{width:100%; border:1px solid var(--line); border-radius:8px}
+
+footer{border-top:1px solid var(--line); margin-top:40px; padding-block:22px 40px;
+  color:var(--ink-3); font-size:12.5px}
+footer a{color:var(--ink-2)}
+main{padding-bottom:30px}
+@media (max-width:700px){
+  header.top{padding-block:14px 8px}
+  h1{margin-top:10px}
+  .subline{font-size:13px; margin-top:8px}
+  .counts{display:none}
+  .tabs{margin-top:12px; flex-wrap:nowrap; width:100%; overflow-x:auto; scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{padding:7px 11px; font-size:12px}
+  .toolbar{padding-block:8px}
+  .toolbar .wrap{gap:7px}
+  .searchrow{flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; padding-bottom:1px}
+  .searchrow::-webkit-scrollbar{display:none}
+  .search{flex:1 0 58%}
+  select.sel{flex:none}
+  .searchrow .chip{flex:none}
+  .chips{flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; padding-bottom:1px; -webkit-overflow-scrolling:touch}
+  .chips::-webkit-scrollbar{display:none}
+  .chip .hex{display:none}
+  .slot{grid-template-columns:52px 1fr; gap:8px}
+  .slot .st{font-size:13px; top:112px}
+  .cards{grid-template-columns:1fr}
+  .gridwrap{max-height:calc(100vh - 150px)}
+  .gridhead .hcell{padding:7px 8px}
+  .hhex{display:none}
+  .warn{margin-left:60px}
+  .clash__cards{grid-template-columns:1fr; gap:12px}
+  .sheet{left:0; top:auto; width:100%; max-height:86vh; border-left:none;
+    border-top:1px solid var(--line-2); border-radius:14px 14px 0 0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important; scroll-behavior:auto!important}}
+</style>
+
+<div class="ticker" aria-hidden="true"><div class="ticker__track" id="tickerTrack"></div></div>
+<div class="swatchbar" id="swatchbar" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brandrow">
+      <div>
+        <span class="mark"><b>#FFDD2D</b><u id="markNote">Продукты 24 · Т-Банк</u></span>
+        <h1>Куда пойти<br>на <mark>Продуктах 24</mark></h1>
+        <p class="subline" id="subline"></p>
+      </div>
+      <div class="counts" id="counts"></div>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" data-view="grid" aria-selected="false">Сетка залов</button>
+      <button class="tab" role="tab" data-view="list" aria-selected="true">Списком</button>
+      <button class="tab" role="tab" data-view="plan" aria-selected="false">Мой план <span class="badge mono" id="planBadge">0</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <div class="wrap">
+    <div class="searchrow">
+      <label class="search" for="q">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l4 4" stroke="currentColor" stroke-width="1.6"/></svg>
+        <input id="q" type="search" placeholder="Спикер, тема, компания…" autocomplete="off">
+      </label>
+      <select class="sel" id="sectionSel" aria-label="Секция"></select>
+      <button class="chip plain" id="breaksBtn" aria-pressed="true">Перерывы</button>
+      <button class="chip plain" id="onlyPlanBtn" aria-pressed="false">Только мой план</button>
+    </div>
+    <div class="chips" id="venueChips"></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="view-grid"></section>
+  <section id="view-list" hidden></section>
+  <section id="view-plan" hidden></section>
+</main>
+
+<footer class="wrap"><div id="footnote"></div></footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Событие"></aside>
+
+<script>
+/* ============================================================
+   ПРОГРАММА. Всё, что ниже в DATA, взято с официального сайта
+   конференции. events[] заполняется из программы producty24-ffdd2d.ru
+   ============================================================ */
+const DATA = {
+  "conf": {
+    "name": "Продукты 24 × ffdd2d",
+    "edition": "Конференция о продуктах, аналитике и дизайне",
+    "date": "2026-09-12",
+    "dateLabel": "12 сентября 2026, суббота",
+    "site": "https://producty24-ffdd2d.ru/",
+    "organizer": "Т-Банк",
+    "tagline": "Продукт, аналитика и дизайн на одной сцене",
+    "places": [{"name": "Пространство «Мечта»", "note": "набережная Парка Горького, Москва"}],
+    "dayWindow": "10:00–18:00",
+    "extras": []
+  },
+  "venues": [],
+  "sections": [],
+  "events": []
+};
+
+/* ---------- палитра залов: у каждого зала свой hex ---------- */
+const PALETTE = [
+  ['#2F6FD0','#77AEF5'], ['#0E7C6B','#3FC2AC'], ['#6C4FD1','#A68FF0'], ['#C22E52','#F0718F'],
+  ['#6E7A18','#AFBE3C'], ['#C75B12','#F0904A'], ['#50596B','#9AA4B8'], ['#A8309B','#E072D6']
+];
+DATA.venues.forEach((v,i)=>{
+  const p = PALETTE[i % PALETTE.length];
+  v.color = v.color || p[0];
+  v.colorDark = v.colorDark || p[1];
+});
+(function venueStyles(){
+  if(!DATA.venues.length) return;
+  const light = DATA.venues.map(v=>`--v-${v.id}:${v.color}`).join(';');
+  const dark  = DATA.venues.map(v=>`--v-${v.id}:${v.colorDark}`).join(';');
+  const css = `:root{${light}}
+    @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){${dark}}}
+    :root[data-theme="dark"]{${dark}}`;
+  const tag = document.createElement('style'); tag.textContent = css; document.head.appendChild(tag);
+})();
+
+const V = {}; DATA.venues.forEach(v=>V[v.id]=v);
+const VCOLOR = id => `var(--v-${id})`;
+const EV = DATA.events;
+const byId = {}; EV.forEach(e=>byId[e.id]=e);
+const CONTENT = EV.filter(e=>e.kind!=='break' && e.kind!=='service');
+const HAS_PROGRAM = EV.length > 0;
+
+const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const plural = (n, one, few, many) => {
+  const n10=n%10, n100=n%100;
+  return n + ' ' + (n10===1 && n100!==11 ? one : (n10>=2 && n10<=4 && (n100<12||n100>14) ? few : many));
+};
+const hhmm = m => String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
+
+/* граница дня считается по самой программе, а не прописана руками */
+const T0 = HAS_PROGRAM ? Math.floor(Math.min(...EV.map(e=>e.startMin))/60)*60 : 600;
+const T1 = HAS_PROGRAM ? Math.ceil(Math.max(...EV.map(e=>e.endMin||e.startMin+60))/60)*60 : 1080;
+const PAD = 14;
+const narrow = () => window.innerWidth < 700;
+
+const state = {
+  view: narrow() ? 'list' : 'grid', q:'', section:'', venues:new Set(),
+  breaks:true, onlyPlan:false, plan:new Set(), open:null
+};
+
+/* ---------- план живёт в базе, если она есть, иначе в браузере ---------- */
+const LS = 'producty24-2026-plan';
+let dbDoc=null, writing=false;
+try{
+  const raw=localStorage.getItem(LS);
+  if(raw) JSON.parse(raw).forEach(id=>{ if(byId[id] && byId[id].kind!=='break') state.plan.add(id); });
+}catch(e){}
+function savePlan(){
+  const ids=[...state.plan];
+  try{ localStorage.setItem(LS, JSON.stringify(ids)); }catch(e){}
+  if(dbDoc){ writing=true; dbDoc.set({ids, updated:Date.now()}).catch(()=>{}).finally(()=>{writing=false;}); }
+}
+function docIds(snap){
+  const body = snap && snap.exists ? snap.data() : null;
+  return body && Array.isArray(body.ids) ? body.ids.filter(id=>byId[id] && byId[id].kind!=='break') : null;
+}
+(async()=>{
+  const db = await (window.claude?.use?.('db') ?? Promise.resolve(null));
+  if(!db) return;
+  try{
+    dbDoc = db.doc('plan/main');
+    const ids = docIds(await dbDoc.get());
+    if(ids){
+      const merged = new Set([...state.plan, ...ids]);
+      const needsWrite = merged.size !== ids.length;
+      state.plan = merged;
+      if(needsWrite) savePlan();
+      else { try{ localStorage.setItem(LS, JSON.stringify([...merged])); }catch(e){} }
+      render();
+    } else if(state.plan.size){ savePlan(); }
+    dbDoc.onSnapshot(snap=>{
+      if(writing) return;
+      const live = docIds(snap);
+      if(!live) return;
+      state.plan = new Set(live);
+      try{ localStorage.setItem(LS, JSON.stringify(live)); }catch(e){}
+      render();
+    }, ()=>{});
+  }catch(e){ dbDoc=null; }
+})();
+
+/* ---------- отметка «сейчас» ---------- */
+function nowMin(){
+  const d=new Date();
+  const today = d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  if(today!==DATA.conf.date) return null;
+  const m=d.getHours()*60+d.getMinutes();
+  return (m>=T0 && m<=T1) ? m : null;
+}
+
+/* ---------- фильтры ---------- */
+function matches(e){
+  if(!state.breaks && e.kind==='break') return false;
+  if(state.onlyPlan && !state.plan.has(e.id)) return false;
+  if(state.venues.size && !state.venues.has(e.venue)) return false;
+  if(state.section && e.section!==state.section) return false;
+  if(state.q){
+    const q=state.q.toLowerCase();
+    const hay=(e.title+' '+(e.section||'')+' '+(e.curator||'')+' '+
+      e.speakers.map(s=>s.name+' '+(s.role||'')).join(' ')).toLowerCase();
+    if(!hay.includes(q)) return false;
+  }
+  return true;
+}
+const filtering = () => state.q || state.section || state.venues.size || state.onlyPlan;
+
+/* ---------- шапка ---------- */
+function header(){
+  const c=DATA.conf;
+  const speakers = new Set(EV.flatMap(e=>e.speakers.map(s=>s.name))).size;
+  const halls = DATA.venues.length;
+  const facts = ['12 сентября', c.name, c.places[0].name, c.dayWindow]
+    .concat(HAS_PROGRAM ? [
+      plural(CONTENT.length,'событие','события','событий')+' в '+plural(halls,'зале','залах','залах'),
+      plural(speakers,'спикер','спикера','спикеров')
+    ] : ['программа на producty24-ffdd2d.ru'])
+    .concat(c.extras.map(x=>x.label+' '+x.time));
+  const once = facts.map(t=>`<span>${esc(t)}&nbsp;&nbsp;<i>/</i></span>`).join('');
+  document.getElementById('tickerTrack').innerHTML = once + once;
+
+  document.getElementById('swatchbar').innerHTML = DATA.venues.length
+    ? DATA.venues.map(v=>`<i style="background:${VCOLOR(v.id)}"></i>`).join('')
+    : `<i style="background:var(--y)"></i>`;
+
+  document.getElementById('markNote').textContent = `${c.organizer} · ${c.dateLabel.replace(', суббота','')}`;
+
+  document.getElementById('subline').innerHTML = !HAS_PROGRAM
+    ? `<b>${esc(c.dateLabel)}</b> · ${esc(c.places[0].name)}, ${esc(c.places[0].note)} · ${esc(c.dayWindow)}. Программа ещё не загружена.`
+    : narrow()
+      ? `<b>${esc(c.dateLabel)}</b> · ${plural(CONTENT.length,'событие','события','событий')} в ${plural(halls,'зале','залах','залах')}. Отмечайте ★ — план соберётся во вкладке «Мой план».`
+      : `<b>${esc(c.dateLabel)}</b> · ${esc(c.places[0].name)} · ${plural(CONTENT.length,'событие','события','событий')} в ${plural(halls,'зале','залах','залах')} параллельно. `+
+        `Отмечайте звёздочкой то, что хотите — план соберётся во вкладке «Мой план» и предупредит о накладках.`;
+
+  document.getElementById('counts').innerHTML = HAS_PROGRAM
+    ? [[CONTENT.length,'событий'],[halls,'залов'],[DATA.sections.length,'секций'],[speakers,'спикеров']]
+        .filter(([n])=>n).map(([n,l])=>`<div class="count"><span class="n mono">${n}</span><span class="l">${l}</span></div>`).join('')
+    : '';
+
+  const extras = c.extras.length
+    ? ' ' + c.extras.map(x=>`${esc(x.label)} — ${esc(x.time)}${x.place?', '+esc(x.place):''}.`).join(' ')
+    : '';
+  document.getElementById('footnote').innerHTML =
+    `Расписание собрано из программы конференции <a href="${esc(c.site)}" target="_blank" rel="noopener">«${esc(c.name)}»</a>, ${esc(c.dateLabel)}. `+
+    `${esc(c.places[0].name)} — ${esc(c.places[0].note)}.${extras} `+
+    `Организаторы могут менять программу: сверяйтесь на месте.`;
+}
+
+/* ---------- фильтры-контролы ---------- */
+function controls(){
+  document.getElementById('venueChips').innerHTML = DATA.venues.map(v=>
+    `<button class="chip" data-venue="${v.id}" style="--v:${VCOLOR(v.id)}" aria-pressed="${state.venues.has(v.id)}">
+       <span class="dot"></span>${esc(v.name)}<span class="hex">${esc(v.color)}</span></button>`).join('');
+  const sel=document.getElementById('sectionSel');
+  if(!sel.options.length){
+    sel.innerHTML = `<option value="">Все секции</option>` + DATA.sections.map(s=>
+      `<option value="${esc(s.name)}">${esc(s.name)}${s.venue&&V[s.venue]?' — '+esc(V[s.venue].name):''}</option>`).join('');
+    sel.hidden = !DATA.sections.length;
+  }
+  document.getElementById('planBadge').textContent = state.plan.size;
+  document.getElementById('toolbar').hidden = !HAS_PROGRAM;
+}
+
+/* ---------- пустая программа ---------- */
+const NO_PROGRAM = `<div class="empty">
+  <h2>Программа ещё не загружена</h2>
+  <p>Залы, доклады и спикеры появятся здесь, как только программа с сайта
+  <a href="${DATA.conf.site}" target="_blank" rel="noopener">producty24-ffdd2d.ru</a> попадёт в расписание.
+  Всё остальное уже готово: сетка залов, поиск по спикерам, отметки ★ и сборка личного плана с проверкой накладок.</p></div>`;
+
+/* ---------- сетка залов ---------- */
+function renderGrid(){
+  if(!HAS_PROGRAM){ document.getElementById('view-grid').innerHTML = NO_PROGRAM; return; }
+  const PPM = narrow() ? 3.4 : 2.6;
+  const cols = DATA.venues.filter(v=>!state.venues.size || state.venues.has(v.id));
+  const tpl = `${narrow()?50:76}px repeat(${cols.length}, minmax(${narrow()?170:160}px,1fr))`;
+  const H = (T1-T0)*PPM + PAD*2;
+  let lines='';
+  for(let m=T0;m<=T1;m+=30) lines += `<div class="hourline${m%60?' half':''}" style="top:${(m-T0)*PPM+PAD}px"></div>`;
+  let ruler='';
+  for(let m=T0;m<=T1;m+=60) ruler += `<div class="hourlab mono" style="top:${(m-T0)*PPM+PAD}px">${hhmm(m)}</div>`;
+  const nm=nowMin();
+  const now = nm!==null ? `<div class="nowline" style="top:${(nm-T0)*PPM+PAD}px"></div>` : '';
+
+  const body = cols.map(v=>{
+    const evs = EV.filter(e=>e.venue===v.id && (state.breaks || e.kind!=='break'));
+    return `<div class="gcol" style="--v:${VCOLOR(v.id)}">${lines}` + evs.map(e=>{
+      const top=(e.startMin-T0)*PPM+PAD, h=Math.max(24,((e.endMin||e.startMin+20)-e.startMin)*PPM-4);
+      const dim = filtering() && !matches(e) ? ' dim':'';
+      const cls = `ev${e.kind==='break'?' break':''}${state.plan.has(e.id)?' picked':''}${dim}`;
+      const tag = e.kind==='break' ? 'div' : 'button';
+      const at  = e.kind==='break' ? '' : ` data-ev="${e.id}"`;
+      const clamp = Math.max(1, Math.floor((h - 11) / 15));
+      return `<${tag} class="${cls}"${at} style="top:${top}px;height:${h}px">
+        <span class="ti" style="-webkit-line-clamp:${clamp}"><span class="t">${e.start}</span>${esc(e.title.replace(/\.$/,''))}</span></${tag}>`;
+    }).join('') + `</div>`;
+  }).join('');
+
+  document.getElementById('view-grid').innerHTML = `
+    <div class="gridwrap" id="gridwrap">
+      <div class="gridhead" style="grid-template-columns:${tpl}">
+        <div class="hcell"></div>
+        ${cols.map(v=>`<div class="hcell" style="--v:${VCOLOR(v.id)}">
+            <div class="hname"><span class="dot"></span>${esc(v.name)}</div>
+            <div class="hhex">${esc(v.color)}</div></div>`).join('')}
+      </div>
+      <div class="gridbody" style="grid-template-columns:${tpl}; height:${H}px">
+        <div class="gcol ruler">${lines}${ruler}</div>
+        ${body}
+        ${now}
+      </div>
+    </div>
+    <p class="hint" style="margin-top:8px">Столбцы — залы, вертикаль — время. Клик по блоку открывает описание и ставит его в план.${nm!==null?' Красная линия — текущее время.':''}</p>`;
+  if(nm!==null){
+    const w=document.getElementById('gridwrap');
+    w.scrollTop=Math.max(0,(nm-T0)*PPM+PAD-140);
+  }
+}
+
+/* ---------- список ---------- */
+function renderList(){
+  const el=document.getElementById('view-list');
+  if(!HAS_PROGRAM){ el.innerHTML = NO_PROGRAM; return; }
+  const evs = EV.filter(matches).sort((a,b)=>a.startMin-b.startMin || a.venue.localeCompare(b.venue));
+  if(!evs.length){ el.innerHTML=`<div class="empty"><h2>Ничего не нашлось</h2><p>Смягчите фильтры или поищите другое слово.</p></div>`; return; }
+  const slots=[]; let cur=null;
+  evs.forEach(e=>{ if(!cur || cur.t!==e.start){ cur={t:e.start, items:[]}; slots.push(cur);} cur.items.push(e); });
+  el.innerHTML = `<div style="margin-top:6px">` + slots.map(s=>`
+    <div class="slot">
+      <div class="st">${s.t}</div>
+      <div class="cards">${s.items.map(cardHTML).join('')}</div>
+    </div>`).join('') + `</div>`;
+}
+function cardHTML(e){
+  const v=V[e.venue] || {name:'—'};
+  const sp = e.speakers.length
+    ? `<div class="sp">${e.speakers.slice(0,3).map(s=>`<b>${esc(s.name)}</b>${s.role?' — '+esc(s.role.split(',')[0]):''}`).join('<br>')}${e.speakers.length>3?`<br>+ ещё ${e.speakers.length-3}`:''}</div>`
+    : '';
+  const kind = e.kind==='disc'?`<span class="kind disc">дискуссия</span>`
+             : e.kind==='special'?`<span class="kind special">спецформат</span>`:'';
+  if(e.kind==='break') return `<div class="card" style="--v:${VCOLOR(e.venue)}">
+    <div class="body"><div class="meta"><span class="vn">${esc(v.name)}</span><span class="mono">${e.start}–${e.end||''}</span></div>
+    <h3 style="font-weight:500;color:var(--ink-3)">${esc(e.title)}</h3></div></div>`;
+  return `<button class="card${state.plan.has(e.id)?' picked':''}" data-ev="${e.id}" style="--v:${VCOLOR(e.venue)}">
+    <div class="body">
+      <div class="meta"><span class="vn">${esc(v.name)}</span>${e.section?`<span class="seclabel">${esc(e.section)}</span>`:''}${kind}<span class="mono">${e.start}–${e.end||''}</span></div>
+      <h3>${esc(e.title)}</h3>${sp}
+    </div>
+    <span class="star" aria-hidden="true">${state.plan.has(e.id)?'★':'☆'}</span>
+  </button>`;
+}
+
+/* ---------- мой план ---------- */
+function renderPlan(){
+  const el=document.getElementById('view-plan');
+  if(!HAS_PROGRAM){ el.innerHTML = NO_PROGRAM; return; }
+  const picks=[...state.plan].map(id=>byId[id]).filter(Boolean).sort((a,b)=>a.startMin-b.startMin);
+  if(!picks.length){
+    el.innerHTML = `<div class="empty"><h2>План пока пустой</h2>
+      <p>Откройте «Сетку залов» или «Списком» и отмечайте звёздочкой то, что цепляет.
+      Здесь всё выстроится по времени, а накладки и перебежки между залами подсветятся.</p></div>`;
+    return;
+  }
+  const clusters=[]; let cur=null, curEnd=0;
+  picks.forEach(e=>{
+    const end = e.endMin || e.startMin+20;
+    if(cur && e.startMin < curEnd){ cur.push(e); curEnd=Math.max(curEnd,end); }
+    else { if(cur) clusters.push(cur); cur=[e]; curEnd=end; }
+  });
+  if(cur) clusters.push(cur);
+
+  let html='<div class="plan">';
+  clusters.forEach((group,gi)=>{
+    const first=group[0], prevGroup=clusters[gi-1];
+    if(prevGroup){
+      const prev=prevGroup.reduce((a,b)=>(a.endMin||0)>=(b.endMin||0)?a:b);
+      const gap=first.startMin-(prev.endMin||prev.startMin);
+      if(prev.venue!==first.venue && gap<=0){
+        html += `<div class="warn walk"><b>Встык</b>${esc(V[prev.venue].name)} → ${esc(V[first.venue].name)} без зазора. Залы в одном пространстве, но на переход нужна пара минут — выйдите чуть раньше.</div>`;
+      } else if(gap >= 40){
+        html += `<div class="warn"><b>Окно ${gap} мин</b>кофе, стенды партнёров или нетворкинг.</div>`;
+      }
+    }
+    const last=group.reduce((a,b)=>(a.endMin||0)>=(b.endMin||0)?a:b);
+    const when=`${first.start}<small>${last.end||''}</small>`;
+    if(group.length===1){
+      html += `<div class="prow"><div class="pt">${when}</div><div>${cardHTML(first)}</div></div>`;
+    } else {
+      html += `<div class="prow clash">
+        <div class="pt">${when}</div>
+        <div>
+          <div class="clash__head"><b>Накладка</b>${plural(group.length,'событие','события','событий')} пересекаются по времени — снимите звезду с лишнего</div>
+          <div class="clash__cards">${group.map(cardHTML).join('')}</div>
+        </div>
+      </div>`;
+    }
+  });
+  html += '</div>';
+  const last=picks[picks.length-1];
+  html += `<div class="planbar">
+      <button class="btn primary" id="savePng">Сохранить картинкой</button>
+      <button class="btn" id="savePdf">PDF</button>
+      <button class="btn" id="copyPlan">Скопировать текстом</button>
+      <button class="btn" id="clearPlan">Очистить план</button>
+      <span class="hint">${plural(picks.length,'событие','события','событий')} · с ${picks[0].start} до ${last.end||last.start}</span>
+    </div>`;
+  el.innerHTML=html;
+  document.getElementById('savePng').onclick = e => exportPlan('png', e.currentTarget);
+  document.getElementById('savePdf').onclick = e => exportPlan('pdf', e.currentTarget);
+  document.getElementById('clearPlan').onclick = ()=>{
+    if(confirm('Убрать все отмеченные события?')){ state.plan.clear(); savePlan(); render(); }
+  };
+  document.getElementById('copyPlan').onclick = async()=>{
+    const txt = 'Мои Продукты 24, '+DATA.conf.dateLabel+'\n\n' + picks.map(e=>
+      `${e.start}–${e.end||''} · ${V[e.venue].name}\n${e.title}` +
+      (e.speakers.length?`\n${e.speakers.map(s=>s.name).join(', ')}`:'')).join('\n\n');
+    const b=document.getElementById('copyPlan');
+    try{ await navigator.clipboard.writeText(txt); b.textContent='Скопировано';
+      setTimeout(()=>b.textContent='Скопировать текстом',1600); }
+    catch(err){ alert(txt); }
+  };
+}
+
+/* ---------- экспорт плана: картинка и PDF ---------- */
+const EX = {W:1080, PAD:64, TCOL:150, A4:1527};
+function venueExportColor(id){ return (V[id] && V[id].color) || '#5C5B52'; }
+function wrapText(ctx, text, maxW, font){
+  ctx.font = font;
+  const out=[]; let line='';
+  for(const word of String(text).split(/\s+/)){
+    const test = line ? line+' '+word : word;
+    if(ctx.measureText(test).width <= maxW || !line) line = test;
+    else { out.push(line); line = word; }
+  }
+  if(line) out.push(line);
+  return out;
+}
+function planWarning(prev, e){
+  if(!prev) return null;
+  const prevEnd = prev.endMin || prev.startMin;
+  if(e.startMin < prevEnd) return {t:`Накладка с «${prev.title}» (до ${prev.end}, ${V[prev.venue].name})`, c:'red'};
+  const gap = e.startMin - prevEnd;
+  if(prev.venue!==e.venue && gap<=0) return {t:`Встык: ${V[prev.venue].name} → ${V[e.venue].name}`, c:'teal'};
+  if(gap >= 40) return {t:`Окно ${gap} мин`, c:'grey'};
+  return null;
+}
+function buildBlocks(picks, scale){
+  const ctx = document.createElement('canvas').getContext('2d');
+  const cw = (EX.W - EX.PAD*2 - EX.TCOL) / scale;
+  const blocks=[];
+  picks.forEach((e,i)=>{
+    const w = planWarning(picks[i-1], e);
+    if(w){
+      const wl = wrapText(ctx, (w.c==='red'?'⚠ ':w.c==='teal'?'→ ':'· ')+w.t, cw, `600 22px "Golos Text",system-ui,sans-serif`);
+      blocks.push({type:'warn', ...w, lines:wl, h: wl.length*28 + 22});
+    }
+    const titleLines = wrapText(ctx, e.title, cw, `600 30px "Golos Text",system-ui,sans-serif`);
+    const spText = e.speakers.map(s=>s.name).join(', ');
+    const spLines = spText ? wrapText(ctx, spText, cw, `400 24px "Golos Text",system-ui,sans-serif`).slice(0,2) : [];
+    blocks.push({type:'ev', e, titleLines, spLines,
+      h: 34 + titleLines.length*38 + (spLines.length ? spLines.length*30 + 8 : 0) + 26});
+  });
+  return blocks;
+}
+function roundRect(c,x,y,w,h,r){ c.beginPath(); c.moveTo(x+r,y); c.arcTo(x+w,y,x+w,y+h,r);
+  c.arcTo(x+w,y+h,x,y+h,r); c.arcTo(x,y+h,x,y,r); c.arcTo(x,y,x+w,y,r); c.closePath(); }
+function drawPages(picks, pageH, scale){
+  const blocks = buildBlocks(picks, scale);
+  const headH = 250, contH = 96, footH = 70;
+  const pages=[]; let cur=[], y=headH;
+  blocks.forEach(b=>{
+    if(pageH && y + b.h > pageH - footH && cur.length){ pages.push(cur); cur=[]; y=contH; }
+    cur.push(b); y += b.h;
+  });
+  if(cur.length) pages.push(cur);
+  const total = pages.length;
+  return pages.map((items,pi)=>{
+    const top = pi===0 ? headH : contH;
+    const H = pageH || (top + items.reduce((a,b)=>a+b.h,0) + footH);
+    const cv = document.createElement('canvas');
+    cv.width = EX.W; cv.height = Math.round(H*scale);
+    const c = cv.getContext('2d');
+    c.scale(scale, scale);
+    const W = EX.W/scale, P = EX.PAD/scale, TC = EX.TCOL/scale, HH = H;
+    c.fillStyle='#FFFFFF'; c.fillRect(0,0,W,HH);
+    c.textBaseline='alphabetic';
+    if(pi===0){
+      c.fillStyle='#FFDD2D'; roundRect(c,P,56,150,44,5); c.fill();
+      c.fillStyle='#14140F'; c.font=`800 23px "Unbounded","Golos Text",sans-serif`;
+      c.fillText('#FFDD2D', P+16, 86);
+      c.fillStyle='#14140F'; c.font=`800 46px "Unbounded","Golos Text",sans-serif`;
+      c.fillText('МОЙ ПЛАН НА КОНФЕ', P, 166);
+      const last = picks[picks.length-1];
+      c.fillStyle='#5C5B52'; c.font=`400 25px "Golos Text",system-ui,sans-serif`;
+      c.fillText(`${DATA.conf.dateLabel} · ${plural(picks.length,'событие','события','событий')} · с ${picks[0].start} до ${last.end||last.start}`, P, 212);
+      c.fillStyle='#E4E2DA'; c.fillRect(P, 238, W-P*2, 1);
+    } else {
+      c.fillStyle='#8E8C80'; c.font=`500 19px "Unbounded","Golos Text",sans-serif`;
+      c.fillText('МОЙ ПЛАН НА ПРОДУКТАХ 24 — ПРОДОЛЖЕНИЕ', P, 56);
+      c.fillStyle='#E4E2DA'; c.fillRect(P, 74, W-P*2, 1);
+    }
+    let y = top;
+    items.forEach(b=>{
+      if(b.type==='warn'){
+        const col = b.c==='red' ? '#E0321E' : b.c==='teal' ? '#0E7C6B' : '#8E8C80';
+        c.fillStyle=col; c.font=`600 22px "Golos Text",system-ui,sans-serif`;
+        b.lines.forEach((l,i)=>c.fillText(l, P+TC, y+26+i*28));
+        y += b.h; return;
+      }
+      const e=b.e, v=V[e.venue]||{name:''};
+      const col = venueExportColor(e.venue);
+      c.fillStyle=col; c.fillRect(P+TC-26, y+8, 5, b.h-24);
+      c.fillStyle='#14140F'; c.font=`700 28px "JetBrains Mono",monospace`; c.fillText(e.start, P, y+34);
+      c.fillStyle='#8E8C80'; c.font=`500 21px "JetBrains Mono",monospace`; c.fillText(e.end||'', P, y+62);
+      c.fillStyle=col; c.font=`700 17px "Unbounded","Golos Text",sans-serif`;
+      c.fillText((v.name+(e.section?' · '+e.section:'')).toUpperCase(), P+TC, y+26);
+      c.fillStyle='#14140F'; c.font=`600 30px "Golos Text",system-ui,sans-serif`;
+      b.titleLines.forEach((l,i)=>c.fillText(l, P+TC, y+64+i*38));
+      if(b.spLines.length){
+        c.fillStyle='#5C5B52'; c.font=`400 24px "Golos Text",system-ui,sans-serif`;
+        b.spLines.forEach((l,i)=>c.fillText(l, P+TC, y+64+b.titleLines.length*38+16+i*30));
+      }
+      y += b.h;
+      c.fillStyle='#EFEEE8'; c.fillRect(P+TC, y-13, W-P-TC, 1);
+    });
+    c.fillStyle='#8E8C80'; c.font=`400 20px "Golos Text",system-ui,sans-serif`;
+    c.fillText(`${DATA.conf.name} · ${DATA.conf.places[0].name} · producty24-ffdd2d.ru`, P, HH-30);
+    if(total>1){ c.textAlign='right'; c.fillText(`${pi+1} / ${total}`, W-P, HH-30); c.textAlign='left'; }
+    return cv;
+  });
+}
+function loadScript(src){
+  return new Promise((res,rej)=>{ const t=document.createElement('script'); t.src=src;
+    t.onload=res; t.onerror=rej; document.head.appendChild(t); });
+}
+function openBlob(blob){ const u=URL.createObjectURL(blob); window.open(u,'_blank');
+  setTimeout(()=>URL.revokeObjectURL(u),60000); }
+async function exportPlan(kind, btn){
+  const picks=[...state.plan].map(id=>byId[id]).filter(Boolean).sort((a,b)=>a.startMin-b.startMin);
+  if(!picks.length) return;
+  const label = btn.textContent; btn.textContent='Готовлю…'; btn.disabled=true;
+  try{
+    if(document.fonts && document.fonts.ready) await document.fonts.ready;
+    if(kind==='png'){
+      const rough = buildBlocks(picks,1).reduce((a,b)=>a+b.h,0) + 320;
+      const scale = rough > 13000 ? 0.72 : 1;
+      const cv = drawPages(picks, null, scale)[0];
+      const blob = await new Promise(r=>cv.toBlob(r,'image/png'));
+      showExport(cv.toDataURL('image/png'), blob, 'producty24-plan.png');
+    } else {
+      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js');
+      const pages = drawPages(picks, EX.A4, 1);
+      const doc = new window.jspdf.jsPDF({unit:'pt', format:'a4'});
+      pages.forEach((cv,i)=>{ if(i) doc.addPage();
+        doc.addImage(cv.toDataURL('image/jpeg',0.92),'JPEG',0,0,595.28,841.89); });
+      const blob = doc.output('blob');
+      const dl = await (window.claude?.use?.('downloads') ?? Promise.resolve(null));
+      if(dl){ try{ await dl.save({filename:'producty24-plan.pdf', data:blob}); }
+              catch(err){ if(err?.code!=='declined') openBlob(blob); } }
+      else openBlob(blob);
+    }
+  }catch(err){ alert('Не получилось собрать файл: '+(err&&err.message||err)); }
+  finally{ btn.textContent=label; btn.disabled=false; }
+}
+async function showExport(dataUrl, blob, filename){
+  const sheet=document.getElementById('sheet');
+  sheet.innerHTML = `<button class="close" id="closeSheet" aria-label="Закрыть">✕</button>
+    <h2 style="font-size:19px">Расписание картинкой</h2>
+    <p class="hint" style="margin:8px 0 12px">Нажмите «Сохранить» — файл уйдёт в системное меню сохранения.
+    На айфоне проще иначе: долгое нажатие на картинку → «Добавить в Фото».</p>
+    <img class="shot" src="${dataUrl}" alt="Мой план на Продуктах 24">
+    <div class="act"><button class="btn primary" id="dlNow">Сохранить</button></div>`;
+  sheet.classList.add('open'); document.getElementById('scrim').classList.add('open');
+  sheet.scrollTop=0;
+  document.getElementById('closeSheet').onclick=closeSheet;
+  document.getElementById('dlNow').onclick=async ev=>{
+    const b=ev.currentTarget;
+    const dl = await (window.claude?.use?.('downloads') ?? Promise.resolve(null));
+    if(!dl){ openBlob(blob); return; }
+    try{ await dl.save({filename, data:blob}); b.textContent='Сохранено'; }
+    catch(err){ if(err?.code==='declined'){ b.textContent='Сохранить'; } else { openBlob(blob); } }
+  };
+}
+
+/* ---------- карточка события ---------- */
+function openSheet(id){
+  const e=byId[id]; if(!e) return;
+  state.open=id;
+  const v=V[e.venue]||{name:'—'};
+  const end = e.endMin || e.startMin+20;
+  const parallel = EV.filter(x=>x.id!==e.id && x.kind!=='break' &&
+      x.startMin < end && (x.endMin||x.startMin+20) > e.startMin)
+    .sort((a,b)=>a.startMin-b.startMin);
+  document.getElementById('sheet').innerHTML = `
+    <button class="close" id="closeSheet" aria-label="Закрыть">✕</button>
+    <span class="vtag" style="--v:${VCOLOR(e.venue)}"><span class="dot"></span>${esc(v.name)}</span>
+    <h2>${esc(e.title)}</h2>
+    <div class="when">${e.start}${e.end?' – '+e.end:''}</div>
+    <div class="where">${esc(DATA.conf.places[0].name)}${e.section?` · секция «${esc(e.section)}»`:''}${e.curator?` · куратор: ${esc(e.curator)}`:''}</div>
+    ${e.speakers.length?`<div class="splist">${e.speakers.map(s=>
+      `<div class="sp-item"><b>${esc(s.name)}</b>${s.role?`<span>${esc(s.role)}</span>`:''}</div>`).join('')}</div>`:''}
+    <div class="act">
+      <button class="btn primary" id="togglePick">${state.plan.has(e.id)?'★ Убрать из плана':'☆ В мой план'}</button>
+    </div>
+    ${parallel.length?`<div class="parallel"><h4>В это же время в других залах — ${parallel.length}</h4>
+      ${parallel.map(p=>`<button class="pl" data-ev="${p.id}" style="--v:${VCOLOR(p.venue)}">
+        <span class="vn">${esc(V[p.venue].name)}</span> <span class="mono">${p.start}</span><br><b>${esc(p.title)}</b></button>`).join('')}</div>`:''}`;
+  document.getElementById('sheet').classList.add('open');
+  document.getElementById('scrim').classList.add('open');
+  document.getElementById('closeSheet').onclick=closeSheet;
+  document.getElementById('togglePick').onclick=()=>{ toggle(e.id); openSheet(e.id); };
+  document.getElementById('sheet').scrollTop=0;
+}
+function closeSheet(){
+  state.open=null;
+  document.getElementById('sheet').classList.remove('open');
+  document.getElementById('scrim').classList.remove('open');
+}
+function toggle(id){
+  if(state.plan.has(id)) state.plan.delete(id); else state.plan.add(id);
+  savePlan(); render();
+}
+
+/* ---------- рендер ---------- */
+function render(){
+  controls();
+  document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected', String(t.dataset.view===state.view)));
+  ['grid','list','plan'].forEach(v=>document.getElementById('view-'+v).hidden = v!==state.view);
+  if(state.view==='grid') renderGrid();
+  if(state.view==='list') renderList();
+  if(state.view==='plan') renderPlan();
+}
+
+/* ---------- события ---------- */
+document.addEventListener('click', ev=>{
+  const tab=ev.target.closest('.tab');
+  if(tab){ state.view=tab.dataset.view; render(); return; }
+  const chip=ev.target.closest('[data-venue]');
+  if(chip){ const id=chip.dataset.venue; state.venues.has(id)?state.venues.delete(id):state.venues.add(id); render(); return; }
+  const star=ev.target.closest('.star');
+  if(star){ const c=star.closest('[data-ev]'); if(c){ ev.stopPropagation(); toggle(c.dataset.ev); return; } }
+  const item=ev.target.closest('[data-ev]');
+  if(item){ openSheet(item.dataset.ev); return; }
+  if(ev.target.id==='scrim') closeSheet();
+});
+document.getElementById('q').addEventListener('input', e=>{
+  state.q=e.target.value.trim(); if(state.view!=='plan') render(); });
+document.getElementById('sectionSel').addEventListener('change', e=>{ state.section=e.target.value; render(); });
+document.getElementById('breaksBtn').addEventListener('click', e=>{
+  state.breaks=!state.breaks; e.currentTarget.setAttribute('aria-pressed',String(state.breaks)); render(); });
+document.getElementById('onlyPlanBtn').addEventListener('click', e=>{
+  state.onlyPlan=!state.onlyPlan; e.currentTarget.setAttribute('aria-pressed',String(state.onlyPlan)); render(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeSheet(); });
+
+header(); render();
+let wasNarrow = narrow();
+addEventListener('resize', ()=>{ if(narrow()!==wasNarrow){ wasNarrow=narrow(); header(); render(); } });
+</script>
