@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Собирает блок const DATA = {...}; из программы, снятой с PDF сайта, и
-вставляет его в producty24/index.html вместо прежнего."""
+вставляет его в src/producty24.html вместо прежнего."""
 import json, re, pathlib
 
 P, A, D = "prod", "analyst", "design"
@@ -280,7 +280,7 @@ DATA = {
 
 block = "const DATA = " + json.dumps(DATA, ensure_ascii=False, indent=2) + ";"
 
-path = pathlib.Path("/home/user/Sheduler/producty24/index.html")
+path = pathlib.Path(__file__).resolve().parent / "producty24.html"
 html = path.read_text(encoding="utf-8")
 new, n = re.subn(r"const DATA = \{.*?\n\};", block, html, count=1, flags=re.S)
 assert n == 1, "блок DATA не найден"
