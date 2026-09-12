@@ -42,8 +42,15 @@ HEAD = f"""<!doctype html>
 <body>
 """
 
-out = ROOT / "docs" / "index.html"
-out.parent.mkdir(exist_ok=True)
-out.write_text(HEAD + body + "\n</body>\n</html>\n", encoding="utf-8")
-(ROOT / "docs" / ".nojekyll").write_text("", encoding="utf-8")
-print("собрано:", out, "|", round(out.stat().st_size / 1024, 1), "КБ")
+page = HEAD + body + "\n</body>\n</html>\n"
+
+# Кладём страницу и в корень, и в docs/: GitHub Pages можно настроить на любую
+# из этих папок, и при обеих расписание должно открываться по адресу сайта.
+# Пустой .nojekyll рядом отключает Jekyll, иначе он отдаёт README вместо страницы.
+for folder in ("", "docs"):
+    d = ROOT / folder if folder else ROOT
+    d.mkdir(exist_ok=True)
+    (d / "index.html").write_text(page, encoding="utf-8")
+    (d / ".nojekyll").write_text("", encoding="utf-8")
+    print("собрано:", (d / "index.html").relative_to(ROOT), "|",
+          round((d / "index.html").stat().st_size / 1024, 1), "КБ")
